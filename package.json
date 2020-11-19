@@ -1,0 +1,25 @@
+{
+    "name": "glua",
+    "displayName": "glua",
+    "description": "GLua syntax highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "lua",
+            "aliases": ["GLua", "lua"],
+            "extensions": [".lua"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "lua",
+            "scopeName": "source.lua",
+            "path": "./syntaxes/lua.tmLanguage.json"
+        }]
+    }
+}
