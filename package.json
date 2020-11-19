@@ -1,6 +1,7 @@
 {
     "name": "glua",
-    "displayName": "glua",
+	"displayName": "glua",
+	"publisher": "yobson",
     "description": "GLua syntax highlighting",
     "version": "1.0.0",
     "engines": {
