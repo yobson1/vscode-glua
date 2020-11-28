@@ -1,92 +1,58 @@
--- Functions
-local function func(arg)
+nil false true ...
+var = "\a\b\f\n\r\t\v\\\"\'"
+var = 'alo\n123"'
+var = "alo\n123\""
+var = '\97lo\10\04923"'
+var = [[alo
+123"]]
+var = [==[
+alo
+123"]==]
+3   3.0   3.1416   314.16e-2   0.31416E1   0xff   0x56
 
-end
+var = { [f(1)] = g; "x", "y"; x = 1, f(x), [30] = 23; 45 }
 
-function test.test(hello, world)
+1 + 1 < 1 - 1 <= 1 * 1 > 1 / 1 >= 1 ^ 1 == 1 % 1 ~= 1 .. 1 != (#1 and -1 or not 1)
+&& ||
+and
+or
+break
+not
+return
+continue
+goto Name
+::Name::
+do block end
+while exp do block end
+repeat block until exp
+if exp then block elseif exp then block else block end
+for Name = exp, exp, exp do block end
+for namelist in explist do block end
+function funcname(parlist, ...) block end
+function obj:funcname(parlist, ...) self:method() end
+function tbl.funcname(parlist, ...) block end
+function tbl.tbl.funcname(parlist, ...) block end
+function chat.AddText(parlist, ...) block end
+local function Name(parlist, ...) block end
+local namelist = explist;
+funcname(parlist, ...)
+obj:funcname(parlist, ...)
+tbl.funcname(parlist, ...)
+chat.AddText(parlist, ...)
+tbl.tbl.funcname(parlist, ...)
+tbl[1]["foo"].bar(...)
+tbl[foo].foo.bar(...)
 
-end
+-- Single comment
+code() -- Single comment
 
-function test:test(hello, world)
+--[[Multilined
+comment
+]]--
 
-end
-
-local function vargtest(...)
-	local test = {...}
-end
-
-func "Hello World!"
-func 'Hello World!'
-func [[Hello World!]]
-func [==[  ]==]
-func {"Hello World!"}
-
--- Consts
-true
-false
-nil
-NULL
-_G
-_VERSION
-math.pi
-math.huge
-jit.arch
-jit.os
-jit.version
-jit.version_num
-SERVER
-CLIENT
-...
-
--- Numbers
-123
-.123
-0.123
-0x3F
-0xFF.03
-
--- Strings
-"Hello world"
-'Hello world'
-[[Hello world]]
-"Newline \n"
-"Backslash \\"
-"Decimal \100"
-"Hex \xff"
-"Invalid escape \i \e"
-[=[
-	[[]]
-]=]
-
--- Keywords
-break do else elseif
-end for goto
-if in local repeat
-return then until while
-
-+ - * / ^
-.. == ~= < > <= >=
-and or not
-
-goto done
-::done::
-
-self
-self.self.self
-
--- Variable names
-test
-TEST
-t3st
-_test__fewf4f
-3invalid
-
--- Comments
---[[
-	Hello World
+--[[Multilined comment
 ]]
-/*
-	Hello World
-*/
--- Hello World
-// Hello World
+
+--[===[
+Multilined comment
+]===]--
