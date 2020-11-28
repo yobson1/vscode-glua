@@ -97,7 +97,7 @@
 		},
 		{
 			"name": "keyword.operator.lua",
-			"match": "(?x)\n\n\t\t\t# Mathematical Operators\n\t\t\t\\+ | - | \\* | \\/ | \\^ | %\n\t\t\t# Auxialiary Operators\n\t\t\t| \\#\n\t\t\t# Logical Operators\n\t\t\t| ==? | ~= | <=? | >=?\n\t\t\t# Boolean Operators\n\t\t\t| \\b ( and | or | not ) \\b\n\t\t\t# Concatenation Operator\n\t\t\t| (?<! \\. ) \\.{2} (?! \\. )\n\t\t"
+			"match": "(={1,2}|\\+|-|\\*|\\/|\\^|%|\\#|==|~=|!=|<=|>=|and|or|not|\\.{2})"
 		},
 		{
 			"name": "variable.language.self.lua",
