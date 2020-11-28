@@ -3,13 +3,13 @@
     "displayName": "glua",
     "publisher": "yobson",
     "description": "GLua syntax highlighting",
-    "version": "1.1.10",
+    "version": "2.0.0",
     "engines": {
         "vscode": "^1.51.0"
     },
     "categories": [
-		"Programming Languages",
-		"Snippets"
+        "Programming Languages",
+        "Snippets"
     ],
     "contributes": {
         "languages": [
@@ -31,13 +31,13 @@
                 "scopeName": "source.lua",
                 "path": "./syntaxes/lua.tmLanguage.json"
             }
-		],
-		"snippets": [
-			{
-				"language": "lua",
-				"path": "./snippets/globals.json"
-			}
-		]
+        ],
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets/globals.json"
+            }
+        ]
     },
     "repository": {
         "type": "git",
