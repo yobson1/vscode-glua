@@ -5,11 +5,11 @@ import os
 def dump(dict, filename):
 	json.dump(dict, open("final/" + filename + ".json", "w"), sort_keys=True, indent="\t", separators=(",", ": "))
 
-def translateMethod(method):
+def translateMethod(method, prefix=""):
 	newMethod = {}
 
 	# Adding prefix
-	newMethod["prefix"] = method["name"]
+	newMethod["prefix"] = prefix + method["name"]
 
 	# Adding description, removing any left over HTML tags
 	if "description" in method:
@@ -18,7 +18,7 @@ def translateMethod(method):
 		newMethod["description"] = ""
 
 	# Formatting body
-	newMethod["body"] = [method["name"] + "("]
+	newMethod["body"] = [prefix + method["name"] + "("]
 
 	if "arguments" in method:
 		i = 1
@@ -59,7 +59,7 @@ def translateLibs():
 
 	for l in d:
 		for m in l["functions"]:
-			finalLibs[l["name"] + "." + m["name"]] = translateMethod(m)
+			finalLibs[l["name"] + "." + m["name"]] = translateMethod(m, l["name"] + ".")
 
 	return finalLibs
 
