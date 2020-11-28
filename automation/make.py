@@ -38,7 +38,7 @@ def translateValue(value):
 	newValue = {}
 
 	newValue["body"] = value["name"]
-	newValue["description"] = formatDesc("Decimal value: " + str(value["value"]) + ("\n" + formatDesc(value["description"]) if "description" in value else ""))
+	newValue["description"] = formatDesc("Decimal value: " + str(value["value"]) + ("\n\n" + formatDesc(value["description"]) if "description" in value else ""))
 	newValue["prefix"] = value["name"]
 
 	return newValue
