@@ -6,7 +6,7 @@
 	"fileTypes": [
 		"lua"
 	],
-	"firstLineMatch": "(?x)\n\n\t# Change syntax to Lua if we find an interpreter directive\n\t\\A \\#! .*? \\b lua \\b\n",
+	"firstLineMatch": "\\A\\#!.*?\\blua\\b",
 	"patterns": [
 		{
 			"name": "comment.line.double-slash.lua",
@@ -88,7 +88,7 @@
 		},
 		{
 			"name": "string.quotes.other.multiline.lua",
-			"begin": "(?x)\n\n\t\t\t# Match the starting double brace\n\t\t\t\\[ ( =* ) \\[\n\t\t",
+			"begin": "\\[(=*)\\[",
 			"end": "\\]\\1\\]"
 		},
 		{
