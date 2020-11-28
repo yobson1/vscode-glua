@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.0.1
+- Improved descriptions of several snippets
+
 ## 2.0.0
 - Added snippets, currently only for global functions
 
