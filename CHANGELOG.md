@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.2.2
+- Added additional newlines to enum snippet descriptions
+
 ## 2.2.1
 - Updated description
 
