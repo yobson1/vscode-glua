@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "constant.numeric.lua",
-			"match": "(0x[\\da-fA-F]+(\\.[\\da-fA-F]+)?)|(\\d*\\.?[eE]?\\d+)"
+			"match": "\\b(0x[\\da-fA-F]+(\\.[\\da-fA-F]+)?)|(\\d*\\.?[eE]?\\d+)\\b"
 		},
 		{
 			"name": "constant.language.lua",
@@ -133,7 +133,7 @@
 		},
 		{
 			"name": "variable.other.lua",
-			"match": "(?<=[.|:])\\b([a-zA-Z_\\d]\\w*)\\b"
+			"match": "(?<=[.:])\\b([a-zA-Z_\\d]\\w*)\\b"
 		}
 	],
 	"repository": {
