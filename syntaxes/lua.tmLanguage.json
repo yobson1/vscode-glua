@@ -97,7 +97,7 @@
 		},
 		{
 			"name": "keyword.operator.lua",
-			"match": "\\b(and|or|not)\\b|={1,2}|\\.{2}|\\+|-|\\*|\\/|\\^|%|\\#|==|~=|!=|<=|>="
+			"match": "\\b(and|or|not)\\b|={1,2}|\\.{2}|\\+|-|\\*|\\/|\\^|%|\\#|==|~=|!=|<|>"
 		},
 		{
 			"name": "variable.language.self.lua",
