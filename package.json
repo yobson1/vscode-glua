@@ -1,9 +1,9 @@
 {
     "name": "glua",
-	"displayName": "glua",
-	"publisher": "yobson",
+    "displayName": "glua",
+    "publisher": "yobson",
     "description": "GLua syntax highlighting",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "engines": {
         "vscode": "^1.51.0"
     },
@@ -11,22 +11,31 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "lua",
-            "aliases": ["GLua", "lua"],
-            "extensions": [".lua"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "lua",
-            "scopeName": "source.lua",
-            "path": "./syntaxes/lua.tmLanguage.json"
-        }]
-	},
-	"repository": {
-	    "type": "git",
-	    "url": "https://github.com/yobson1/vscode-glua"
-	},
-	"homepage": "https://github.com/yobson1/vscode-glua/blob/master/README.md",
-	"license": "GNU GENERAL PUBLIC LICENSE"
+        "languages": [
+            {
+                "id": "lua",
+                "aliases": [
+                    "GLua",
+                    "lua"
+                ],
+                "extensions": [
+                    ".lua"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "lua",
+                "scopeName": "source.lua",
+                "path": "./syntaxes/lua.tmLanguage.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yobson1/vscode-glua"
+    },
+    "homepage": "https://github.com/yobson1/vscode-glua/blob/master/README.md",
+    "license": "GNU GENERAL PUBLIC LICENSE"
 }
