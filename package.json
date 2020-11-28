@@ -3,7 +3,7 @@
     "displayName": "glua",
     "publisher": "yobson",
     "description": "GLua syntax highlighting and snippets",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "engines": {
         "vscode": "^1.51.0"
     },
