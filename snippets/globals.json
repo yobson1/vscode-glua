@@ -1,0 +1,1871 @@
+{
+	"AccessorFunc": {
+		"body": [
+			"AccessorFunc(${1:tab}, ${2:key}, ${3:name}, ${4:force=nil})$0"
+		],
+		"description": "Adds simple Get/Set accessor functions on the specified table.\nCan also force the value to be set to a number, bool or string.",
+		"prefix": "AccessorFunc"
+	},
+	"AddBackgroundImage": {
+		"body": [
+			"AddBackgroundImage(${1:path})$0"
+		],
+		"description": "Adds the specified image path to the main menu background pool. Image can be png or jpeg.",
+		"prefix": "AddBackgroundImage"
+	},
+	"AddCSLuaFile": {
+		"body": [
+			"AddCSLuaFile(${1:file=current file})$0"
+		],
+		"description": "Marks a Lua file to be sent to clients when they join the server. Doesn't do anything on the client - this means you can use it in a shared file without problems.\n\nThis function is not needed for scripts located in **lua/autorun/** and **lua/autorun/client/**: they are automatically sent to clients.\n\nYou can add up to **8192** files. Each file can be up to **64KB** compressed (LZMA)",
+		"prefix": "AddCSLuaFile"
+	},
+	"AddConsoleCommand": {
+		"body": [
+			"AddConsoleCommand(${1:name}, ${2:helpText}, ${3:flags})$0"
+		],
+		"description": ".",
+		"prefix": "AddConsoleCommand"
+	},
+	"AddOriginToPVS": {
+		"body": [
+			"AddOriginToPVS(${1:position})$0"
+		],
+		"description": "Adds the specified vector to the PVS which is currently building. This allows all objects in visleafs visible from that vector to be drawn.",
+		"prefix": "AddOriginToPVS"
+	},
+	"AddWorldTip": {
+		"body": [
+			"AddWorldTip(${1:entindex=nil}, ${2:text}, ${3:dieTime=SysTime() + 0.05}, ${4:pos=ent:GetPos()}, ${5:ent=nil})$0"
+		],
+		"description": "This function creates a World Tip, similar to the one shown when aiming at a Thruster where it shows you its force.\n\nThis function will make a World Tip that will only last 50 milliseconds (1/20th of a second), so you must call it continuously as long as you want the World Tip to be shown. It is common to call it inside a Think hook.\n\nContrary to what the function's name implies, it is impossible to create more than one World Tip at the same time. A new World Tip will overwrite the old one, so only use this function when you know nothing else will also be using it.\n\nSee ",
+		"prefix": "AddWorldTip"
+	},
+	"Add_NPC_Class": {
+		"body": [
+			"Add_NPC_Class(${1:name})$0"
+		],
+		"description": "Defines a global entity class variable with an automatic value in order to prevent collisions with other . You should prefix your variable with CLASS_ for consistency.",
+		"prefix": "Add_NPC_Class"
+	},
+	"AddonMaterial": {
+		"body": [
+			"AddonMaterial(${1:name})$0"
+		],
+		"description": "Loads the specified image from the /cache folder, used in combination .\nMost addons will provide a 512x512 png image.",
+		"prefix": "AddonMaterial"
+	},
+	"Angle": {
+		"body": [
+			"Angle(${1:pitch=0}, ${2:yaw=0}, ${3:roll=0})$0"
+		],
+		"description": "Creates an  object.",
+		"prefix": "Angle"
+	},
+	"AngleRand": {
+		"body": [
+			"AngleRand(${1:min=-90 for pitch, -180 for yaw and roll}, ${2:max=90 for pitch, 180 for yaw and roll})$0"
+		],
+		"description": "Returns an angle with a randomized pitch, yaw, and roll between min(inclusive), max(exclusive).",
+		"prefix": "AngleRand"
+	},
+	"BroadcastLua": {
+		"body": [
+			"BroadcastLua(${1:code})$0"
+		],
+		"description": "Sends the specified Lua code to all connected clients and executes it.\n",
+		"prefix": "BroadcastLua"
+	},
+	"BuildNetworkedVarsTable": {
+		"body": [
+			"BuildNetworkedVarsTable()$0"
+		],
+		"description": "Dumps the networked variables of all entities into one table and returns it.",
+		"prefix": "BuildNetworkedVarsTable"
+	},
+	"CanAddServerToFavorites": {
+		"body": [
+			"CanAddServerToFavorites()$0"
+		],
+		"description": "\n\nUsed internally to check if the current server the player is on can be added to favorites or not. Does not check if the server is ALREADY in the favorites.",
+		"prefix": "CanAddServerToFavorites"
+	},
+	"CancelLoading": {
+		"body": [
+			"CancelLoading()$0"
+		],
+		"description": "Aborts joining of the server you are currently joining.",
+		"prefix": "CancelLoading"
+	},
+	"ChangeBackground": {
+		"body": [
+			"ChangeBackground(${1:currentgm})$0"
+		],
+		"description": "Sets the active main menu background image to a random entry from the background images pool. Images are added with .",
+		"prefix": "ChangeBackground"
+	},
+	"ChangeTooltip": {
+		"body": [
+			"ChangeTooltip(${1:panel})$0"
+		],
+		"description": "Automatically called by the engine when a panel is hovered over with the mouse",
+		"prefix": "ChangeTooltip"
+	},
+	"ClearBackgroundImages": {
+		"body": [
+			"ClearBackgroundImages()$0"
+		],
+		"description": "Empties the pool of main menu background images.",
+		"prefix": "ClearBackgroundImages"
+	},
+	"ClientsideModel": {
+		"body": [
+			"ClientsideModel(${1:model}, ${2:renderGroup=RENDERGROUP_OTHER})$0"
+		],
+		"description": "Creates a non physical entity that only exists on the client. See also ",
+		"prefix": "ClientsideModel"
+	},
+	"ClientsideRagdoll": {
+		"body": [
+			"ClientsideRagdoll(${1:model}, ${2:renderGroup=RENDERGROUP_OPAQUE})$0"
+		],
+		"description": "Creates a fully clientside ragdoll.\n\n",
+		"prefix": "ClientsideRagdoll"
+	},
+	"ClientsideScene": {
+		"body": [
+			"ClientsideScene(${1:name}, ${2:targetEnt})$0"
+		],
+		"description": "Creates a scene entity based on the scene name and the entity.",
+		"prefix": "ClientsideScene"
+	},
+	"CloseDermaMenus": {
+		"body": [
+			"CloseDermaMenus()$0"
+		],
+		"description": "Closes all Derma menus that have been passed to ",
+		"prefix": "CloseDermaMenus"
+	},
+	"Color": {
+		"body": [
+			"Color(${1:r}, ${2:g}, ${3:b}, ${4:a=255})$0"
+		],
+		"description": "Creates a .",
+		"prefix": "Color"
+	},
+	"ColorAlpha": {
+		"body": [
+			"ColorAlpha(${1:color}, ${2:alpha})$0"
+		],
+		"description": "Returns a new  and the alpha value specified.",
+		"prefix": "ColorAlpha"
+	},
+	"ColorRand": {
+		"body": [
+			"ColorRand(${1:a=false})$0"
+		],
+		"description": "Creates a  with randomized red, green, and blue components. If the alpha argument is true, alpha will also be randomized.",
+		"prefix": "ColorRand"
+	},
+	"ColorToHSL": {
+		"body": [
+			"ColorToHSL(${1:color})$0"
+		],
+		"description": "Converts a  into HSL color space.",
+		"prefix": "ColorToHSL"
+	},
+	"ColorToHSV": {
+		"body": [
+			"ColorToHSV(${1:color})$0"
+		],
+		"description": "Converts a  into HSV color space.",
+		"prefix": "ColorToHSV"
+	},
+	"CompileFile": {
+		"body": [
+			"CompileFile(${1:path})$0"
+		],
+		"description": "Attempts to compile the given file. If successful, returns a function that can be called to perform the actual execution of the script.",
+		"prefix": "CompileFile"
+	},
+	"CompileString": {
+		"body": [
+			"CompileString(${1:code}, ${2:identifier}, ${3:HandleError=true})$0"
+		],
+		"description": "This function will compile the code argument as lua code and return a function that will execute that code.\n\nPlease note that this function will not automatically execute the given code after compiling it.",
+		"prefix": "CompileString"
+	},
+	"ConVarExists": {
+		"body": [
+			"ConVarExists(${1:name})$0"
+		],
+		"description": "Returns whether a  with the given name exists or not",
+		"prefix": "ConVarExists"
+	},
+	"ConsoleAutoComplete": {
+		"body": [
+			"ConsoleAutoComplete(${1:text})$0"
+		],
+		"description": "Returns a table of console command names beginning with the given text.",
+		"prefix": "ConsoleAutoComplete"
+	},
+	"CreateClientConVar": {
+		"body": [
+			"CreateClientConVar(${1:name}, ${2:default}, ${3:shouldsave=true}, ${4:userinfo=false}, ${5:helptext}, ${6:min=nil}, ${7:max=nil})$0"
+		],
+		"description": "Makes a clientside-only console variable\n\n\n\nAlthough this function is shared, it should only be used clientside.",
+		"prefix": "CreateClientConVar"
+	},
+	"CreateConVar": {
+		"body": [
+			"CreateConVar(${1:name}, ${2:value}, ${3:flags=FCVAR_NONE}, ${4:helptext}, ${5:min=nil}, ${6:max=nil})$0"
+		],
+		"description": "Creates a console variable (), in general these are for things like gamemode/server settings.",
+		"prefix": "CreateConVar"
+	},
+	"CreateMaterial": {
+		"body": [
+			"CreateMaterial(${1:name}, ${2:shaderName}, ${3:materialData})$0"
+		],
+		"description": "Creates a new material with the specified name and shader.\n\nThis does not work with [patch materials](https://developer.valvesoftware.com/wiki/Patch).",
+		"prefix": "CreateMaterial"
+	},
+	"CreateParticleSystem": {
+		"body": [
+			"CreateParticleSystem(${1:ent}, ${2:effect}, ${3:partAttachment}, ${4:entAttachment=0}, ${5:offset=Vector( 0, 0, 0 )})$0"
+		],
+		"description": "Creates a new particle system.\n\n",
+		"prefix": "CreateParticleSystem"
+	},
+	"CreatePhysCollideBox": {
+		"body": [
+			"CreatePhysCollideBox(${1:mins}, ${2:maxs})$0"
+		],
+		"description": "Creates a new ",
+		"prefix": "CreatePhysCollideBox"
+	},
+	"CreatePhysCollidesFromModel": {
+		"body": [
+			"CreatePhysCollidesFromModel(${1:modelName})$0"
+		],
+		"description": "Creates  before being used with this function.",
+		"prefix": "CreatePhysCollidesFromModel"
+	},
+	"CreateSound": {
+		"body": [
+			"CreateSound(${1:targetEnt}, ${2:soundName}, ${3:filter=[CPASAttenuationFilter](https://developer.valvesoftware.com/wiki/CRecipientFilter#Derived_classes)})$0"
+		],
+		"description": "Returns a sound parented to the specified entity.\n\n",
+		"prefix": "CreateSound"
+	},
+	"CreateSprite": {
+		"body": [
+			"CreateSprite(${1:material})$0"
+		],
+		"description": "Creates and returns a new  element with the supplied material.",
+		"prefix": "CreateSprite"
+	},
+	"CurTime": {
+		"body": [
+			"CurTime()$0"
+		],
+		"description": "Returns the uptime of the server in seconds (to at least 4 decimal places)\n\nThis is a synchronised value and affected by various factors such as host_timescale (or ) and the server being paused - either by sv_pausable or all players disconnecting.\n\nYou should use this function for timing in-game events but not for real-world events.\n\nSee also: This is internally defined as a float, and as such it will be affected by precision loss if your server uptime is more than 6 hours, which will cause jittery movement of players and props and inaccuracy of timers, it is highly encouraged to refresh or change the map when that happens (a server restart is not necessary).\n\n\n\nThis is **NOT** easy as it sounds to fix in the engine, so please refrain from posting issues about this",
+		"prefix": "CurTime"
+	},
+	"DEFINE_BASECLASS": {
+		"body": [
+			"DEFINE_BASECLASS(${1:value})$0"
+		],
+		"description": "This is not a function. This is a preprocessor keyword that translates to:\n```\nlocal BaseClass = baseclass.Get(\"my_weapon\")\n```\nIf you type `DEFINE_BASECLASS(\"my_weapon\")` in your script.\n\nSee  for more information.",
+		"prefix": "DEFINE_BASECLASS"
+	},
+	"DOFModeHack": {
+		"body": [
+			"DOFModeHack(${1:enable})$0"
+		],
+		"description": "A hacky method used to fix some bugs regarding DoF.\n\n",
+		"prefix": "DOFModeHack"
+	},
+	"DOF_Kill": {
+		"body": [
+			"DOF_Kill()$0"
+		],
+		"description": "Cancels current DOF post-process effect started with ",
+		"prefix": "DOF_Kill"
+	},
+	"DOF_Start": {
+		"body": [
+			"DOF_Start()$0"
+		],
+		"description": "Cancels any existing DOF post-process effects.\nBegins the DOF post-process effect.",
+		"prefix": "DOF_Start"
+	},
+	"DamageInfo": {
+		"body": [
+			"DamageInfo()$0"
+		],
+		"description": "Returns an ",
+		"prefix": "DamageInfo"
+	},
+	"DebugInfo": {
+		"body": [
+			"DebugInfo(${1:slot}, ${2:info})$0"
+		],
+		"description": "Writes text to the right hand side of the screen, like the old error system. Messages disappear after a couple of seconds.",
+		"prefix": "DebugInfo"
+	},
+	"DeriveGamemode": {
+		"body": [
+			"DeriveGamemode(${1:base})$0"
+		],
+		"description": "Loads and registers the specified gamemode, setting the GM table's DerivedFrom field to the value provided, if the table exists. The DerivedFrom field is used post-gamemode-load as the \"derived\" parameter for .",
+		"prefix": "DeriveGamemode"
+	},
+	"DermaMenu": {
+		"body": [
+			"DermaMenu(${1:keepOpen=false}, ${2:parent=nil})$0"
+		],
+		"description": "Creates a  and closes any current menus.",
+		"prefix": "DermaMenu"
+	},
+	"Derma_Anim": {
+		"body": [
+			"Derma_Anim(${1:name}, ${2:panel}, ${3:func})$0"
+		],
+		"description": "Creates a new derma animation.",
+		"prefix": "Derma_Anim"
+	},
+	"Derma_DrawBackgroundBlur": {
+		"body": [
+			"Derma_DrawBackgroundBlur(${1:panel}, ${2:startTime})$0"
+		],
+		"description": "Draws background blur around the given panel.",
+		"prefix": "Derma_DrawBackgroundBlur"
+	},
+	"Derma_Hook": {
+		"body": [
+			"Derma_Hook(${1:panel}, ${2:functionName}, ${3:hookName}, ${4:typeName})$0"
+		],
+		"description": "Creates panel method that calls the supplied Derma skin hook via ",
+		"prefix": "Derma_Hook"
+	},
+	"Derma_Install_Convar_Functions": {
+		"body": [
+			"Derma_Install_Convar_Functions(${1:target})$0"
+		],
+		"description": "Makes the panel (usually an input of sorts) respond to changes in console variables by adding next functions to the panel:\n*  when the panel's value has changed.",
+		"prefix": "Derma_Install_Convar_Functions"
+	},
+	"Derma_Message": {
+		"body": [
+			"Derma_Message(${1:Text}, ${2:Title}, ${3:Button})$0"
+		],
+		"description": "Creates a derma window to display information",
+		"prefix": "Derma_Message"
+	},
+	"Derma_Query": {
+		"body": [
+			"Derma_Query(${1:text=Message Text (Second Parameter)}, ${2:title=Message Title (First Parameter)}, ${3:btn1text}, ${4:btn1func=nil}, ${5:btn2text=nil}, ${6:btn2func=nil}, ${7:btn3text=nil}, ${8:btn3func=nil}, ${9:btn4text=nil}, ${10:btn4func=nil})$0"
+		],
+		"description": "Shows a message box in the middle of the screen, with up to 4 buttons they can press.",
+		"prefix": "Derma_Query"
+	},
+	"Derma_StringRequest": {
+		"body": [
+			"Derma_StringRequest(${1:title}, ${2:subtitle}, ${3:default}, ${4:confirm}, ${5:cancel=nil}, ${6:confirmText=OK}, ${7:cancelText=Cancel})$0"
+		],
+		"description": "Creates a derma window asking players to input a string.",
+		"prefix": "Derma_StringRequest"
+	},
+	"DisableClipping": {
+		"body": [
+			"DisableClipping(${1:disable})$0"
+		],
+		"description": "Sets whether rendering should be limited to being inside a panel or not.\n\nSee also .",
+		"prefix": "DisableClipping"
+	},
+	"DrawBackground": {
+		"body": [
+			"DrawBackground()$0"
+		],
+		"description": " Draws the currently active main menu background image and handles transitioning between background images.\n\nThis is called by default in the menu panel's Paint hook.",
+		"prefix": "DrawBackground"
+	},
+	"DrawBloom": {
+		"body": [
+			"DrawBloom(${1:Darken}, ${2:Multiply}, ${3:SizeX}, ${4:SizeY}, ${5:Passes}, ${6:ColorMultiply}, ${7:Red}, ${8:Green}, ${9:Blue})$0"
+		],
+		"description": "Draws the bloom shader, which creates a glowing effect from bright objects.",
+		"prefix": "DrawBloom"
+	},
+	"DrawColorModify": {
+		"body": [
+			"DrawColorModify(${1:modifyParameters})$0"
+		],
+		"description": "Draws the Color Modify shader, which can be used to adjust colors on screen.",
+		"prefix": "DrawColorModify"
+	},
+	"DrawMaterialOverlay": {
+		"body": [
+			"DrawMaterialOverlay(${1:Material}, ${2:RefractAmount})$0"
+		],
+		"description": "Draws a material overlay on the screen.",
+		"prefix": "DrawMaterialOverlay"
+	},
+	"DrawMotionBlur": {
+		"body": [
+			"DrawMotionBlur(${1:AddAlpha}, ${2:DrawAlpha}, ${3:Delay})$0"
+		],
+		"description": "Creates a motion blur effect by drawing your screen multiple times.",
+		"prefix": "DrawMotionBlur"
+	},
+	"DrawSharpen": {
+		"body": [
+			"DrawSharpen(${1:Contrast}, ${2:Distance})$0"
+		],
+		"description": "Draws the sharpen shader, which creates more contrast.",
+		"prefix": "DrawSharpen"
+	},
+	"DrawSobel": {
+		"body": [
+			"DrawSobel(${1:Threshold})$0"
+		],
+		"description": "Draws the sobel shader, which detects edges and draws a black border.",
+		"prefix": "DrawSobel"
+	},
+	"DrawSunbeams": {
+		"body": [
+			"DrawSunbeams(${1:darken}, ${2:multiplier}, ${3:sunSize}, ${4:sunX}, ${5:sunY})$0"
+		],
+		"description": "Renders the post-processing effect of beams of light originating from the map's sun. Utilises the `pp/sunbeams` material.",
+		"prefix": "DrawSunbeams"
+	},
+	"DrawTexturize": {
+		"body": [
+			"DrawTexturize(${1:Scale}, ${2:BaseTexture})$0"
+		],
+		"description": "Draws the texturize shader, which replaces each pixel on your screen with a different part of the texture depending on its brightness. See  for information on making the texture.",
+		"prefix": "DrawTexturize"
+	},
+	"DrawToyTown": {
+		"body": [
+			"DrawToyTown(${1:Passes}, ${2:Height})$0"
+		],
+		"description": "Draws the toy town shader, which blurs the top and bottom of your screen. This can make very large objects look like toys, hence the name.",
+		"prefix": "DrawToyTown"
+	},
+	"DropEntityIfHeld": {
+		"body": [
+			"DropEntityIfHeld(${1:ent})$0"
+		],
+		"description": "Drops the specified entity if it is being held by any player with Gravity Gun or +use pickup.",
+		"prefix": "DropEntityIfHeld"
+	},
+	"DynamicLight": {
+		"body": [
+			"DynamicLight(${1:index}, ${2:elight=false})$0"
+		],
+		"description": "Creates or replaces a dynamic light with the given id.\n\n",
+		"prefix": "DynamicLight"
+	},
+	"EffectData": {
+		"body": [
+			"EffectData()$0"
+		],
+		"description": "Returns a ",
+		"prefix": "EffectData"
+	},
+	"Either": {
+		"body": [
+			"Either(${1:condition}, ${2:truevar}, ${3:falsevar})$0"
+		],
+		"description": "A compact 'if then else'. This is *almost* equivalent to (`condition` and `truevar` or `falsevar`) in Lua.\n\nThe difference is that if `truevar` evaluates to false, the plain Lua method stated would return `falsevar` regardless of `condition` whilst this function would take `condition` into account.",
+		"prefix": "Either"
+	},
+	"EmitSentence": {
+		"body": [
+			"EmitSentence(${1:soundName}, ${2:position}, ${3:entity}, ${4:channel=CHAN_AUTO}, ${5:volume=1}, ${6:soundLevel=75}, ${7:soundFlags=0}, ${8:pitch=100})$0"
+		],
+		"description": "Plays a sentence from `scripts/sentences.txt`",
+		"prefix": "EmitSentence"
+	},
+	"EmitSound": {
+		"body": [
+			"EmitSound(${1:soundName}, ${2:position}, ${3:entity}, ${4:channel=CHAN_AUTO}, ${5:volume=1}, ${6:soundLevel=75}, ${7:soundFlags=0}, ${8:pitch=100}, ${9:dsp=0})$0"
+		],
+		"description": "Emits the specified sound at the specified position.\n\n",
+		"prefix": "EmitSound"
+	},
+	"EndTooltip": {
+		"body": [
+			"EndTooltip(${1:panel})$0"
+		],
+		"description": "Removes the currently active tool tip from the screen.",
+		"prefix": "EndTooltip"
+	},
+	"Entity": {
+		"body": [
+			"Entity(${1:entityIndex})$0"
+		],
+		"description": "Returns the entity with the matching () are always reserved for players.\n\nIn examples on this wiki, **Entity( 1 )** is used when a player entity is needed (see ). In singleplayer and listen servers, **Entity( 1 )** will always be the first player. In dedicated servers, however, **Entity( 1 )** won't always be a valid player.",
+		"prefix": "Entity"
+	},
+	"Error": {
+		"body": [
+			"Error(${1:arguments})$0"
+		],
+		"description": "Throws an error. This is currently an alias of Global.error(lowercase)",
+		"prefix": "Error"
+	},
+	"ErrorNoHalt": {
+		"body": [
+			"ErrorNoHalt(${1:arguments})$0"
+		],
+		"description": "Throws a Lua error but does not break out of the current call stack.\nThis function will not print a stack trace like a normal error would.\nEssentially similar if not equivalent to .",
+		"prefix": "ErrorNoHalt"
+	},
+	"EyeAngles": {
+		"body": [
+			"EyeAngles()$0"
+		],
+		"description": "Returns the angles of the current render context as calculated by ",
+		"prefix": "EyeAngles"
+	},
+	"EyePos": {
+		"body": [
+			"EyePos()$0"
+		],
+		"description": "Returns the origin of the current render context as calculated by ",
+		"prefix": "EyePos"
+	},
+	"EyeVector": {
+		"body": [
+			"EyeVector()$0"
+		],
+		"description": "Returns the normal vector of the current render context as calculated by ",
+		"prefix": "EyeVector"
+	},
+	"FindMetaTable": {
+		"body": [
+			"FindMetaTable(${1:metaName})$0"
+		],
+		"description": "Returns the meta table for the class with the matching name.\n\nInternally returns ()[metaName]\n\nYou can learn more about meta tables on the . The name in the description is the string to use with this function.",
+		"prefix": "FindMetaTable"
+	},
+	"FindTooltip": {
+		"body": [
+			"FindTooltip(${1:panel})$0"
+		],
+		"description": "Returns the tool-tip text and tool-tip-panel (if any) of the given panel as well as itself",
+		"prefix": "FindTooltip"
+	},
+	"Format": {
+		"body": [
+			"Format(${1:format}, ${2:formatParameters})$0"
+		],
+		"description": "Formats the specified values into the string given. Same as .",
+		"prefix": "Format"
+	},
+	"FrameNumber": {
+		"body": [
+			"FrameNumber()$0"
+		],
+		"description": "Returns the number of frames rendered since the game was launched.",
+		"prefix": "FrameNumber"
+	},
+	"FrameTime": {
+		"body": [
+			"FrameTime()$0"
+		],
+		"description": "Returns the . RealFrameTime is more suited for things like GUIs or HUDs.",
+		"prefix": "FrameTime"
+	},
+	"GameDetails": {
+		"body": [
+			"GameDetails(${1:servername}, ${2:serverurl}, ${3:mapname}, ${4:maxplayers}, ${5:steamid}, ${6:gamemode})$0"
+		],
+		"description": "Callback function for when the client has joined a server. This function shows the server's loading URL by default.",
+		"prefix": "GameDetails"
+	},
+	"GetConVar": {
+		"body": [
+			"GetConVar(${1:name})$0"
+		],
+		"description": "Gets the ",
+		"prefix": "GetConVar"
+	},
+	"GetConVarNumber": {
+		"body": [
+			"GetConVarNumber(${1:name})$0"
+		],
+		"description": "Gets the numeric value ConVar with the specified name.",
+		"prefix": "GetConVarNumber"
+	},
+	"GetConVarString": {
+		"body": [
+			"GetConVarString(${1:name})$0"
+		],
+		"description": "Gets the string value ConVar with the specified name.",
+		"prefix": "GetConVarString"
+	},
+	"GetConVar_Internal": {
+		"body": [
+			"GetConVar_Internal(${1:name})$0"
+		],
+		"description": "Gets the ConVar with the specified name. This function doesn't cache the convar.",
+		"prefix": "GetConVar_Internal"
+	},
+	"GetDefaultLoadingHTML": {
+		"body": [
+			"GetDefaultLoadingHTML()$0"
+		],
+		"description": "Returns the default loading screen URL (asset://garrysmod/html/loading.html)",
+		"prefix": "GetDefaultLoadingHTML"
+	},
+	"GetDemoFileDetails": {
+		"body": [
+			"GetDemoFileDetails(${1:filename})$0"
+		],
+		"description": "Retrieves data about the demo with the specified filename. Similar to .",
+		"prefix": "GetDemoFileDetails"
+	},
+	"GetDownloadables": {
+		"body": [
+			"GetDownloadables()$0"
+		],
+		"description": "Returns a table with the names of files needed from the server you are currently joining.",
+		"prefix": "GetDownloadables"
+	},
+	"GetGlobalAngle": {
+		"body": [
+			"GetGlobalAngle(${1:index}, ${2:default=Angle( 0, 0, 0 )})$0"
+		],
+		"description": "Returns an angle that is shared between the server and all clients.",
+		"prefix": "GetGlobalAngle"
+	},
+	"GetGlobalBool": {
+		"body": [
+			"GetGlobalBool(${1:index}, ${2:default=false})$0"
+		],
+		"description": "Returns a boolean that is shared between the server and all clients.",
+		"prefix": "GetGlobalBool"
+	},
+	"GetGlobalEntity": {
+		"body": [
+			"GetGlobalEntity(${1:index}, ${2:default=NULL})$0"
+		],
+		"description": "Returns an entity that is shared between the server and all clients.",
+		"prefix": "GetGlobalEntity"
+	},
+	"GetGlobalFloat": {
+		"body": [
+			"GetGlobalFloat(${1:index}, ${2:default=0})$0"
+		],
+		"description": "Returns a float that is shared between the server and all clients.",
+		"prefix": "GetGlobalFloat"
+	},
+	"GetGlobalInt": {
+		"body": [
+			"GetGlobalInt(${1:index}, ${2:default=0})$0"
+		],
+		"description": "Returns an integer that is shared between the server and all clients.\n\n",
+		"prefix": "GetGlobalInt"
+	},
+	"GetGlobalString": {
+		"body": [
+			"GetGlobalString(${1:index}, ${2:default})$0"
+		],
+		"description": "Returns a string that is shared between the server and all clients.",
+		"prefix": "GetGlobalString"
+	},
+	"GetGlobalVector": {
+		"body": [
+			"GetGlobalVector(${1:Index}, ${2:Default})$0"
+		],
+		"description": "Returns a vector that is shared between the server and all clients.",
+		"prefix": "GetGlobalVector"
+	},
+	"GetHUDPanel": {
+		"body": [
+			"GetHUDPanel()$0"
+		],
+		"description": "Returns the panel that is used as a wrapper for the HUD. If you want your panel to be hidden when the main menu is opened, parent it to this. Child panels will also have their controls disabled.\n\nSee also ",
+		"prefix": "GetHUDPanel"
+	},
+	"GetHostName": {
+		"body": [
+			"GetHostName()$0"
+		],
+		"description": "Returns the name of the current server.",
+		"prefix": "GetHostName"
+	},
+	"GetLoadPanel": {
+		"body": [
+			"GetLoadPanel()$0"
+		],
+		"description": "Returns the loading screen panel and creates it if it doesn't exist.",
+		"prefix": "GetLoadPanel"
+	},
+	"GetLoadStatus": {
+		"body": [
+			"GetLoadStatus()$0"
+		],
+		"description": "Returns the current status of the server join progress.",
+		"prefix": "GetLoadStatus"
+	},
+	"GetMapList": {
+		"body": [
+			"GetMapList()$0"
+		],
+		"description": "Returns a table with the names of all maps and categories that you have on your client.",
+		"prefix": "GetMapList"
+	},
+	"GetOverlayPanel": {
+		"body": [
+			"GetOverlayPanel()$0"
+		],
+		"description": "Returns the menu overlay panel, a container for panels like the error panel created in .",
+		"prefix": "GetOverlayPanel"
+	},
+	"GetPredictionPlayer": {
+		"body": [
+			"GetPredictionPlayer()$0"
+		],
+		"description": "Returns the player whose movement commands are currently being processed. The player this returns can safely have () called on them. See .",
+		"prefix": "GetPredictionPlayer"
+	},
+	"GetRenderTarget": {
+		"body": [
+			"GetRenderTarget(${1:name}, ${2:width}, ${3:height}, ${4:additive=false})$0"
+		],
+		"description": "Creates or gets the rendertarget with the given name.\n\nSee ",
+		"prefix": "GetRenderTarget"
+	},
+	"GetRenderTargetEx": {
+		"body": [
+			"GetRenderTargetEx(${1:name}, ${2:width}, ${3:height}, ${4:sizeMode}, ${5:depthMode}, ${6:textureFlags}, ${7:rtFlags}, ${8:imageFormat})$0"
+		],
+		"description": "Gets (or creates if it does not exist) the rendertarget with the given name, this function allows to adjust the creation of a rendertarget more than .",
+		"prefix": "GetRenderTargetEx"
+	},
+	"GetSaveFileDetails": {
+		"body": [
+			"GetSaveFileDetails(${1:filename})$0"
+		],
+		"description": "Retrieves data about the save with the specified filename. Similar to .",
+		"prefix": "GetSaveFileDetails"
+	},
+	"GetTimeoutInfo": {
+		"body": [
+			"GetTimeoutInfo()$0"
+		],
+		"description": "Returns if the client is timing out, and time since last ping from the server. Similar to the server side ",
+		"prefix": "GetTimeoutInfo"
+	},
+	"GetViewEntity": {
+		"body": [
+			"GetViewEntity()$0"
+		],
+		"description": "Returns the entity the client is using to see from (such as the player itself, the camera, or another entity).",
+		"prefix": "GetViewEntity"
+	},
+	"HSLToColor": {
+		"body": [
+			"HSLToColor(${1:hue}, ${2:saturation}, ${3:value})$0"
+		],
+		"description": "Converts a color from [HSL color space](https://en.wikipedia.org/wiki/HSL_and_HSV) into RGB color space and returns a ",
+		"prefix": "HSLToColor"
+	},
+	"HSVToColor": {
+		"body": [
+			"HSVToColor(${1:hue}, ${2:saturation}, ${3:value})$0"
+		],
+		"description": "Converts a color from [HSV color space](https://en.wikipedia.org/wiki/HSL_and_HSV) into RGB color space and returns a ",
+		"prefix": "HSVToColor"
+	},
+	"HTTP": {
+		"body": [
+			"HTTP(${1:parameters})$0"
+		],
+		"description": "Launches an asynchronous http request with the given parameters.\n\nHTTP-requests to destinations on private networks (such as `192.168.0.1`) won't work.",
+		"prefix": "HTTP"
+	},
+	"IncludeCS": {
+		"body": [
+			"IncludeCS(${1:filename})$0"
+		],
+		"description": "To send the target file to the client simply call AddCSLuaFile() in the target file itself. on the filename, so that it gets sent to the client.",
+		"prefix": "IncludeCS"
+	},
+	"IsColor": {
+		"body": [
+			"IsColor(${1:Object})$0"
+		],
+		"description": "Returns whether the given object does or doesn't have a `metatable` of a color.\n\nEngine functions (i.e. those not written in plain Lua) that return color objects do not currently set the color metatable and this function will return false if you use it on them.",
+		"prefix": "IsColor"
+	},
+	"IsEnemyEntityName": {
+		"body": [
+			"IsEnemyEntityName(${1:className})$0"
+		],
+		"description": "Returns if the given NPC class name is an enemy.\n\nReturns true if the entity name is one of the following:\n* \"npc_antlion\"\n* \"npc_antlionguard\"\n* \"npc_antlionguardian\"\n* \"npc_barnacle\"\n* \"npc_breen\"\n* \"npc_clawscanner\"\n* \"npc_combine_s\"\n* \"npc_cscanner\"\n* \"npc_fastzombie\"\n* \"npc_fastzombie_torso\"\n* \"npc_headcrab\"\n* \"npc_headcrab_fast\"\n* \"npc_headcrab_poison\"\n* \"npc_hunter\"\n* \"npc_metropolice\"\n* \"npc_manhack\"\n* \"npc_poisonzombie\"\n* \"npc_strider\"\n* \"npc_stalker\"\n* \"npc_zombie\"\n* \"npc_zombie_torso\"\n* \"npc_zombine\"",
+		"prefix": "IsEnemyEntityName"
+	},
+	"IsEntity": {
+		"body": [
+			"IsEntity(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is an .",
+		"prefix": "IsEntity"
+	},
+	"IsFirstTimePredicted": {
+		"body": [
+			"IsFirstTimePredicted()$0"
+		],
+		"description": "Returns if this is the first time this hook was predicted.\n\nThis is useful for one-time logic in your SWEPs PrimaryAttack, SecondaryAttack and Reload and other  (to prevent those hooks from being called rapidly in succession). It's also useful in a Move hook for when the client predicts movement.\n\nVisit ",
+		"prefix": "IsFirstTimePredicted"
+	},
+	"IsFriendEntityName": {
+		"body": [
+			"IsFriendEntityName(${1:className})$0"
+		],
+		"description": "Returns if the given NPC class name is a friend.\n\nReturns true if the entity name is one of the following:\n* \"npc_alyx\"\n* \"npc_barney\"\n* \"npc_citizen\"\n* \"npc_dog\"\n* \"npc_eli\"\n* \"npc_fisherman\"\n* \"npc_gman\"\n* \"npc_kleiner\"\n* \"npc_magnusson\"\n* \"npc_monk\"\n* \"npc_mossman\"\n* \"npc_odessa\"\n* \"npc_vortigaunt\"",
+		"prefix": "IsFriendEntityName"
+	},
+	"IsInGame": {
+		"body": [
+			"IsInGame()$0"
+		],
+		"description": "Returns true if the client is currently playing either a singleplayer or multiplayer game.",
+		"prefix": "IsInGame"
+	},
+	"IsMounted": {
+		"body": [
+			"IsMounted(${1:game})$0"
+		],
+		"description": "Checks whether or not a game is currently mounted. Uses data given by .",
+		"prefix": "IsMounted"
+	},
+	"IsTableOfEntitiesValid": {
+		"body": [
+			"IsTableOfEntitiesValid(${1:table})$0"
+		],
+		"description": "Returns whether or not every element within a table is a valid entity",
+		"prefix": "IsTableOfEntitiesValid"
+	},
+	"IsUselessModel": {
+		"body": [
+			"IsUselessModel(${1:modelName})$0"
+		],
+		"description": "Returns whether or not a model is useless by checking that the file path is that of a proper model.\n\nIf the string \".mdl\" is not found in the model name, the function will return true.\n\nThe function will also return true if any of the following strings are found in the given model name:\n* \"_gesture\"\n* \"_anim\"\n* \"_gst\"\n* \"_pst\"\n* \"_shd\"\n* \"_ss\"\n* \"_posture\"\n* \"_anm\"\n* \"ghostanim\"\n* \"_paths\"\n* \"_shared\"\n* \"anim_\"\n* \"gestures_\"\n* \"shared_ragdoll_\"",
+		"prefix": "IsUselessModel"
+	},
+	"IsValid": {
+		"body": [
+			"IsValid(${1:toBeValidated})$0"
+		],
+		"description": "Returns whether an object is valid or not. (Such as  objects and more).\nChecks that an object is not nil, has an IsValid method and if this method returns true.\n\n",
+		"prefix": "IsValid"
+	},
+	"JS_Language": {
+		"body": [
+			"JS_Language(${1:htmlPanel})$0"
+		],
+		"description": "Adds javascript function 'language.Update' to an HTML panel as a method to call Lua's  function.",
+		"prefix": "JS_Language"
+	},
+	"JS_Utility": {
+		"body": [
+			"JS_Utility(${1:htmlPanel})$0"
+		],
+		"description": "Adds javascript function 'util.MotionSensorAvailable' to an HTML panel as a method to call Lua's  function.",
+		"prefix": "JS_Utility"
+	},
+	"JS_Workshop": {
+		"body": [
+			"JS_Workshop(${1:htmlPanel})$0"
+		],
+		"description": "Adds workshop related javascript functions to an HTML panel, used by the \"Dupes\" and \"Saves\" tabs in the spawnmenu.",
+		"prefix": "JS_Workshop"
+	},
+	"JoinServer": {
+		"body": [
+			"JoinServer(${1:IP})$0"
+		],
+		"description": "Joins the server with the specified IP.",
+		"prefix": "JoinServer"
+	},
+	"Label": {
+		"body": [
+			"Label(${1:text}, ${2:parent=nil})$0"
+		],
+		"description": "Convenience function that creates a , sets the text, and returns it",
+		"prefix": "Label"
+	},
+	"LanguageChanged": {
+		"body": [
+			"LanguageChanged(${1:lang})$0"
+		],
+		"description": "Callback function for when the client's language changes. Called by the engine.",
+		"prefix": "LanguageChanged"
+	},
+	"Lerp": {
+		"body": [
+			"Lerp(${1:t}, ${2:from}, ${3:to})$0"
+		],
+		"description": "Performs a linear interpolation from the start number to the end number.\n\nThis function provides a very efficient and easy way to smooth out movements.\n",
+		"prefix": "Lerp"
+	},
+	"LerpAngle": {
+		"body": [
+			"LerpAngle(${1:ratio}, ${2:angleStart}, ${3:angleEnd})$0"
+		],
+		"description": "Returns point between first and second angle using given fraction and linear interpolation\n",
+		"prefix": "LerpAngle"
+	},
+	"LerpVector": {
+		"body": [
+			"LerpVector(${1:fraction}, ${2:from}, ${3:to})$0"
+		],
+		"description": "Linear interpolation between two vectors. It is commonly used to smooth movement between two vectors\n",
+		"prefix": "LerpVector"
+	},
+	"LoadLastMap": {
+		"body": [
+			"LoadLastMap()$0"
+		],
+		"description": ".",
+		"prefix": "LoadLastMap"
+	},
+	"LoadPresets": {
+		"body": [
+			"LoadPresets()$0"
+		],
+		"description": "Loads all preset settings for the  and returns them in a table",
+		"prefix": "LoadPresets"
+	},
+	"LocalPlayer": {
+		"body": [
+			"LocalPlayer()$0"
+		],
+		"description": "Returns the player object of the current client.\n\nLocalPlayer() will return NULL until all entities have been initialized. See ",
+		"prefix": "LocalPlayer"
+	},
+	"LocalToWorld": {
+		"body": [
+			"LocalToWorld(${1:localPos}, ${2:localAng}, ${3:originPos}, ${4:originAngle})$0"
+		],
+		"description": "Translates the specified position and angle from the specified local coordinate system into worldspace coordinates.\n\nIf you're working with an entity's local vectors, use , the reverse of this function.",
+		"prefix": "LocalToWorld"
+	},
+	"Localize": {
+		"body": [
+			"Localize(${1:localisationToken}, ${2:default})$0"
+		],
+		"description": "Returns a localisation for the given token, if none is found it will return the default (second) parameter.",
+		"prefix": "Localize"
+	},
+	"Material": {
+		"body": [
+			"Material(${1:materialName}, ${2:pngParameters=nil})$0"
+		],
+		"description": "Either returns the material with the given name, or loads the material interpreting the first argument as the path.\n\nWhen using .png or .jpg textures, try to make their sizes Power Of 2 (1, 2, 4, 8, 16, 32, 64, etc). While images are no longer scaled to Power of 2 sizes since February 2019, it is a good practice for things like icons, etc.",
+		"prefix": "Material"
+	},
+	"Matrix": {
+		"body": [
+			"Matrix(${1:data={{1, 0, 0, 0}, {0, 1, 0, 0}, {0, 0, 1, 0}, {0, 0, 0, 1}}})$0"
+		],
+		"description": "Returns a  object.",
+		"prefix": "Matrix"
+	},
+	"Mesh": {
+		"body": [
+			"Mesh(${1:mat=nil})$0"
+		],
+		"description": "Returns a new mesh object.",
+		"prefix": "Mesh"
+	},
+	"Model": {
+		"body": [
+			"Model(${1:model})$0"
+		],
+		"description": "Runs  and returns the string.",
+		"prefix": "Model"
+	},
+	"Msg": {
+		"body": [
+			"Msg(${1:args})$0"
+		],
+		"description": "Writes every given argument to the console.\n\nAutomatically attempts to convert each argument to a string. (See )\n\nUnlike ",
+		"prefix": "Msg"
+	},
+	"MsgAll": {
+		"body": [
+			"MsgAll(${1:args})$0"
+		],
+		"description": "Works exactly like  except that, if called on the server, will print to all players consoles plus the server console.",
+		"prefix": "MsgAll"
+	},
+	"MsgC": {
+		"body": [
+			"MsgC(${1:args})$0"
+		],
+		"description": "Just like .",
+		"prefix": "MsgC"
+	},
+	"MsgN": {
+		"body": [
+			"MsgN(${1:args})$0"
+		],
+		"description": "Same as , which doesn't add a newline (`\"\\n\"`) at the end.",
+		"prefix": "MsgN"
+	},
+	"NamedColor": {
+		"body": [
+			"NamedColor(${1:name})$0"
+		],
+		"description": "Returns named color defined in resource/ClientScheme.res.",
+		"prefix": "NamedColor"
+	},
+	"NumDownloadables": {
+		"body": [
+			"NumDownloadables()$0"
+		],
+		"description": "Returns the number of files needed from the server you are currently joining.",
+		"prefix": "NumDownloadables"
+	},
+	"NumModelSkins": {
+		"body": [
+			"NumModelSkins(${1:modelName})$0"
+		],
+		"description": "Returns the amount of skins the specified model has.\n\nSee also  if you have an entity.",
+		"prefix": "NumModelSkins"
+	},
+	"OnModelLoaded": {
+		"body": [
+			"OnModelLoaded(${1:modelName}, ${2:numPostParams}, ${3:numSeq}, ${4:numAttachments}, ${5:numBoneControllers}, ${6:numSkins}, ${7:size})$0"
+		],
+		"description": ".",
+		"prefix": "OnModelLoaded"
+	},
+	"OpenFolder": {
+		"body": [
+			"OpenFolder(${1:folder})$0"
+		],
+		"description": "Opens a folder with the given name in the garrysmod folder using the operating system's file browser.\n\n",
+		"prefix": "OpenFolder"
+	},
+	"OrderVectors": {
+		"body": [
+			"OrderVectors(${1:vector1}, ${2:vector2})$0"
+		],
+		"description": "Modifies the given vectors so that all of vector2's axis are larger than vector1's by switching them around. Also known as ordering vectors.\n\n",
+		"prefix": "OrderVectors"
+	},
+	"Particle": {
+		"body": [
+			"Particle(${1:file})$0"
+		],
+		"description": "Calls  and returns given string.",
+		"prefix": "Particle"
+	},
+	"ParticleEffect": {
+		"body": [
+			"ParticleEffect(${1:particleName}, ${2:position}, ${3:angles}, ${4:parent=NULL})$0"
+		],
+		"description": "Creates a particle effect.\n\n",
+		"prefix": "ParticleEffect"
+	},
+	"ParticleEffectAttach": {
+		"body": [
+			"ParticleEffectAttach(${1:particleName}, ${2:attachType}, ${3:entity}, ${4:attachmentID})$0"
+		],
+		"description": "Creates a particle effect with specialized parameters.\n\n",
+		"prefix": "ParticleEffectAttach"
+	},
+	"ParticleEmitter": {
+		"body": [
+			"ParticleEmitter(${1:position}, ${2:use3D})$0"
+		],
+		"description": "Creates a new ",
+		"prefix": "ParticleEmitter"
+	},
+	"Path": {
+		"body": [
+			"Path(${1:type})$0"
+		],
+		"description": "Creates a path for the bot to follow",
+		"prefix": "Path"
+	},
+	"Player": {
+		"body": [
+			"Player(${1:playerIndex})$0"
+		],
+		"description": "Returns the player with the matching .",
+		"prefix": "Player"
+	},
+	"PositionSpawnIcon": {
+		"body": [
+			"PositionSpawnIcon(${1:model}, ${2:position}, ${3:noAngles})$0"
+		],
+		"description": "Moves the given model to the given position and calculates appropriate camera parameters for rendering the model to an icon.\n\nThe output table interacts nicely with  with a few key renames.",
+		"prefix": "PositionSpawnIcon"
+	},
+	"PrecacheParticleSystem": {
+		"body": [
+			"PrecacheParticleSystem(${1:particleSystemName})$0"
+		],
+		"description": "Precaches the particle with the specified name.",
+		"prefix": "PrecacheParticleSystem"
+	},
+	"PrecacheScene": {
+		"body": [
+			"PrecacheScene(${1:scene})$0"
+		],
+		"description": "Precaches a scene file.",
+		"prefix": "PrecacheScene"
+	},
+	"PrecacheSentenceFile": {
+		"body": [
+			"PrecacheSentenceFile(${1:filename})$0"
+		],
+		"description": "Load and precache a custom sentence file.",
+		"prefix": "PrecacheSentenceFile"
+	},
+	"PrecacheSentenceGroup": {
+		"body": [
+			"PrecacheSentenceGroup(${1:group})$0"
+		],
+		"description": "Precache a sentence group in a sentences.txt definition file.",
+		"prefix": "PrecacheSentenceGroup"
+	},
+	"PrintMessage": {
+		"body": [
+			"PrintMessage(${1:type}, ${2:message})$0"
+		],
+		"description": "Displays a message in the chat, console, or center of screen of every player.\n\nThis uses the archaic user message system () and hence is limited to \u00e2\u2030\u02c6250 characters.",
+		"prefix": "PrintMessage"
+	},
+	"PrintTable": {
+		"body": [
+			"PrintTable(${1:tableToPrint}, ${2:indent=0}, ${3:done={}})$0"
+		],
+		"description": "Recursively prints the contents of a table to the console.",
+		"prefix": "PrintTable"
+	},
+	"ProjectedTexture": {
+		"body": [
+			"ProjectedTexture()$0"
+		],
+		"description": "Creates a new .",
+		"prefix": "ProjectedTexture"
+	},
+	"ProtectedCall": {
+		"body": [
+			"ProtectedCall(${1:func})$0"
+		],
+		"description": "Runs a function without stopping the whole script on error.\n\nThis function is similar to  called).",
+		"prefix": "ProtectedCall"
+	},
+	"RandomPairs": {
+		"body": [
+			"RandomPairs(${1:table}, ${2:descending})$0"
+		],
+		"description": "Returns an iterator function that can be used to loop through a table in random order",
+		"prefix": "RandomPairs"
+	},
+	"RealFrameTime": {
+		"body": [
+			"RealFrameTime()$0"
+		],
+		"description": "Returns the real frame-time which is unaffected by host_timescale. To be used for GUI effects (for example)",
+		"prefix": "RealFrameTime"
+	},
+	"RealTime": {
+		"body": [
+			"RealTime()$0"
+		],
+		"description": "Returns the uptime of the game/server in seconds (to at least **4** decimal places). This value updates itself once every time the realm thinks. For servers, this is the server tickrate. For clients, its their current FPS.\n\nThis is **not** synchronised or affected by the game.\n\nThis will be affected by precision loss if the uptime is more than 30+(?) days, and effectively cease to be functional after 50+(?) days.\n\nChanging the map will **not** fix it like it does with ) for timing real-world events such as user interaction, but not for timing game events such as animations.\n\nSee also: ",
+		"prefix": "RealTime"
+	},
+	"RecipientFilter": {
+		"body": [
+			"RecipientFilter(${1:unreliable=false})$0"
+		],
+		"description": "Creates a new .",
+		"prefix": "RecipientFilter"
+	},
+	"RecordDemoFrame": {
+		"body": [
+			"RecordDemoFrame()$0"
+		],
+		"description": "\nAdds a frame to the currently recording demo.",
+		"prefix": "RecordDemoFrame"
+	},
+	"RegisterDermaMenuForClose": {
+		"body": [
+			"RegisterDermaMenuForClose(${1:menu})$0"
+		],
+		"description": "Registers a Derma element to be closed the next time  is called",
+		"prefix": "RegisterDermaMenuForClose"
+	},
+	"RememberCursorPosition": {
+		"body": [
+			"RememberCursorPosition()$0"
+		],
+		"description": "Saves position of your cursor on screen. You can restore it by using\n.",
+		"prefix": "RememberCursorPosition"
+	},
+	"RemoveTooltip": {
+		"body": [
+			"RemoveTooltip()$0"
+		],
+		"description": "Does the removing of the tooltip panel. Called by .",
+		"prefix": "RemoveTooltip"
+	},
+	"RenderAngles": {
+		"body": [
+			"RenderAngles()$0"
+		],
+		"description": "Returns the angle that the clients view is being rendered at",
+		"prefix": "RenderAngles"
+	},
+	"RenderDoF": {
+		"body": [
+			"RenderDoF(${1:origin}, ${2:angle}, ${3:usableFocusPoint}, ${4:angleSize}, ${5:radialSteps}, ${6:passes}, ${7:spin}, ${8:inView}, ${9:fov})$0"
+		],
+		"description": "Renders a Depth of Field effect",
+		"prefix": "RenderDoF"
+	},
+	"RenderStereoscopy": {
+		"body": [
+			"RenderStereoscopy(${1:viewOrigin}, ${2:viewAngles})$0"
+		],
+		"description": "Renders the stereoscopic post-process effect",
+		"prefix": "RenderStereoscopy"
+	},
+	"RenderSuperDoF": {
+		"body": [
+			"RenderSuperDoF(${1:viewOrigin}, ${2:viewAngles}, ${3:viewFOV})$0"
+		],
+		"description": "Renders the Super Depth of Field post-process effect",
+		"prefix": "RenderSuperDoF"
+	},
+	"RestoreCursorPosition": {
+		"body": [
+			"RestoreCursorPosition()$0"
+		],
+		"description": "Restores position of your cursor on screen. You can save it by using .",
+		"prefix": "RestoreCursorPosition"
+	},
+	"RunConsoleCommand": {
+		"body": [
+			"RunConsoleCommand(${1:command}, ${2:arguments})$0"
+		],
+		"description": "Executes the given console command with the parameters.\n\n",
+		"prefix": "RunConsoleCommand"
+	},
+	"RunGameUICommand": {
+		"body": [
+			"RunGameUICommand(${1:command})$0"
+		],
+		"description": "Runs a menu command. Equivalent to ( \"gamemenucommand\", command ) unless the command starts with the \"engine\" keyword in which case it is equivalent to ( command ).",
+		"prefix": "RunGameUICommand"
+	},
+	"RunString": {
+		"body": [
+			"RunString(${1:code}, ${2:identifier=RunString}, ${3:handleError=true})$0"
+		],
+		"description": "Evaluates and executes the given code, will throw an error on failure.\n",
+		"prefix": "RunString"
+	},
+	"RunStringEx": {
+		"body": [
+			"RunStringEx()$0"
+		],
+		"description": "Alias of ",
+		"prefix": "RunStringEx"
+	},
+	"SQLStr": {
+		"body": [
+			"SQLStr(${1:input}, ${2:noQuotes=false})$0"
+		],
+		"description": "Returns the input value in an escaped form so that it can safely be used inside of queries. The returned value is surrounded by quotes unless noQuotes is true. Alias of ",
+		"prefix": "SQLStr"
+	},
+	"SScale": {
+		"body": [
+			"SScale(${1:Size})$0"
+		],
+		"description": ".",
+		"prefix": "SScale"
+	},
+	"STNDRD": {
+		"body": [
+			"STNDRD(${1:number})$0"
+		],
+		"description": "Returns the ordinal suffix of a given number.",
+		"prefix": "STNDRD"
+	},
+	"SafeRemoveEntity": {
+		"body": [
+			"SafeRemoveEntity(${1:ent})$0"
+		],
+		"description": "Removes the given entity unless it is a player or the world entity",
+		"prefix": "SafeRemoveEntity"
+	},
+	"SafeRemoveEntityDelayed": {
+		"body": [
+			"SafeRemoveEntityDelayed(${1:entity}, ${2:delay})$0"
+		],
+		"description": "Removes entity after delay using ",
+		"prefix": "SafeRemoveEntityDelayed"
+	},
+	"SaveLastMap": {
+		"body": [
+			"SaveLastMap(${1:map}, ${2:category})$0"
+		],
+		"description": "\nThis function is used to save the last map and category to which the map belongs as a .",
+		"prefix": "SaveLastMap"
+	},
+	"SavePresets": {
+		"body": [
+			"SavePresets(${1:presets})$0"
+		],
+		"description": "Overwrites all presets with the supplied table. Used by the  for preset saving",
+		"prefix": "SavePresets"
+	},
+	"ScrH": {
+		"body": [
+			"ScrH()$0"
+		],
+		"description": "Gets the height of the game's window (in pixels).",
+		"prefix": "ScrH"
+	},
+	"ScrW": {
+		"body": [
+			"ScrW()$0"
+		],
+		"description": "Gets the width of the game's window (in pixels).",
+		"prefix": "ScrW"
+	},
+	"ScreenScale": {
+		"body": [
+			"ScreenScale(${1:Size})$0"
+		],
+		"description": "Returns a number based on the Size argument and your screen's width. The screen's width is always equal to size 640. This function is primarily used for scaling font sizes.",
+		"prefix": "ScreenScale"
+	},
+	"SendUserMessage": {
+		"body": [
+			"SendUserMessage(${1:name}, ${2:recipients}, ${3:args})$0"
+		],
+		"description": "",
+		"prefix": "SendUserMessage"
+	},
+	"SentenceDuration": {
+		"body": [
+			"SentenceDuration(${1:name})$0"
+		],
+		"description": "Returns approximate duration of a sentence by name. See .",
+		"prefix": "SentenceDuration"
+	},
+	"ServerLog": {
+		"body": [
+			"ServerLog(${1:parameter})$0"
+		],
+		"description": "Prints \"ServerLog: PARAM\" without a newline, to the server log and console.",
+		"prefix": "ServerLog"
+	},
+	"SetClipboardText": {
+		"body": [
+			"SetClipboardText(${1:text})$0"
+		],
+		"description": "Adds the given string to the computers clipboard, which can then be pasted in or outside of GMod with Ctrl + V.",
+		"prefix": "SetClipboardText"
+	},
+	"SetGlobalAngle": {
+		"body": [
+			"SetGlobalAngle(${1:index}, ${2:angle})$0"
+		],
+		"description": "Defines an angle to be automatically networked to clients\n\n",
+		"prefix": "SetGlobalAngle"
+	},
+	"SetGlobalBool": {
+		"body": [
+			"SetGlobalBool(${1:index}, ${2:bool})$0"
+		],
+		"description": "Defined a boolean to be automatically networked to clients\n\n",
+		"prefix": "SetGlobalBool"
+	},
+	"SetGlobalEntity": {
+		"body": [
+			"SetGlobalEntity(${1:index}, ${2:ent})$0"
+		],
+		"description": "Defines an entity to be automatically networked to clients\n\n",
+		"prefix": "SetGlobalEntity"
+	},
+	"SetGlobalFloat": {
+		"body": [
+			"SetGlobalFloat(${1:index}, ${2:float})$0"
+		],
+		"description": "Defines a floating point number to be automatically networked to clients\n\n",
+		"prefix": "SetGlobalFloat"
+	},
+	"SetGlobalInt": {
+		"body": [
+			"SetGlobalInt(${1:index}, ${2:value})$0"
+		],
+		"description": "Sets an integer that is shared between the server and all clients.\n\n",
+		"prefix": "SetGlobalInt"
+	},
+	"SetGlobalString": {
+		"body": [
+			"SetGlobalString(${1:index}, ${2:string})$0"
+		],
+		"description": "Defines a string with a maximum of 199 characters to be automatically networked to clients\n\n",
+		"prefix": "SetGlobalString"
+	},
+	"SetGlobalVector": {
+		"body": [
+			"SetGlobalVector(${1:index}, ${2:vec})$0"
+		],
+		"description": "Defines a vector to be automatically networked to clients\n\n",
+		"prefix": "SetGlobalVector"
+	},
+	"SetPhysConstraintSystem": {
+		"body": [
+			"SetPhysConstraintSystem(${1:constraintSystem})$0"
+		],
+		"description": "Called by the engine to set which [constraint system](https://developer.valvesoftware.com/wiki/Phys_constraintsystem) the next created constraints should use.",
+		"prefix": "SetPhysConstraintSystem"
+	},
+	"SortedPairs": {
+		"body": [
+			"SortedPairs(${1:table}, ${2:desc=false})$0"
+		],
+		"description": "This function can be used in a for loop instead of .",
+		"prefix": "SortedPairs"
+	},
+	"SortedPairsByMemberValue": {
+		"body": [
+			"SortedPairsByMemberValue(${1:table}, ${2:memberKey}, ${3:descending=false})$0"
+		],
+		"description": "Returns an iterator function that can be used to loop through a table in order of member values, when the values of the table are also tables and contain that member.\n\nTo sort by **value**, use .",
+		"prefix": "SortedPairsByMemberValue"
+	},
+	"SortedPairsByValue": {
+		"body": [
+			"SortedPairsByValue(${1:table}, ${2:descending=false})$0"
+		],
+		"description": "Returns an iterator function that can be used to loop through a table in order of its **values**.\n\nTo sort by specific **value member**, use .",
+		"prefix": "SortedPairsByValue"
+	},
+	"Sound": {
+		"body": [
+			"Sound(${1:soundPath})$0"
+		],
+		"description": "Runs ",
+		"prefix": "Sound"
+	},
+	"SoundDuration": {
+		"body": [
+			"SoundDuration(${1:soundName})$0"
+		],
+		"description": "Returns the duration of the specified sound in seconds.\n\n",
+		"prefix": "SoundDuration"
+	},
+	"SuppressHostEvents": {
+		"body": [
+			"SuppressHostEvents(${1:suppressPlayer})$0"
+		],
+		"description": "Suppress any networking from the server to the specified player. This is automatically called by the engine before/after a player fires their weapon, reloads, or causes any other similar shared-predicted event to occur.",
+		"prefix": "SuppressHostEvents"
+	},
+	"SysTime": {
+		"body": [
+			"SysTime()$0"
+		],
+		"description": "Returns a highly accurate time in seconds since the start up, ideal for benchmarking. Unlike , this value will be updated any time the function is called, allowing for sub-think precision.",
+		"prefix": "SysTime"
+	},
+	"TauntCamera": {
+		"body": [
+			"TauntCamera()$0"
+		],
+		"description": "Returns a TauntCamera object",
+		"prefix": "TauntCamera"
+	},
+	"TextEntryLoseFocus": {
+		"body": [
+			"TextEntryLoseFocus()$0"
+		],
+		"description": "Clears focus from any text entries player may have focused.",
+		"prefix": "TextEntryLoseFocus"
+	},
+	"TimedCos": {
+		"body": [
+			"TimedCos(${1:frequency}, ${2:min}, ${3:max}, ${4:offset})$0"
+		],
+		"description": "Returns a cosine value that fluctuates based on the current time",
+		"prefix": "TimedCos"
+	},
+	"TimedSin": {
+		"body": [
+			"TimedSin(${1:frequency}, ${2:origin}, ${3:max}, ${4:offset})$0"
+		],
+		"description": "Returns a sine value that fluctuates based on The range arguments don't work as intended. The existing (bugged) behavior is documented below.",
+		"prefix": "TimedSin"
+	},
+	"ToggleFavourite": {
+		"body": [
+			"ToggleFavourite(${1:map})$0"
+		],
+		"description": "Toggles whether or not the named map is favorited in the new game list.",
+		"prefix": "ToggleFavourite"
+	},
+	"TranslateDownloadableName": {
+		"body": [
+			"TranslateDownloadableName(${1:filename})$0"
+		],
+		"description": "\nReturns \"Lua Cache File\" if the given file name is in a certain string table, nothing otherwise.",
+		"prefix": "TranslateDownloadableName"
+	},
+	"TypeID": {
+		"body": [
+			"TypeID(${1:variable})$0"
+		],
+		"description": "Gets the associated type ID of the variable. Unlike ",
+		"prefix": "TypeID"
+	},
+	"UTIL_IsUselessModel": {
+		"body": [
+			"UTIL_IsUselessModel(${1:modelName})$0"
+		],
+		"description": "\n\nReturns whether or not a model is useless by checking that the file path is that of a proper model.\n\nIf the string \".mdl\" is not found in the model name, the function will return true.\n\nThe function will also return true if any of the following strings are found in the given model name:\n* \"_gesture\"\n* \"_anim\"\n* \"_gst\"\n* \"_pst\"\n* \"_shd\"\n* \"_ss\"\n* \"_posture\"\n* \"_anm\"\n* \"ghostanim\"\n* \"_paths\"\n* \"_shared\"\n* \"anim_\"\n* \"gestures_\"\n* \"shared_ragdoll_\"",
+		"prefix": "UTIL_IsUselessModel"
+	},
+	"UnPredictedCurTime": {
+		"body": [
+			"UnPredictedCurTime()$0"
+		],
+		"description": "Returns the current asynchronous in-game time.",
+		"prefix": "UnPredictedCurTime"
+	},
+	"UpdateLoadPanel": {
+		"body": [
+			"UpdateLoadPanel(${1:javascript})$0"
+		],
+		"description": "Runs JavaScript on the loading screen panel ().",
+		"prefix": "UpdateLoadPanel"
+	},
+	"VGUIFrameTime": {
+		"body": [
+			"VGUIFrameTime()$0"
+		],
+		"description": "Returns the time in seconds it took to render the VGUI.",
+		"prefix": "VGUIFrameTime"
+	},
+	"VGUIRect": {
+		"body": [
+			"VGUIRect(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+		],
+		"description": "Creates and returns a  rectangle GUI element with the given dimensions.",
+		"prefix": "VGUIRect"
+	},
+	"ValidPanel": {
+		"body": [
+			"ValidPanel(${1:panel})$0"
+		],
+		"description": "\n\nReturns if a panel is safe to use.",
+		"prefix": "ValidPanel"
+	},
+	"Vector": {
+		"body": [
+			"Vector(${1:x=0}, ${2:y=0}, ${3:z=0})$0"
+		],
+		"description": "Creates a  object.",
+		"prefix": "Vector"
+	},
+	"VectorRand": {
+		"body": [
+			"VectorRand(${1:min=-1}, ${2:max=1})$0"
+		],
+		"description": "Returns a random vector whose components are each between min(inclusive), max(exclusive).",
+		"prefix": "VectorRand"
+	},
+	"VisualizeLayout": {
+		"body": [
+			"VisualizeLayout(${1:panel})$0"
+		],
+		"description": "\nBriefly displays layout details of the given panel on-screen",
+		"prefix": "VisualizeLayout"
+	},
+	"WorkshopFileBase": {
+		"body": [
+			"WorkshopFileBase(${1:namespace}, ${2:requiredTags})$0"
+		],
+		"description": "Returns a new WorkshopFileBase element",
+		"prefix": "WorkshopFileBase"
+	},
+	"WorldToLocal": {
+		"body": [
+			"WorldToLocal(${1:position}, ${2:angle}, ${3:newSystemOrigin}, ${4:newSystemAngles})$0"
+		],
+		"description": "Translates the specified position and angle into the specified coordinate system.",
+		"prefix": "WorldToLocal"
+	},
+	"assert": {
+		"body": [
+			"assert(${1:expression}, ${2:errorMessage=assertion failed!}, ${3:returns=nil})$0"
+		],
+		"description": "If the result of the first argument is false or nil, an error is thrown with the second argument as the message.",
+		"prefix": "assert"
+	},
+	"collectgarbage": {
+		"body": [
+			"collectgarbage(${1:action=collect}, ${2:arg})$0"
+		],
+		"description": "Executes the specified action on the garbage collector.",
+		"prefix": "collectgarbage"
+	},
+	"error": {
+		"body": [
+			"error(${1:message}, ${2:errorLevel=1})$0"
+		],
+		"description": "Throws a Lua error and breaks out of the current call stack.",
+		"prefix": "error"
+	},
+	"gcinfo": {
+		"body": [
+			"gcinfo()$0"
+		],
+		"description": "( \"count\" ) instead. Returns the current floored dynamic memory usage of Lua in kilobytes.",
+		"prefix": "gcinfo"
+	},
+	"getfenv": {
+		"body": [
+			"getfenv(${1:location=1})$0"
+		],
+		"description": "Returns the environment table of either the stack level or the function specified.",
+		"prefix": "getfenv"
+	},
+	"getmetatable": {
+		"body": [
+			"getmetatable(${1:object})$0"
+		],
+		"description": "Returns the metatable of an object. This function obeys the metatable's __metatable field, and will return that field if the metatable has it set.\n\nUse  if you want the true metatable of the object.",
+		"prefix": "getmetatable"
+	},
+	"include": {
+		"body": [
+			"include(${1:fileName})$0"
+		],
+		"description": "Executes a Lua script.\n\nAddon files (.gma files) do not support relative parent folders (`..` notation).",
+		"prefix": "include"
+	},
+	"ipairs": {
+		"body": [
+			"ipairs(${1:tab})$0"
+		],
+		"description": "Returns an iterator function for a for loop, to return ordered key-value pairs from a table.\n\nThis will only iterate though **numerical** keys, and these must also be **sequential**; starting at 1 with no gaps.\n\nFor unordered pairs, see .",
+		"prefix": "ipairs"
+	},
+	"isangle": {
+		"body": [
+			"isangle(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is an .",
+		"prefix": "isangle"
+	},
+	"isbool": {
+		"body": [
+			"isbool(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is a .",
+		"prefix": "isbool"
+	},
+	"isfunction": {
+		"body": [
+			"isfunction(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is a .",
+		"prefix": "isfunction"
+	},
+	"ismatrix": {
+		"body": [
+			"ismatrix(${1:variable})$0"
+		],
+		"description": "Returns whether the passed object is a .",
+		"prefix": "ismatrix"
+	},
+	"isnumber": {
+		"body": [
+			"isnumber(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is a .",
+		"prefix": "isnumber"
+	},
+	"ispanel": {
+		"body": [
+			"ispanel(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is a .",
+		"prefix": "ispanel"
+	},
+	"isstring": {
+		"body": [
+			"isstring(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is a .",
+		"prefix": "isstring"
+	},
+	"istable": {
+		"body": [
+			"istable(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is a .",
+		"prefix": "istable"
+	},
+	"isvector": {
+		"body": [
+			"isvector(${1:variable})$0"
+		],
+		"description": "Returns if the passed object is a .",
+		"prefix": "isvector"
+	},
+	"module": {
+		"body": [
+			"module(${1:name}, ${2:loaders})$0"
+		],
+		"description": "Creates a table with the specified module name and sets the function environment for said table.\n\nAny passed loaders are called with the table as an argument. An example of this is .",
+		"prefix": "module"
+	},
+	"newproxy": {
+		"body": [
+			"newproxy(${1:addMetatable=false})$0"
+		],
+		"description": "Returns a new userdata object.",
+		"prefix": "newproxy"
+	},
+	"next": {
+		"body": [
+			"next(${1:tab}, ${2:prevKey=nil})$0"
+		],
+		"description": "Returns the next key and value pair in a table.\n\n",
+		"prefix": "next"
+	},
+	"pairs": {
+		"body": [
+			"pairs(${1:tab})$0"
+		],
+		"description": "Returns an iterator function() for a for loop that will return the values of the specified table in an arbitrary order.\n\n* For alphabetical **key** order use  (and `ents.Find*` functions), it's more efficient to use  or [for](http://lua-users.org/wiki/ForTutorial) iterator.",
+		"prefix": "pairs"
+	},
+	"pcall": {
+		"body": [
+			"pcall(${1:func}, ${2:arguments})$0"
+		],
+		"description": "Calls a function and catches an error that can be thrown while the execution of the call.\n\n from sending error messages to the server (if called clientside) or calling the ",
+		"prefix": "pcall"
+	},
+	"print": {
+		"body": [
+			"print(${1:args})$0"
+		],
+		"description": "Writes every given argument to the console.\nAutomatically attempts to convert each argument to a string. (See )\n\nSeperates lines with a line break (`\"\\n\"`)\n\nSeparates arguments with a tab character (`\"\\t\"`).",
+		"prefix": "print"
+	},
+	"rawequal": {
+		"body": [
+			"rawequal(${1:value1}, ${2:value2})$0"
+		],
+		"description": "Compares the two values without calling their __eq operator.",
+		"prefix": "rawequal"
+	},
+	"rawget": {
+		"body": [
+			"rawget(${1:table}, ${2:index})$0"
+		],
+		"description": "Gets the value with the specified key from the table without calling the __index method.",
+		"prefix": "rawget"
+	},
+	"rawset": {
+		"body": [
+			"rawset(${1:table}, ${2:index}, ${3:value})$0"
+		],
+		"description": "Sets the value with the specified key from the table without calling the __newindex method.",
+		"prefix": "rawset"
+	},
+	"require": {
+		"body": [
+			"require(${1:name})$0"
+		],
+		"description": "First tries to load a binary module with the given name, if unsuccessful, it tries to load a Lua module with the given name.\n\n",
+		"prefix": "require"
+	},
+	"select": {
+		"body": [
+			"select(${1:parameter}, ${2:vararg})$0"
+		],
+		"description": "Used to select single values from a vararg or get the count of values in it.",
+		"prefix": "select"
+	},
+	"setfenv": {
+		"body": [
+			"setfenv(${1:location}, ${2:enviroment})$0"
+		],
+		"description": "Sets the enviroment for a function or a stack level, if a function is passed, the return value will be the function, otherwise nil.",
+		"prefix": "setfenv"
+	},
+	"setmetatable": {
+		"body": [
+			"setmetatable(${1:Tab}, ${2:Metatable})$0"
+		],
+		"description": "Sets, changes or removes a table's metatable. Returns Tab (the first argument).",
+		"prefix": "setmetatable"
+	},
+	"tobool": {
+		"body": [
+			"tobool(${1:val})$0"
+		],
+		"description": "Attempts to return an appropriate boolean for the given value",
+		"prefix": "tobool"
+	},
+	"tonumber": {
+		"body": [
+			"tonumber(${1:value}, ${2:base=10})$0"
+		],
+		"description": "Attempts to convert the value to a number.\n\nReturns nil on failure.",
+		"prefix": "tonumber"
+	},
+	"tostring": {
+		"body": [
+			"tostring(${1:value})$0"
+		],
+		"description": "Attempts to convert the value to a string. If the value is an object and its metatable has defined the __tostring metamethod, this will call that function.\n\n also uses this functionality.",
+		"prefix": "tostring"
+	},
+	"type": {
+		"body": [
+			"type(${1:var})$0"
+		],
+		"description": "Returns a string representing the name of the type of the passed object.",
+		"prefix": "type"
+	},
+	"unpack": {
+		"body": [
+			"unpack(${1:tbl}, ${2:startIndex=1}, ${3:endIndex=#tbl})$0"
+		],
+		"description": "This function takes a numeric indexed table and return all the members as a vararg. If specified, it will start at the given index and end at end index.",
+		"prefix": "unpack"
+	},
+	"xpcall": {
+		"body": [
+			"xpcall(${1:func}, ${2:errorCallback}, ${3:arguments})$0"
+		],
+		"description": "Attempts to call the first function. If the execution succeeds, this returns `true` followed by the returns of the function. If execution fails, this returns `false` and the second function is called with the error message.\n\nUnlike in  from sending error messages to the server (if called clientside) or calling the ",
+		"prefix": "xpcall"
+	}
+}

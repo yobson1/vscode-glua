@@ -8,7 +8,8 @@
         "vscode": "^1.51.0"
     },
     "categories": [
-        "Programming Languages"
+		"Programming Languages",
+		"Snippets"
     ],
     "contributes": {
         "languages": [
@@ -30,7 +31,13 @@
                 "scopeName": "source.lua",
                 "path": "./syntaxes/lua.tmLanguage.json"
             }
-        ]
+		],
+		"snippets": [
+			{
+				"language": "lua",
+				"path": "./snippets/globals.json"
+			}
+		]
     },
     "repository": {
         "type": "git",
