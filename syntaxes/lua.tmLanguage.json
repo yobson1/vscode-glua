@@ -54,7 +54,7 @@
 		},
 		{
 			"name": "constant.language.lua",
-			"match": "\\b(true|false|nil|_G|_VERSION|math\\.pi|math\\.huge|jit\\.arch|jit\\.os|jit\\.version|jit\\.version_num|SERVER|CLIENT)\\b"
+			"match": "\\b(true|false|nil|_G|_VERSION|math\\.pi|math\\.huge|jit\\.arch|jit\\.os|jit\\.version|jit\\.version_num|SERVER|CLIENT)\\b|\\.\\.\\."
 		},
 		{
 			"name": "comment.block.lua",
