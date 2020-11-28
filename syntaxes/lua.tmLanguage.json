@@ -93,7 +93,7 @@
 		},
 		{
 			"name": "keyword.control.lua",
-			"match": "(?x)\n\n\t\t\t\\b (\n\t\t\t\tbreak | do | else | for\n\t\t\t\t| if | elseif | return | then\n\t\t\t\t| repeat | while | until | end\n\t\t\t\t| function | local | in | goto\n\t\t\t) \\b\n\t\t"
+			"match": "\\b(break|do|else|for|if|elseif|return|then|repeat|while|until|end|function|local|in|goto)\\b"
 		},
 		{
 			"name": "keyword.operator.lua",
