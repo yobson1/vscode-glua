@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.1.8
+- More regex improvements
+- Fixed functions not being highlighted correctly when called with a single argument using a multilevel string
+- Fixed ... not being highlighted as a const
+- Fixed < and > not being highlighted as operators
+- Fixed numbers in variable names being highlighted
+
 ## 1.1.7
 - More regex improvements
 - Fixed accessing a table with [] being recognised as a function call
