@@ -36,6 +36,14 @@
             {
                 "language": "lua",
                 "path": "./snippets/globals.json"
+			},
+			{
+                "language": "lua",
+                "path": "./snippets/classes.json"
+			},
+			{
+                "language": "lua",
+                "path": "./snippets/libraries.json"
             }
         ]
     },
