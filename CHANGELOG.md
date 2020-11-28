@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.2.3
+- Fixed numbers at the end of variable names being tokenized
+
 ## 2.2.2
 - Added additional newlines to enum snippet descriptions
 
