@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.9
+- More regex improvements
+
 ## 1.1.8
 - More regex improvements
 - Fixed functions not being highlighted correctly when called with a single argument using a multilevel string
