@@ -2,8 +2,8 @@
     "name": "glua",
     "displayName": "glua",
     "publisher": "yobson",
-    "description": "GLua syntax highlighting",
-    "version": "2.2.0",
+    "description": "GLua syntax highlighting and snippets",
+    "version": "2.2.1",
     "engines": {
         "vscode": "^1.51.0"
     },

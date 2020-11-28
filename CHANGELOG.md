@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.2.1
+- Updated description
+
 ## 2.2.0
 - Added enums to snippets
 
