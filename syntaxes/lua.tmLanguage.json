@@ -129,7 +129,7 @@
 		},
 		{
 			"name": "support.function.any-method.lua",
-			"match": "\\b([a-zA-Z_]\\w*)\\b\\s*(?=([({\\\"']|\\[*\\[))"
+			"match": "\\b([a-zA-Z_]\\w*)\\b\\s*(?=([({\"']|\\[\\[))"
 		},
 		{
 			"name": "variable.other.lua",
