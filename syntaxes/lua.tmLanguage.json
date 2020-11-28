@@ -28,7 +28,7 @@
 		},
 		{
 			"name": "meta.function.lua",
-			"begin": "(?x)\n\n\t\t\t# Match the function keyword\n\t\t\t\\b ( function )\n\n\t\t\t# Optional: function name\n\t\t\t(?:\n\t\t\t\t# Scope\n\t\t\t\t\\s+ ( (?: [a-zA-Z_]\\w*\n [.:] )* )\n\t\t\t\t# Function name\n\t\t\t\t( [a-zA-Z_]\\w*\n ) \\s*\n\t\t\t)?\n\n\t\t\t# Match the opening parameters brace\n\t\t",
+			"begin": "(?x)(\\bfunction\\b) \\s+ ([a-zA-Z1-9_]\\w* [.:])* ([a-zA-Z1-9_]\\w*)* \\s* (\\()",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.control.lua"
