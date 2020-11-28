@@ -125,7 +125,7 @@
 		},
 		{
 			"name": "keyword.control.tag.lua",
-			"match": "(?x)\n\n\t\t\t:: ( [a-zA-Z_]\\w*\n ) ::\n\t\t"
+			"match": "(::[a-zA-Z_]\\w*::)"
 		},
 		{
 			"name": "support.function.any-method.lua",
