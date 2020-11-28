@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "constant.numeric.lua",
-			"match": "\\b(0x[\\da-fA-F]+(\\.[\\da-fA-F]+)?)|(\\d*\\.?[eE]?\\d+)\\b"
+			"match": "\\b(0x[\\da-fA-F]+(\\.[\\da-fA-F]+)?)|(\\d*\\.?[eE]?-?\\d+)\\b"
 		},
 		{
 			"name": "constant.language.lua",
