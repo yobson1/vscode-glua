@@ -1,5 +1,10 @@
 # Change Log
 
+## 1.1.6
+- More regex improvements
+- Fixed 'self' highlight
+- Fixed function calls not being highlighted as such if they are also table members e.g. TestTable.TestMethod()
+
 ## 1.1.5
 - Fixed many operators not being highlighted
 
