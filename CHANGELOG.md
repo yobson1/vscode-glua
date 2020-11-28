@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.0.0
+- Added snippets, currently only for global functions
+
 ## 1.1.10
 - Fixed numbers being highlighted incorrectly with a negative exponent
 
