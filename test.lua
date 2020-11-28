@@ -80,3 +80,13 @@ TEST
 t3st
 _test__fewf4f
 3invalid
+
+-- Comments
+--[[
+	Hello World
+]]
+/*
+	Hello World
+*/
+-- Hello World
+// Hello World
