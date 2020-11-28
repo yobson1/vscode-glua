@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.5
+- Fixed many operators not being highlighted
+
 ## 1.1.4
 - Added icon
 
