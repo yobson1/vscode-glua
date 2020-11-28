@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.4
+- Added icon
+
 ## 1.1.3
 - Fixed concatenation operator not being highlighted
 

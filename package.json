@@ -37,5 +37,6 @@
         "url": "https://github.com/yobson1/vscode-glua"
     },
     "homepage": "https://github.com/yobson1/vscode-glua/blob/master/README.md",
-    "license": "GNU GENERAL PUBLIC LICENSE"
+	"license": "GNU GENERAL PUBLIC LICENSE",
+	"icon": "images/icon.png"
 }
