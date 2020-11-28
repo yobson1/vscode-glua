@@ -52,6 +52,16 @@ def translateClasses():
 
 	return finalClasses
 
+def translateLibs():
+	f = open("output/libraries.json")
+	d = json.load(f)
+	finalLibs = {}
+
+	for l in d:
+		for m in l["functions"]:
+			finalLibs[l["name"] + "." + m["name"]] = translateMethod(m)
+
+	return finalLibs
 
 if not os.path.exists("final"):
 	os.makedirs("final")
@@ -59,3 +69,4 @@ if not os.path.exists("final"):
 
 dump(translateGlobals(), "globals")
 dump(translateClasses(), "classes")
+dump(translateLibs(), "libraries")
