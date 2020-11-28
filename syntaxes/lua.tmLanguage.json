@@ -54,7 +54,7 @@
 		},
 		{
 			"name": "constant.language.lua",
-			"match": "(?x)\n\n\t\t\t\\b (\n\t\t\t\tnil | true | false | _G\n\t\t\t\t| _VERSION | math\\.pi | math\\.huge\n\t\t\t) \\b\n\t\t|\n\t\t\t\\.{3}\n\t\t"
+			"match": "\\b(true|false|nil|_G|_VERSION|math\\.pi|math\\.huge|jit\\.arch|jit\\.os|jit\\.version|jit\\.version_num|SERVER|CLIENT)\\b"
 		},
 		{
 			"name": "comment.block.lua",
