@@ -3,7 +3,7 @@
     "displayName": "glua",
     "publisher": "yobson",
     "description": "GLua syntax highlighting",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "engines": {
         "vscode": "^1.51.0"
     },
@@ -37,6 +37,6 @@
         "url": "https://github.com/yobson1/vscode-glua"
     },
     "homepage": "https://github.com/yobson1/vscode-glua/blob/master/README.md",
-	"license": "GNU GENERAL PUBLIC LICENSE",
-	"icon": "images/icon.png"
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "icon": "images/icon.png"
 }
