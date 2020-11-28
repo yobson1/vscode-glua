@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.2.0
+- Added enums to snippets
+
 ## 2.1.0
 - Added libraries and meta methods to snippets
 
