@@ -17,7 +17,7 @@ def translateGlobals():
 		curGlobal["prefix"] = g["name"]
 
 		# Adding description, removing any left over HTML tags
-		curGlobal["description"] = re.sub(r"\<[^)]*\>", "", g["description"])
+		curGlobal["description"] = re.sub(r"\<[^>]*\>", "", g["description"])
 
 		# Formatting body
 		curGlobal["body"] = [g["name"] + "("]
