@@ -5,6 +5,9 @@ import os
 def dump(dict, filename):
 	json.dump(dict, open("final/" + filename + ".json", "w"), sort_keys=True, indent="\t", separators=(",", ": "))
 
+def formatDesc(desc):
+	return re.sub(r"\<[^>]*\>", "", desc)
+
 def translateMethod(method, prefix=""):
 	newMethod = {}
 
@@ -13,7 +16,7 @@ def translateMethod(method, prefix=""):
 
 	# Adding description, removing any left over HTML tags
 	if "description" in method:
-		newMethod["description"] = re.sub(r"\<[^>]*\>", "", method["description"])
+		newMethod["description"] = formatDesc(method["description"])
 	else:
 		newMethod["description"] = ""
 
@@ -30,6 +33,14 @@ def translateMethod(method, prefix=""):
 	newMethod["body"][0] += ")$0"
 
 	return newMethod
+
+def translateValue(value):
+	newValue = {}
+
+	newValue["body"] = value["name"]
+	newValue["description"] = formatDesc("Decimal value: " + str(value["value"]) + ("\n" + formatDesc(value["description"]) if "description" in value else ""))
+
+	return newValue
 
 def translateGlobals():
 	f = open("output/global-functions.json")
@@ -63,6 +74,17 @@ def translateLibs():
 
 	return finalLibs
 
+def translateEnums():
+	f = open("output/enums.json")
+	d = json.load(f)
+	finalEnums = {}
+
+	for eList in d:
+		for e in eList["fields"]:
+			finalEnums[e["name"]] = translateValue(e)
+
+	return finalEnums
+
 if not os.path.exists("final"):
 	os.makedirs("final")
 
@@ -70,3 +92,4 @@ if not os.path.exists("final"):
 dump(translateGlobals(), "globals")
 dump(translateClasses(), "classes")
 dump(translateLibs(), "libraries")
+dump(translateEnums(), "enums")
