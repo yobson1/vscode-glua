@@ -1,5 +1,8 @@
 # Change Log
 
+## 1.1.10
+- Fixed numbers being highlighted incorrectly with a negative exponent
+
 ## 1.1.9
 - More regex improvements
 
