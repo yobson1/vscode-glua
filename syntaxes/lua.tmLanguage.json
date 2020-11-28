@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "constant.numeric.lua",
-			"match": "(?x)\n\n\t\t\t\\b (\n\t\t\t\t# Hex numbers\n\t\t\t\t0x [\\d a-f A-F]+\n\t\t\t\t# Optional decimal\n\t\t\t\t( \\. [\\d a-f A-F]+ )?\n\t\t\t|\n\t\t\t\t# Integers with optional exponent\n\t\t\t\t\\d+\n\t\t\t\t( [eE] -? \\d+ )?\n\t\t\t|\n\t\t\t\t# Decimals with optional exponent\n\t\t\t\t\\d* \\. \\d+\n\t\t\t\t( [eE] -? \\d+ )?\n\t\t\t)\n\t\t"
+			"match": "(0x[\\da-fA-F]+(\\.[\\da-fA-F]+)?)|(\\d*\\.?[eE]?\\d+)"
 		},
 		{
 			"name": "constant.language.lua",
