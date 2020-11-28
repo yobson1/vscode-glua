@@ -1,7 +1,22 @@
 # Change Log
 
-## 1.0.0
-- Initial release
+## 1.1.3
+- Fixed concatenation operator not being highlighted
+
+## 1.1.2
+- Fixed = operator not being highlighted
+
+## 1.1.1
+- Fixed operators not needing to match whole word
+
+## 1.1.0
+- Made several improvements to the regex expressions used
+
+## 1.0.2
+- Fixed a bug where if a table member with the word function anywhere within was indexed using . it would break the highlighting
 
 ## 1.0.1
 - Updated standard library matches for latest Garry's Mod version
+
+## 1.0.0
+- Initial release
