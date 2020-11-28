@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.1.7
+- More regex improvements
+- Fixed accessing a table with [] being recognised as a function call
+
 ## 1.1.6
 - More regex improvements
 - Fixed 'self' highlight
