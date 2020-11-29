@@ -1,0 +1,3453 @@
+{
+	"EFFECT:EndTouch": {
+		"body": [
+			"function EFFECT:EndTouch()\n\t$0\nend"
+		],
+		"description": "",
+		"prefix": "EFFECT:EndTouch"
+	},
+	"EFFECT:GetTracerShootPos": {
+		"body": [
+			"function EFFECT:GetTracerShootPos(pos, ent, attachment)\n\t$0\nend"
+		],
+		"description": "Used to get the \"real\" start position of a trace, for weapon tracer effects.\n\n\"real\" meaning in 3rd person, the 3rd person position will be used, in first person the first person position will be used.",
+		"prefix": "EFFECT:GetTracerShootPos"
+	},
+	"EFFECT:Init": {
+		"body": [
+			"function EFFECT:Init(effectData)\n\t$0\nend"
+		],
+		"description": "Called when the effect is created.",
+		"prefix": "EFFECT:Init"
+	},
+	"EFFECT:PhysicsCollide": {
+		"body": [
+			"function EFFECT:PhysicsCollide(colData, collider)\n\t$0\nend"
+		],
+		"description": "Called when the effect collides with anything.",
+		"prefix": "EFFECT:PhysicsCollide"
+	},
+	"EFFECT:Render": {
+		"body": [
+			"function EFFECT:Render()\n\t$0\nend"
+		],
+		"description": "Called when the effect should be rendered.",
+		"prefix": "EFFECT:Render"
+	},
+	"EFFECT:StartTouch": {
+		"body": [
+			"function EFFECT:StartTouch()\n\t$0\nend"
+		],
+		"description": "",
+		"prefix": "EFFECT:StartTouch"
+	},
+	"EFFECT:Think": {
+		"body": [
+			"function EFFECT:Think()\n\t$0\nend"
+		],
+		"description": "Called when the effect should think, return false to kill the effect.",
+		"prefix": "EFFECT:Think"
+	},
+	"EFFECT:Touch": {
+		"body": [
+			"function EFFECT:Touch()\n\t$0\nend"
+		],
+		"description": "",
+		"prefix": "EFFECT:Touch"
+	},
+	"ENTITY:AcceptInput": {
+		"body": [
+			"function ENTITY:AcceptInput(inputName, activator, caller, data)\n\t$0\nend"
+		],
+		"description": "Called when another entity fires an event to this entity.",
+		"prefix": "ENTITY:AcceptInput"
+	},
+	"ENTITY:CalcAbsolutePosition": {
+		"body": [
+			"function ENTITY:CalcAbsolutePosition(pos, ang)\n\t$0\nend"
+		],
+		"description": "Called whenever the entity's position changes. A callback for when an entity's angle changes is available via Entity:AddCallback.\n\nLike ENTITY:RenderOverride, this hook works on any entity (scripted or not) it is applied on.\n\nIf EFL_DIRTY_ABSTRANSFORM is set on the entity, this will be called serverside only; otherwise, this will be called clientside only. This means serverside calls of Entity:SetPos without the EFL_DIRTY_ABSTRANSFORM flag enabled (most cases) will be called clientside only.\n\nThe give concommand will call this hook serverside only upon entity spawn.",
+		"prefix": "ENTITY:CalcAbsolutePosition"
+	},
+	"ENTITY:CanProperty": {
+		"body": [
+			"function ENTITY:CanProperty(ply, property)\n\t$0\nend"
+		],
+		"description": "Controls if a property can be used on this entity or not.\n\nThis hook will only work in Sandbox derived gamemodes that do not have SANDBOX:CanProperty overridden.\n\nThis hook will work on ALL entities, not just the scripted ones (SENTs)",
+		"prefix": "ENTITY:CanProperty"
+	},
+	"ENTITY:CanTool": {
+		"body": [
+			"function ENTITY:CanTool(ply, tr, tool)\n\t$0\nend"
+		],
+		"description": "Controls if a tool can be used on this entity or not.\n\nThis hook will only work in Sandbox derived gamemodes that do not have SANDBOX:CanTool overridden.\n\nThis hook will work on ALL entities, not just the scripted ones (SENTs)",
+		"prefix": "ENTITY:CanTool"
+	},
+	"ENTITY:CreateSchedulesInternal": {
+		"body": [
+			"function ENTITY:CreateSchedulesInternal()\n\t$0\nend"
+		],
+		"description": "Called just before ENTITY:Initialize for \"ai\" type entities only.",
+		"prefix": "ENTITY:CreateSchedulesInternal"
+	},
+	"ENTITY:DoImpactEffect": {
+		"body": [
+			"function ENTITY:DoImpactEffect(tr, damageType)\n\t$0\nend"
+		],
+		"description": "Called so the entity can override the bullet impact effects it makes.\n\nThis hook only works for the \"anim\" type entities.",
+		"prefix": "ENTITY:DoImpactEffect"
+	},
+	"ENTITY:DoSchedule": {
+		"body": [
+			"function ENTITY:DoSchedule(sched)\n\t$0\nend"
+		],
+		"description": "Runs a Lua schedule. Runs tasks inside the schedule.",
+		"prefix": "ENTITY:DoSchedule"
+	},
+	"ENTITY:DoingEngineSchedule": {
+		"body": [
+			"function ENTITY:DoingEngineSchedule()\n\t$0\nend"
+		],
+		"description": "Called whenever an engine schedule is being ran.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:DoingEngineSchedule"
+	},
+	"ENTITY:Draw": {
+		"body": [
+			"function ENTITY:Draw(flags)\n\t$0\nend"
+		],
+		"description": "Called if and when the entity should be drawn opaquely, based on the Entity:GetRenderGroup of the entity.\n\nSee Structures/ENT and Enums/RENDERGROUP for more information.\n\nSee also ENTITY:DrawTranslucent.",
+		"prefix": "ENTITY:Draw"
+	},
+	"ENTITY:DrawTranslucent": {
+		"body": [
+			"function ENTITY:DrawTranslucent(flags)\n\t$0\nend"
+		],
+		"description": "Called when the entity should be drawn translucently. If your scripted entity has a translucent model, it will be invisible unless it is drawn here.",
+		"prefix": "ENTITY:DrawTranslucent"
+	},
+	"ENTITY:EndTouch": {
+		"body": [
+			"function ENTITY:EndTouch(entity)\n\t$0\nend"
+		],
+		"description": "Called when the entity stops touching another entity.\n\nThis only works for **brush** entities and for entities that have Entity:SetTrigger set to true.",
+		"prefix": "ENTITY:EndTouch"
+	},
+	"ENTITY:EngineScheduleFinish": {
+		"body": [
+			"function ENTITY:EngineScheduleFinish()\n\t$0\nend"
+		],
+		"description": "Called whenever an engine schedule is finished.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:EngineScheduleFinish"
+	},
+	"ENTITY:ExpressionFinished": {
+		"body": [
+			"function ENTITY:ExpressionFinished(strExp)\n\t$0\nend"
+		],
+		"description": "Called when an NPC's expression has finished.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:ExpressionFinished"
+	},
+	"ENTITY:FireAnimationEvent": {
+		"body": [
+			"function ENTITY:FireAnimationEvent(pos, ang, event, name)\n\t$0\nend"
+		],
+		"description": "Called before firing clientside animation events, such as muzzle flashes or shell ejections.\n\nSee ENTITY:HandleAnimEvent for the serverside version.\n\nThis hook only works on \"anim\", \"nextbot\" and \"ai\" type entities.",
+		"prefix": "ENTITY:FireAnimationEvent"
+	},
+	"ENTITY:GetAttackSpread": {
+		"body": [
+			"function ENTITY:GetAttackSpread(wep, target)\n\t$0\nend"
+		],
+		"description": "Called to determine how good an NPC is at using a particular weapon.\n\n\"ai\" base only",
+		"prefix": "ENTITY:GetAttackSpread"
+	},
+	"ENTITY:GetRelationship": {
+		"body": [
+			"function ENTITY:GetRelationship(ent)\n\t$0\nend"
+		],
+		"description": "Called when scripted NPC needs to check how he \"feels\" against another entity, such as when NPC:Disposition is called.",
+		"prefix": "ENTITY:GetRelationship"
+	},
+	"ENTITY:GetRenderMesh": {
+		"body": [
+			"function ENTITY:GetRenderMesh()\n\t$0\nend"
+		],
+		"description": "Specify a mesh that should be rendered instead of this SENT's model.",
+		"prefix": "ENTITY:GetRenderMesh"
+	},
+	"ENTITY:GetShadowCastDirection": {
+		"body": [
+			"function ENTITY:GetShadowCastDirection(type)\n\t$0\nend"
+		],
+		"description": "Called when the shadow needs to be recomputed. Allows shadow angles to be customized. This only works for `anim` type entities.",
+		"prefix": "ENTITY:GetShadowCastDirection"
+	},
+	"ENTITY:GravGunPickupAllowed": {
+		"body": [
+			"function ENTITY:GravGunPickupAllowed(ply)\n\t$0\nend"
+		],
+		"description": "Called by GM:GravGunPickupAllowed on ALL entites in Sandbox-derived  gamemodes and acts as an override.",
+		"prefix": "ENTITY:GravGunPickupAllowed"
+	},
+	"ENTITY:GravGunPunt": {
+		"body": [
+			"function ENTITY:GravGunPunt(ply)\n\t$0\nend"
+		],
+		"description": "Called when this entity is about to be punted with the gravity gun (primary fire).\n\nOnly works in Sandbox derived gamemodes and only if GM:GravGunPunt is not overridden.",
+		"prefix": "ENTITY:GravGunPunt"
+	},
+	"ENTITY:HandleAnimEvent": {
+		"body": [
+			"function ENTITY:HandleAnimEvent(event, eventTime, cycle, type, options)\n\t$0\nend"
+		],
+		"description": "Called before firing serverside animation events, such as weapon reload, drawing and holstering for NPCs, scripted sequences, etc.\n\nSee ENTITY:FireAnimationEvent for the clientside version.\n\nThis hook only works on \"anim\", \"ai\" and \"nextbot\" type entities.",
+		"prefix": "ENTITY:HandleAnimEvent"
+	},
+	"ENTITY:ImpactTrace": {
+		"body": [
+			"function ENTITY:ImpactTrace(traceResult, damageType, customImpactName)\n\t$0\nend"
+		],
+		"description": "Called when a bullet trace hits this entity and allows you to override the default behavior by returning true.",
+		"prefix": "ENTITY:ImpactTrace"
+	},
+	"ENTITY:Initialize": {
+		"body": [
+			"function ENTITY:Initialize()\n\t$0\nend"
+		],
+		"description": "Called when the entity is created. This is called when you Entity:Spawn the custom entity.\n\nThis is called **after** ENTITY:SetupDataTables and GM:OnEntityCreated.",
+		"prefix": "ENTITY:Initialize"
+	},
+	"ENTITY:IsJumpLegal": {
+		"body": [
+			"function ENTITY:IsJumpLegal(startPos, apex, endPos)\n\t$0\nend"
+		],
+		"description": "Called when deciding if the Scripted NPC should be able to perform a certain jump or not.\nThis is only called for \"ai\" type entities",
+		"prefix": "ENTITY:IsJumpLegal"
+	},
+	"ENTITY:KeyValue": {
+		"body": [
+			"function ENTITY:KeyValue(key, value)\n\t$0\nend"
+		],
+		"description": "Called when the engine sets a value for this scripted entity.\n\nThis hook is called **before** ENTITY:Initialize when the key-values are set by the map.\nOtherwise this hook will be called whenever Entity:SetKeyValue is called on the entity.\n\nSee GM:EntityKeyValue for a hook that works for all entities.\n\nSee WEAPON:KeyValue for a hook that works for scripted weapons.",
+		"prefix": "ENTITY:KeyValue"
+	},
+	"ENTITY:NextTask": {
+		"body": [
+			"function ENTITY:NextTask(sched)\n\t$0\nend"
+		],
+		"description": "Start the next task in specific schedule.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:NextTask"
+	},
+	"ENTITY:OnChangeActivity": {
+		"body": [
+			"function ENTITY:OnChangeActivity(act)\n\t$0\nend"
+		],
+		"description": "Called when the NPC has changed its activity.\n\nThis hook only works for `ai` type entities.",
+		"prefix": "ENTITY:OnChangeActivity"
+	},
+	"ENTITY:OnCondition": {
+		"body": [
+			"function ENTITY:OnCondition(conditionID)\n\t$0\nend"
+		],
+		"description": "Called each time the NPC updates its condition.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:OnCondition"
+	},
+	"ENTITY:OnDuplicated": {
+		"body": [
+			"function ENTITY:OnDuplicated(entTable)\n\t$0\nend"
+		],
+		"description": "Called on any entity after it has been created by the duplicator and before any bone/entity modifiers have been applied.\n\nThis hook is called after ENTITY:Initialize and before ENTITY:PostEntityPaste.",
+		"prefix": "ENTITY:OnDuplicated"
+	},
+	"ENTITY:OnEntityCopyTableFinish": {
+		"body": [
+			"function ENTITY:OnEntityCopyTableFinish(data)\n\t$0\nend"
+		],
+		"description": "Called after duplicator finishes saving the entity, allowing you to modify the save data.\n\nThis is called after ENTITY:PostEntityCopy.",
+		"prefix": "ENTITY:OnEntityCopyTableFinish"
+	},
+	"ENTITY:OnReloaded": {
+		"body": [
+			"function ENTITY:OnReloaded()\n\t$0\nend"
+		],
+		"description": "Called when the entity is reloaded by the lua auto-refresh system, i.e. when the developer edits the lua file for the entity while the game is running.",
+		"prefix": "ENTITY:OnReloaded"
+	},
+	"ENTITY:OnRemove": {
+		"body": [
+			"function ENTITY:OnRemove()\n\t$0\nend"
+		],
+		"description": "Called when the entity is about to be removed.\n\nSee also Entity:CallOnRemove, which can even be used on engine (non-Lua) entities.\n\n\nCreate an explosion when the entity will be removed. To create an entity, you can read ents.Create.\n\nfunction ENT:OnRemove()\nlocal explosion = ents.Create( \"env_explosion\" ) -- The explosion entity\nexplosion:SetPos( self:GetPos() ) -- Put the position of the explosion at the position of the entity\nexplosion:Spawn() -- Spawn the explosion\nexplosion:SetKeyValue( \"iMagnitude\", \"50\" ) -- the magnitude of the explosion\nexplosion:Fire( \"Explode\", 0, 0 ) -- explode\nend\n\n",
+		"prefix": "ENTITY:OnRemove"
+	},
+	"ENTITY:OnRestore": {
+		"body": [
+			"function ENTITY:OnRestore()\n\t$0\nend"
+		],
+		"description": "Called when the entity is reloaded from a Source Engine save (not the Sandbox saves or dupes) or on a changelevel (for example Half-Life 2 campaign level transitions).\n\nFor the duplicator callbacks, see ENTITY:OnDuplicated.",
+		"prefix": "ENTITY:OnRestore"
+	},
+	"ENTITY:OnTakeDamage": {
+		"body": [
+			"function ENTITY:OnTakeDamage(damage)\n\t$0\nend"
+		],
+		"description": "Called when the entity is taking damage.\n\nCalling Entity:TakeDamage, Entity:TakeDamageInfo, Entity:DispatchTraceAttack, or Player:TraceHullAttack (if the entity is hit) in this hook on the victim entity can cause infinite loops since the hook will be called again. Make sure to setup recursion safeguards like the example below.",
+		"prefix": "ENTITY:OnTakeDamage"
+	},
+	"ENTITY:OnTaskComplete": {
+		"body": [
+			"function ENTITY:OnTaskComplete()\n\t$0\nend"
+		],
+		"description": "Called from the engine when TaskComplete is called.\nThis allows us to move onto the next task - even when TaskComplete was called from an engine side task.\n\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:OnTaskComplete"
+	},
+	"ENTITY:PassesTriggerFilters": {
+		"body": [
+			"function ENTITY:PassesTriggerFilters(ent)\n\t$0\nend"
+		],
+		"description": "Polls whenever the entity should trigger the brush.\n\nThis hook is broken and will not work without code below",
+		"prefix": "ENTITY:PassesTriggerFilters"
+	},
+	"ENTITY:PhysicsCollide": {
+		"body": [
+			"function ENTITY:PhysicsCollide(colData, collider)\n\t$0\nend"
+		],
+		"description": "Called when the entity collides with anything. The move type and solid type must be VPHYSICS for the hook to be called.\n\nIf you want to use this hook on default/engine/non-Lua entites ( like prop_physics ), use Entity:AddCallback instead! This page describes a hook for Lua entities",
+		"prefix": "ENTITY:PhysicsCollide"
+	},
+	"ENTITY:PhysicsSimulate": {
+		"body": [
+			"function ENTITY:PhysicsSimulate(phys, deltaTime)\n\t$0\nend"
+		],
+		"description": "Called from the Entity's motion controller to simulate physics.\n\nThis will only be called after using Entity:StartMotionController on a scripted entity of \"anim\" type.\n\nThis hook can work on the CLIENT if you call Entity:StartMotionController and use Entity:AddToMotionController on the physics objects you want to control\n\nDo not use functions such as PhysObj:EnableCollisions or PhysObj:EnableGravity in this hook as they're very likely to crash your game. You may want to use ENTITY:PhysicsUpdate instead.",
+		"prefix": "ENTITY:PhysicsSimulate"
+	},
+	"ENTITY:PhysicsUpdate": {
+		"body": [
+			"function ENTITY:PhysicsUpdate(phys)\n\t$0\nend"
+		],
+		"description": "Called whenever the physics of the entity are updated.\n\nThis hook won't be called if the Entity's PhysObj goes asleep",
+		"prefix": "ENTITY:PhysicsUpdate"
+	},
+	"ENTITY:PostEntityCopy": {
+		"body": [
+			"function ENTITY:PostEntityCopy()\n\t$0\nend"
+		],
+		"description": "Called after the duplicator finished copying the entity.\n\nSee also ENTITY:PreEntityCopy and ENTITY:PostEntityPaste.",
+		"prefix": "ENTITY:PostEntityCopy"
+	},
+	"ENTITY:PostEntityPaste": {
+		"body": [
+			"function ENTITY:PostEntityPaste(ply, ent, createdEntities)\n\t$0\nend"
+		],
+		"description": "Called after the duplicator pastes the entity, after the bone/entity modifiers have been applied to the entity.\n\nThis hook is called after ENTITY:OnDuplicated.",
+		"prefix": "ENTITY:PostEntityPaste"
+	},
+	"ENTITY:PreEntityCopy": {
+		"body": [
+			"function ENTITY:PreEntityCopy()\n\t$0\nend"
+		],
+		"description": "Called before the duplicator copies the entity.\n\nIf you are looking for a way to make the duplicator spawn another entity when duplicated. ( For example, you duplicate a \"prop_physics\", but you want the duplicator to spawn \"prop_physics_my\" ), you should add prop_physics.ClassOverride = \"prop_physics_my\". The duplication table should be also stored on that prop_physics, not on prop_physics_my.",
+		"prefix": "ENTITY:PreEntityCopy"
+	},
+	"ENTITY:RenderOverride": {
+		"body": [
+			"function ENTITY:RenderOverride(flags)\n\t$0\nend"
+		],
+		"description": "Called instead of the engine drawing function of the entity. This hook works on any entity (scripted or not) it is applied on.\n\nThis does not work on \"physgun_beam\", use GM:DrawPhysgunBeam instead.\n\nAs a downside of this implementation, only one RenderOverride may be applied at a time.\n\nDrawing a viewmodel in this function will cause GM:PreDrawViewModel, WEAPON:PreDrawViewModel, WEAPON:ViewModelDrawn, GM:PostDrawViewModel, and WEAPON:PostDrawViewModel to be called twice.\n\nThis is called before PrePlayerDraw for players. If this function exists at all on a player, their worldmodel will always be rendered regardless of PrePlayerDraw's return.",
+		"prefix": "ENTITY:RenderOverride"
+	},
+	"ENTITY:RunAI": {
+		"body": [
+			"function ENTITY:RunAI()\n\t$0\nend"
+		],
+		"description": "Called from the engine every 0.1 seconds.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:RunAI"
+	},
+	"ENTITY:RunEngineTask": {
+		"body": [
+			"function ENTITY:RunEngineTask(taskID, taskData)\n\t$0\nend"
+		],
+		"description": "Called when an engine task is ran on the entity.\n\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:RunEngineTask"
+	},
+	"ENTITY:RunTask": {
+		"body": [
+			"function ENTITY:RunTask(task)\n\t$0\nend"
+		],
+		"description": "Called every think on running task.\nThe actual task function should tell us when the task is finished.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:RunTask"
+	},
+	"ENTITY:ScheduleFinished": {
+		"body": [
+			"function ENTITY:ScheduleFinished()\n\t$0\nend"
+		],
+		"description": "Called whenever a schedule is finished.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:ScheduleFinished"
+	},
+	"ENTITY:SelectSchedule": {
+		"body": [
+			"function ENTITY:SelectSchedule(iNPCState)\n\t$0\nend"
+		],
+		"description": "Set the schedule we should be playing right now.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:SelectSchedule"
+	},
+	"ENTITY:SetAutomaticFrameAdvance": {
+		"body": [
+			"function ENTITY:SetAutomaticFrameAdvance(enable)\n\t$0\nend"
+		],
+		"description": "Toggles automatic frame advancing for animated sequences on an entity.\n\nThis has the same effect as setting the ``ENT.AutomaticFrameAdvance`` property. (See Structures/ENT)",
+		"prefix": "ENTITY:SetAutomaticFrameAdvance"
+	},
+	"ENTITY:SetTask": {
+		"body": [
+			"function ENTITY:SetTask(task)\n\t$0\nend"
+		],
+		"description": "Sets the current task.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:SetTask"
+	},
+	"ENTITY:SetupDataTables": {
+		"body": [
+			"function ENTITY:SetupDataTables()\n\t$0\nend"
+		],
+		"description": "Called when the entity should set up its Networking_Entities.\n\nThis is a much better option than using Set/Get Networked Values.\n\nThis hook is called after GM:OnEntityCreated and GM:NetworkEntityCreated.",
+		"prefix": "ENTITY:SetupDataTables"
+	},
+	"ENTITY:SpawnFunction": {
+		"body": [
+			"function ENTITY:SpawnFunction(ply, tr, ClassName)\n\t$0\nend"
+		],
+		"description": "This is the spawn function. It's called when a player spawns the entity from the spawnmenu.\n\nIf you want to make your SENT spawnable you need this function to properly create the entity.\n\nUnlike other ENTITY functions, the \"self\" parameter of this function is not an entity but rather the table used to generate the SENT. This table is equivalent to scripted_ents.GetStored(\"ent_name\").",
+		"prefix": "ENTITY:SpawnFunction"
+	},
+	"ENTITY:StartEngineSchedule": {
+		"body": [
+			"function ENTITY:StartEngineSchedule(scheduleID)\n\t$0\nend"
+		],
+		"description": "Starts an engine schedule.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:StartEngineSchedule"
+	},
+	"ENTITY:StartEngineTask": {
+		"body": [
+			"function ENTITY:StartEngineTask(taskID, TaskData)\n\t$0\nend"
+		],
+		"description": "Called when an engine task has been started on the entity.\n\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:StartEngineTask"
+	},
+	"ENTITY:StartSchedule": {
+		"body": [
+			"function ENTITY:StartSchedule(sched)\n\t$0\nend"
+		],
+		"description": "Starts a schedule previously created by ai_schedule.New.\n\nNot to be confused with ENTITY:StartEngineSchedule or NPC:SetSchedule which start an Engine-based schedule.\n\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:StartSchedule"
+	},
+	"ENTITY:StartTask": {
+		"body": [
+			"function ENTITY:StartTask(task)\n\t$0\nend"
+		],
+		"description": "Called once on starting task.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:StartTask"
+	},
+	"ENTITY:StartTouch": {
+		"body": [
+			"function ENTITY:StartTouch(entity)\n\t$0\nend"
+		],
+		"description": "Called when the entity starts touching another entity.\n\nThis only works for **brush** entities and for entities that have Entity:SetTrigger set to true.",
+		"prefix": "ENTITY:StartTouch"
+	},
+	"ENTITY:StoreOutput": {
+		"body": [
+			"function ENTITY:StoreOutput(name, info)\n\t$0\nend"
+		],
+		"description": "Used to store an output so it can be triggered with ENTITY:TriggerOutput.\nOutputs compiled into a map are passed to entities as key/value pairs through ENTITY:KeyValue.\n\nTriggerOutput will do nothing if this function has not been called first.",
+		"prefix": "ENTITY:StoreOutput"
+	},
+	"ENTITY:TaskFinished": {
+		"body": [
+			"function ENTITY:TaskFinished()\n\t$0\nend"
+		],
+		"description": "Returns true if the current running Task is finished.\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:TaskFinished"
+	},
+	"ENTITY:TaskTime": {
+		"body": [
+			"function ENTITY:TaskTime()\n\t$0\nend"
+		],
+		"description": "Returns how many seconds we've been doing this current task\nThis hook only exists for **ai** type SENTs",
+		"prefix": "ENTITY:TaskTime"
+	},
+	"ENTITY:TestCollision": {
+		"body": [
+			"function ENTITY:TestCollision(startpos, delta, isbox, extents, mask)\n\t$0\nend"
+		],
+		"description": "Allows you to override trace result when a trace hits the entitys Bounding Box.\n\nYour entity must have Entity:EnableCustomCollisions enabled for this hook to work.\nThis hook is called for `anim` type only.",
+		"prefix": "ENTITY:TestCollision"
+	},
+	"ENTITY:Think": {
+		"body": [
+			"function ENTITY:Think()\n\t$0\nend"
+		],
+		"description": "Called every frame on the client.\nCalled every tick on the server.\n\nYou may need to call Entity:Spawn to get this hook to run server side.\nBy default, it runs about 5-6 times per second on the server, but you can force it to run at servers tickrate using the example below.",
+		"prefix": "ENTITY:Think"
+	},
+	"ENTITY:Touch": {
+		"body": [
+			"function ENTITY:Touch(entity)\n\t$0\nend"
+		],
+		"description": "Called every tick for every entity being \"touched\".\n\nSee also ENTITY:StartTouch and ENTITY:EndTouch.\n\nFor physics enabled entities, this hook will **not** be ran while the entity's physics is asleep. See PhysObj:Wake.",
+		"prefix": "ENTITY:Touch"
+	},
+	"ENTITY:TriggerOutput": {
+		"body": [
+			"function ENTITY:TriggerOutput(output, activator, data)\n\t$0\nend"
+		],
+		"description": "Triggers all outputs stored using ENTITY:StoreOutput.",
+		"prefix": "ENTITY:TriggerOutput"
+	},
+	"ENTITY:UpdateTransmitState": {
+		"body": [
+			"function ENTITY:UpdateTransmitState()\n\t$0\nend"
+		],
+		"description": "Called whenever the transmit state should be updated.",
+		"prefix": "ENTITY:UpdateTransmitState"
+	},
+	"ENTITY:Use": {
+		"body": [
+			"function ENTITY:Use(activator, caller, useType, value)\n\t$0\nend"
+		],
+		"description": "Called when an entity \"uses\" this entity, for example a player pressing their `+use` key (default E) on this entity.\n\nTo change how often the hook is called, see Entity:SetUseType.\n\nThis hook only works for `nextbot`, `ai` and `anim` scripted entity types.",
+		"prefix": "ENTITY:Use"
+	},
+	"GM:AcceptInput": {
+		"body": [
+			"function GM:AcceptInput(ent, input, activator, caller, value)\n\t$0\nend"
+		],
+		"description": "Called when a map I/O event occurs.\n\nSee also Entity:Fire and Entity:Input for functions to fire Inputs on entities.",
+		"prefix": "GM:AcceptInput"
+	},
+	"GM:AddDeathNotice": {
+		"body": [
+			"function GM:AddDeathNotice(attacker, attackerTeam, inflictor, victim, victimTeam)\n\t$0\nend"
+		],
+		"description": "Adds a death notice entry.\n\nYou cannot use hook.Add on this hook yet.",
+		"prefix": "GM:AddDeathNotice"
+	},
+	"GM:AdjustMouseSensitivity": {
+		"body": [
+			"function GM:AdjustMouseSensitivity(defaultSensitivity)\n\t$0\nend"
+		],
+		"description": "Allows you to adjust the mouse sensitivity.",
+		"prefix": "GM:AdjustMouseSensitivity"
+	},
+	"GM:AllowPlayerPickup": {
+		"body": [
+			"function GM:AllowPlayerPickup(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called when a player tries to pick up something using the \"use\" key, return to override.\n\nSee GM:GravGunPickupAllowed for the Gravity Gun pickup variant.",
+		"prefix": "GM:AllowPlayerPickup"
+	},
+	"GM:CalcMainActivity": {
+		"body": [
+			"function GM:CalcMainActivity(ply, vel)\n\t$0\nend"
+		],
+		"description": "This hook is used to calculate animations for a player.\n\nThis hook must return the same values at the same time on both, client **and** server. On client for players to see the animations, on server for hit detection to work properly.\nThis can return the incorrect velocity when on a moving object.",
+		"prefix": "GM:CalcMainActivity"
+	},
+	"GM:CalcVehicleView": {
+		"body": [
+			"function GM:CalcVehicleView(veh, ply, view)\n\t$0\nend"
+		],
+		"description": "Called from GM:CalcView when player is in driving a vehicle.\n\nThis hook may not be called in gamemodes that override GM:CalcView.",
+		"prefix": "GM:CalcVehicleView"
+	},
+	"GM:CalcView": {
+		"body": [
+			"function GM:CalcView(ply, origin, angles, fov, znear, zfar)\n\t$0\nend"
+		],
+		"description": "Allows override of the default view.",
+		"prefix": "GM:CalcView"
+	},
+	"GM:CalcViewModelView": {
+		"body": [
+			"function GM:CalcViewModelView(wep, vm, oldPos, oldAng, pos, ang)\n\t$0\nend"
+		],
+		"description": "Allows overriding the position and angle of the viewmodel.",
+		"prefix": "GM:CalcViewModelView"
+	},
+	"GM:CanEditVariable": {
+		"body": [
+			"function GM:CanEditVariable(ent, ply, key, val, editor)\n\t$0\nend"
+		],
+		"description": "Called when a variable is edited on an Entity (called by `Edit Properties...` menu), to determine if the edit should be permitted.\n\nSee Editable_Entities for more details about the system.",
+		"prefix": "GM:CanEditVariable"
+	},
+	"GM:CanExitVehicle": {
+		"body": [
+			"function GM:CanExitVehicle(veh, ply)\n\t$0\nend"
+		],
+		"description": "Determines if the player can exit the vehicle.",
+		"prefix": "GM:CanExitVehicle"
+	},
+	"GM:CanPlayerEnterVehicle": {
+		"body": [
+			"function GM:CanPlayerEnterVehicle(player, vehicle, role)\n\t$0\nend"
+		],
+		"description": "Determines whether or not the player can enter the vehicle.\n\nCalled just before GM:PlayerEnteredVehicle.",
+		"prefix": "GM:CanPlayerEnterVehicle"
+	},
+	"GM:CanPlayerSuicide": {
+		"body": [
+			"function GM:CanPlayerSuicide(player)\n\t$0\nend"
+		],
+		"description": "Determines if the player can kill themselves using the concommands `kill` or `explode`.",
+		"prefix": "GM:CanPlayerSuicide"
+	},
+	"GM:CanPlayerUnfreeze": {
+		"body": [
+			"function GM:CanPlayerUnfreeze(player, entity, phys)\n\t$0\nend"
+		],
+		"description": "Determines if the player can unfreeze the entity.",
+		"prefix": "GM:CanPlayerUnfreeze"
+	},
+	"GM:CanUndo": {
+		"body": [
+			"function GM:CanUndo(ply, undo)\n\t$0\nend"
+		],
+		"description": "Called whenever a players tries to undo.",
+		"prefix": "GM:CanUndo"
+	},
+	"GM:CaptureVideo": {
+		"body": [
+			"function GM:CaptureVideo()\n\t$0\nend"
+		],
+		"description": "Called each frame to record demos to video using IVideoWriter.\n\nThis hook is called every frame regardless of whether or not a demo is being recorded",
+		"prefix": "GM:CaptureVideo"
+	},
+	"GM:ChatText": {
+		"body": [
+			"function GM:ChatText(index, name, text, type)\n\t$0\nend"
+		],
+		"description": "Called when a message is printed to the chat box. Note, that this isn't working with player messages even though there are arguments for it.\n\nFor player messages see GM:PlayerSay and GM:OnPlayerChat",
+		"prefix": "GM:ChatText"
+	},
+	"GM:ChatTextChanged": {
+		"body": [
+			"function GM:ChatTextChanged(text)\n\t$0\nend"
+		],
+		"description": "Called whenever the content of the user's chat input box is changed.",
+		"prefix": "GM:ChatTextChanged"
+	},
+	"GM:CheckPassword": {
+		"body": [
+			"function GM:CheckPassword(steamID64, ipAddress, svPassword, clPassword, name)\n\t$0\nend"
+		],
+		"description": "Called when a non local player connects to allow the Lua system to check the password.\n\nThe default behaviour in the base gamemodes emulates what would normally happen. If sv_password is set and its value matches the password passed in by the client - then they are allowed to join. If it isn't set it lets them in too.",
+		"prefix": "GM:CheckPassword"
+	},
+	"GM:CloseDermaMenus": {
+		"body": [
+			"function GM:CloseDermaMenus()\n\t$0\nend"
+		],
+		"description": "Called when derma menus are closed with Global.CloseDermaMenus.",
+		"prefix": "GM:CloseDermaMenus"
+	},
+	"GM:CreateClientsideRagdoll": {
+		"body": [
+			"function GM:CreateClientsideRagdoll(entity, ragdoll)\n\t$0\nend"
+		],
+		"description": "Called whenever an entity becomes a clientside ragdoll.\n\nSee GM:CreateEntityRagdoll for serverside ragdolls.",
+		"prefix": "GM:CreateClientsideRagdoll"
+	},
+	"GM:CreateEntityRagdoll": {
+		"body": [
+			"function GM:CreateEntityRagdoll(owner, ragdoll)\n\t$0\nend"
+		],
+		"description": "Called when a serverside ragdoll of an entity has been created.\n\nSee GM:CreateClientsideRagdoll for clientside ragdolls.",
+		"prefix": "GM:CreateEntityRagdoll"
+	},
+	"GM:CreateMove": {
+		"body": [
+			"function GM:CreateMove(cmd)\n\t$0\nend"
+		],
+		"description": "Allows you to change the players movements before they're sent to the server.\n\nSee Game Movement for an explanation on the move system.\n\nDue to this hook being clientside only, it could be overridden by the user allowing them to completely skip your logic, it is recommended to use GM:StartCommand in a shared file instead.",
+		"prefix": "GM:CreateMove"
+	},
+	"GM:CreateTeams": {
+		"body": [
+			"function GM:CreateTeams()\n\t$0\nend"
+		],
+		"description": "Teams are created within this hook using team.SetUp.\n\nThis hook is called before GM:PreGamemodeLoaded.",
+		"prefix": "GM:CreateTeams"
+	},
+	"GM:DoAnimationEvent": {
+		"body": [
+			"function GM:DoAnimationEvent(ply, event, data)\n\t$0\nend"
+		],
+		"description": "Called upon an animation event, this is the ideal place to call player animation functions such as Player:AddVCDSequenceToGestureSlot, Player:AnimRestartGesture and so on.",
+		"prefix": "GM:DoAnimationEvent"
+	},
+	"GM:DoPlayerDeath": {
+		"body": [
+			"function GM:DoPlayerDeath(ply, attacker, dmg)\n\t$0\nend"
+		],
+		"description": "Handles the player's death.\n\nThis hook is **not** called if the player is killed by Player:KillSilent. See GM:PlayerSilentDeath for that.\n\n* GM:PlayerDeath is called after this hook\n* GM:PostPlayerDeath is called after that\nPlayer:Alive returns true when this is called",
+		"prefix": "GM:DoPlayerDeath"
+	},
+	"GM:DrawDeathNotice": {
+		"body": [
+			"function GM:DrawDeathNotice(x, y)\n\t$0\nend"
+		],
+		"description": "This hook is called every frame to draw all of the current death notices.",
+		"prefix": "GM:DrawDeathNotice"
+	},
+	"GM:DrawMonitors": {
+		"body": [
+			"function GM:DrawMonitors()\n\t$0\nend"
+		],
+		"description": "Called every frame before drawing the in-game monitors ( Breencast, in-game TVs, etc ), but doesn't seem to be doing anything, trying to render 2D or 3D elements fail.",
+		"prefix": "GM:DrawMonitors"
+	},
+	"GM:DrawOverlay": {
+		"body": [
+			"function GM:DrawOverlay()\n\t$0\nend"
+		],
+		"description": "Called after all other 2D draw hooks are called. Draws over all VGUI Panels and HUDs.\n\nUnlike GM:HUDPaint, this hook is called with the game paused and while the Camera SWEP is equipped.\n\nOnly gets called when r_drawvgui is enabled.\n",
+		"prefix": "GM:DrawOverlay"
+	},
+	"GM:DrawPhysgunBeam": {
+		"body": [
+			"function GM:DrawPhysgunBeam(ply, physgun, enabled, target, physBone, hitPos)\n\t$0\nend"
+		],
+		"description": "Allows you to override physgun beam drawing.\n\nThis is still called when physgun_drawbeams is disabled.",
+		"prefix": "GM:DrawPhysgunBeam"
+	},
+	"GM:EndEntityDriving": {
+		"body": [
+			"function GM:EndEntityDriving(ent, ply)\n\t$0\nend"
+		],
+		"description": "Called right before an entity stops driving. Overriding this hook will cause it to not call drive.End and the player will not stop driving.",
+		"prefix": "GM:EndEntityDriving"
+	},
+	"GM:EntityEmitSound": {
+		"body": [
+			"function GM:EntityEmitSound(data)\n\t$0\nend"
+		],
+		"description": "Called whenever a sound has been played. This will not be called clientside if the server played the sound without the client also calling Entity:EmitSound.\n\nThis is not called for scripted sequences.",
+		"prefix": "GM:EntityEmitSound"
+	},
+	"GM:EntityFireBullets": {
+		"body": [
+			"function GM:EntityFireBullets(entity, data)\n\t$0\nend"
+		],
+		"description": "Called every time a bullet is fired from an entity.\n\nThis hook is called directly from Entity:FireBullets. Due to this, you cannot call Entity:FireBullets inside this hook or an infinite loop will occur crashing the game.",
+		"prefix": "GM:EntityFireBullets"
+	},
+	"GM:EntityKeyValue": {
+		"body": [
+			"function GM:EntityKeyValue(ent, key, value)\n\t$0\nend"
+		],
+		"description": "Called when a key-value pair is set on an entity, either by the engine (for example when map spawns) or Entity:SetKeyValue.\n\nSee ENTITY:KeyValue for a hook that works for scripted entities.\n\n\nSee WEAPON:KeyValue for a hook that works for scripted weapons.",
+		"prefix": "GM:EntityKeyValue"
+	},
+	"GM:EntityNetworkedVarChanged": {
+		"body": [
+			"function GM:EntityNetworkedVarChanged(ent, name, oldval, newval)\n\t$0\nend"
+		],
+		"description": "Called when an NWVar is changed.\n\nCurrently this hook only works for the NW2Var system (accessed by adding a 2 in between NW and Var for most NWVar functions), which will replace the original one at some point in the future\nThis hook is fired before the client value is actually changed. Calling the GetNW function for the specified variable name within this hook will return the old value, not the current/updated one.",
+		"prefix": "GM:EntityNetworkedVarChanged"
+	},
+	"GM:EntityRemoved": {
+		"body": [
+			"function GM:EntityRemoved(ent)\n\t$0\nend"
+		],
+		"description": "Called right before the removal of an entity.\nThis hook is called during clientside full updates. See ENTITY:OnRemove#clientsidebehaviourremarks for more information.",
+		"prefix": "GM:EntityRemoved"
+	},
+	"GM:EntityTakeDamage": {
+		"body": [
+			"function GM:EntityTakeDamage(target, dmg)\n\t$0\nend"
+		],
+		"description": "Called when an entity takes damage. You can modify all parts of the damage info in this hook.",
+		"prefix": "GM:EntityTakeDamage"
+	},
+	"GM:FindUseEntity": {
+		"body": [
+			"function GM:FindUseEntity(ply, defaultEnt)\n\t$0\nend"
+		],
+		"description": "This hook polls the entity the player use action should be applied to.\n\nThe default behavior of this hook is in [CBasePlayer::FindUseEntity](https://github.com/ValveSoftware/source-sdk-2013/blob/0d8dceea4310fde5706b3ce1c70609d72a38efdf/mp/src/game/shared/baseplayer_shared.cpp#L1068-L1270). Despite CBasePlayer::FindUseEntity being defined shared, it is only called serverside in practice, so this hook will be only called serverside, as well. It is possible for modules to call it clientside, so the Lua code should still be treated as shared.",
+		"prefix": "GM:FindUseEntity"
+	},
+	"GM:FinishChat": {
+		"body": [
+			"function GM:FinishChat()\n\t$0\nend"
+		],
+		"description": "Runs when user cancels/finishes typing.",
+		"prefix": "GM:FinishChat"
+	},
+	"GM:FinishMove": {
+		"body": [
+			"function GM:FinishMove(ply, mv)\n\t$0\nend"
+		],
+		"description": "Called after GM:Move, applies all the changes from the CMoveData to the player.\n\nSee Game Movement for an explanation on the move system.",
+		"prefix": "GM:FinishMove"
+	},
+	"GM:ForceDermaSkin": {
+		"body": [
+			"function GM:ForceDermaSkin()\n\t$0\nend"
+		],
+		"description": "Called to allow override of the default Derma skin for all panels.\n\nThis hook is only called on Lua start up, changing its value (or adding new hooks) after it has been already called will not have any effect.",
+		"prefix": "GM:ForceDermaSkin"
+	},
+	"GM:GUIMouseDoublePressed": {
+		"body": [
+			"function GM:GUIMouseDoublePressed(mouseCode, aimVector)\n\t$0\nend"
+		],
+		"description": "Called when the mouse has been double clicked on any panel derived from CGModBase, such as the panel used by gui.EnableScreenClicker and the panel used by Panel:ParentToHUD.\n\nBy default this hook calls GM:GUIMousePressed.",
+		"prefix": "GM:GUIMouseDoublePressed"
+	},
+	"GM:GUIMousePressed": {
+		"body": [
+			"function GM:GUIMousePressed(mouseCode, aimVector)\n\t$0\nend"
+		],
+		"description": "Called whenever a players presses a mouse key on the context menu in Sandbox or on any panel derived from CGModBase, such as the panel used by gui.EnableScreenClicker and the panel used by Panel:ParentToHUD.\n\nSee GM:VGUIMousePressed for a hook that is called on all VGUI elements.",
+		"prefix": "GM:GUIMousePressed"
+	},
+	"GM:GUIMouseReleased": {
+		"body": [
+			"function GM:GUIMouseReleased(mouseCode, aimVector)\n\t$0\nend"
+		],
+		"description": "Called whenever a players releases a mouse key on the context menu in Sandbox or on any panel derived from CGModBase, such as the panel used by gui.EnableScreenClicker and the panel used by Panel:ParentToHUD.",
+		"prefix": "GM:GUIMouseReleased"
+	},
+	"GM:GameContentChanged": {
+		"body": [
+			"function GM:GameContentChanged()\n\t$0\nend"
+		],
+		"description": "Called to refresh menu content once it has initialized or something has been mounted.",
+		"prefix": "GM:GameContentChanged"
+	},
+	"GM:GetFallDamage": {
+		"body": [
+			"function GM:GetFallDamage(ply, speed)\n\t$0\nend"
+		],
+		"description": "Called when a player takes damage from falling, allows to override the damage.",
+		"prefix": "GM:GetFallDamage"
+	},
+	"GM:GetGameDescription": {
+		"body": [
+			"function GM:GetGameDescription()\n\t$0\nend"
+		],
+		"description": "Called when the game(server) needs to update the text shown in the server browser as the gamemode.\nThis hook (and the sv_gamename_override command) may not work on some popular gamemodes like DarkRP or Trouble Terrorist Town. This is not a bug, it's just how it works. See [here](https://github.com/Facepunch/garrysmod-issues/issues/4637#issuecomment-677884989) for more information.\nThis hook only works on dedicated servers.",
+		"prefix": "GM:GetGameDescription"
+	},
+	"GM:GetMotionBlurValues": {
+		"body": [
+			"function GM:GetMotionBlurValues(horizontal, vertical, forward, rotational)\n\t$0\nend"
+		],
+		"description": "Allows you to modify the Source Engine's motion blur shaders.",
+		"prefix": "GM:GetMotionBlurValues"
+	},
+	"GM:GetPreferredCarryAngles": {
+		"body": [
+			"function GM:GetPreferredCarryAngles(ent)\n\t$0\nend"
+		],
+		"description": "Called to determine preferred carry angles for the entity. It works for both, +use pickup and gravity gun pickup.\n\nDue to nature of the gravity gun coding in multiplayer, this hook **MAY** seem to not work ( but rest assured it does ), due to clientside prediction not knowing the carry angles. The +use pickup doesn't present this issue as it doesn't predict the player carrying the object clientside ( as you may notice by the prop lagging behind in multiplayer )\n\nThis hook can **not** override preferred carry angles of props such as the sawblade and the harpoon.",
+		"prefix": "GM:GetPreferredCarryAngles"
+	},
+	"GM:GetTeamColor": {
+		"body": [
+			"function GM:GetTeamColor(ent)\n\t$0\nend"
+		],
+		"description": "Returns the color for the given entity's team. This is used in chat and deathnotice text.",
+		"prefix": "GM:GetTeamColor"
+	},
+	"GM:GetTeamNumColor": {
+		"body": [
+			"function GM:GetTeamNumColor(team)\n\t$0\nend"
+		],
+		"description": "Returns the team color for the given team index.",
+		"prefix": "GM:GetTeamNumColor"
+	},
+	"GM:GrabEarAnimation": {
+		"body": [
+			"function GM:GrabEarAnimation(ply)\n\t$0\nend"
+		],
+		"description": "Override this hook to disable/change ear-grabbing in your gamemode.",
+		"prefix": "GM:GrabEarAnimation"
+	},
+	"GM:GravGunOnDropped": {
+		"body": [
+			"function GM:GravGunOnDropped(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called when an entity is released by a gravity gun.",
+		"prefix": "GM:GravGunOnDropped"
+	},
+	"GM:GravGunOnPickedUp": {
+		"body": [
+			"function GM:GravGunOnPickedUp(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called when an entity is picked up by a gravity gun.",
+		"prefix": "GM:GravGunOnPickedUp"
+	},
+	"GM:GravGunPickupAllowed": {
+		"body": [
+			"function GM:GravGunPickupAllowed(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called every tick to poll whether a player is allowed to pick up an entity with the gravity gun or not.\n\nSee GM:AllowPlayerPickup for the +USE pickup variant.\n\nCalls ENTITY:GravGunPickupAllowed on the entity being hovered every frame in Sandbox-derived gamemodes.",
+		"prefix": "GM:GravGunPickupAllowed"
+	},
+	"GM:GravGunPunt": {
+		"body": [
+			"function GM:GravGunPunt(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called when an entity is about to be punted with the gravity gun (primary fire).\n\nBy default this function makes ENTITY:GravGunPunt work in Sandbox derived gamemodes.",
+		"prefix": "GM:GravGunPunt"
+	},
+	"GM:HUDAmmoPickedUp": {
+		"body": [
+			"function GM:HUDAmmoPickedUp(itemName, amount)\n\t$0\nend"
+		],
+		"description": "Called when the client has picked up ammo. Override to disable default HUD notification.",
+		"prefix": "GM:HUDAmmoPickedUp"
+	},
+	"GM:HUDDrawPickupHistory": {
+		"body": [
+			"function GM:HUDDrawPickupHistory()\n\t$0\nend"
+		],
+		"description": "Renders the HUD pick-up history. Override to hide default or draw your own HUD.",
+		"prefix": "GM:HUDDrawPickupHistory"
+	},
+	"GM:HUDDrawScoreBoard": {
+		"body": [
+			"function GM:HUDDrawScoreBoard()\n\t$0\nend"
+		],
+		"description": "Called every frame to render the scoreboard.\n\n\nIt is recommended to use Derma and VGUI for this job instead of this hook. Called right after GM:HUDPaint.\n\n",
+		"prefix": "GM:HUDDrawScoreBoard"
+	},
+	"GM:HUDDrawTargetID": {
+		"body": [
+			"function GM:HUDDrawTargetID()\n\t$0\nend"
+		],
+		"description": "Called from GM:HUDPaint to draw player info when you hover over a player with your crosshair or mouse.",
+		"prefix": "GM:HUDDrawTargetID"
+	},
+	"GM:HUDItemPickedUp": {
+		"body": [
+			"function GM:HUDItemPickedUp(itemName)\n\t$0\nend"
+		],
+		"description": "Called when an item has been picked up. Override to disable the default HUD notification.",
+		"prefix": "GM:HUDItemPickedUp"
+	},
+	"GM:HUDPaint": {
+		"body": [
+			"function GM:HUDPaint()\n\t$0\nend"
+		],
+		"description": "Called whenever the HUD should be drawn. Called right before GM:HUDDrawScoreBoard and after GM:HUDPaintBackground.\n\nNot called when the Camera SWEP is equipped. See also GM:DrawOverlay.\n\nGets called only when r_drawvgui and GM:HUDShouldDraw are enabled and the game is not paused\n",
+		"prefix": "GM:HUDPaint"
+	},
+	"GM:HUDPaintBackground": {
+		"body": [
+			"function GM:HUDPaintBackground()\n\t$0\nend"
+		],
+		"description": "Called before GM:HUDPaint when the HUD background is being drawn.\n\n\nThings rendered in this hook will **always** appear behind things rendered in GM:HUDPaint.\n\n",
+		"prefix": "GM:HUDPaintBackground"
+	},
+	"GM:HUDShouldDraw": {
+		"body": [
+			"function GM:HUDShouldDraw(name)\n\t$0\nend"
+		],
+		"description": "Called when the Gamemode is about to draw a given element on the client's HUD (heads-up display).\n\nThis hook is called HUNDREDS of times per second (more than 5 times per frame on average). You shouldn't be performing any computationally intensive operations.",
+		"prefix": "GM:HUDShouldDraw"
+	},
+	"GM:HUDWeaponPickedUp": {
+		"body": [
+			"function GM:HUDWeaponPickedUp(weapon)\n\t$0\nend"
+		],
+		"description": "Called when a weapon has been picked up. Override to disable the default HUD notification.",
+		"prefix": "GM:HUDWeaponPickedUp"
+	},
+	"GM:HandlePlayerDriving": {
+		"body": [
+			"function GM:HandlePlayerDriving(ply)\n\t$0\nend"
+		],
+		"description": "Allows to override player driving animations.",
+		"prefix": "GM:HandlePlayerDriving"
+	},
+	"GM:HandlePlayerDucking": {
+		"body": [
+			"function GM:HandlePlayerDucking(ply, velocity)\n\t$0\nend"
+		],
+		"description": "Allows to override player crouch animations.",
+		"prefix": "GM:HandlePlayerDucking"
+	},
+	"GM:HandlePlayerJumping": {
+		"body": [
+			"function GM:HandlePlayerJumping(ply, velocity)\n\t$0\nend"
+		],
+		"description": "Called every frame by the player model animation system. Allows to override player jumping animations.",
+		"prefix": "GM:HandlePlayerJumping"
+	},
+	"GM:HandlePlayerLanding": {
+		"body": [
+			"function GM:HandlePlayerLanding(ply, velocity, onGround)\n\t$0\nend"
+		],
+		"description": "Allows to override player landing animations.",
+		"prefix": "GM:HandlePlayerLanding"
+	},
+	"GM:HandlePlayerNoClipping": {
+		"body": [
+			"function GM:HandlePlayerNoClipping(ply, velocity)\n\t$0\nend"
+		],
+		"description": "Allows to override player noclip animations.",
+		"prefix": "GM:HandlePlayerNoClipping"
+	},
+	"GM:HandlePlayerSwimming": {
+		"body": [
+			"function GM:HandlePlayerSwimming(ply, velocity)\n\t$0\nend"
+		],
+		"description": "Allows to override player swimming animations.",
+		"prefix": "GM:HandlePlayerSwimming"
+	},
+	"GM:HandlePlayerVaulting": {
+		"body": [
+			"function GM:HandlePlayerVaulting(ply, velocity)\n\t$0\nend"
+		],
+		"description": "Allows to override player flying ( in mid-air, not noclipping ) animations.",
+		"prefix": "GM:HandlePlayerVaulting"
+	},
+	"GM:HideTeam": {
+		"body": [
+			"function GM:HideTeam()\n\t$0\nend"
+		],
+		"description": "Hides the team selection panel.",
+		"prefix": "GM:HideTeam"
+	},
+	"GM:InitPostEntity": {
+		"body": [
+			"function GM:InitPostEntity()\n\t$0\nend"
+		],
+		"description": "Called after all the entities are initialized. Starting from this hook Global.LocalPlayer will return valid object.\n\nAt this point the client only knows about the entities that are within the spawnpoints' [PVS](https://en.wikipedia.org/wiki/Potentially_visible_set). For instance, if the server sends an entity that is not within this PVS, the client will receive it as NULL entity.\nWhen this hook is called on the client, net messages will reliably be received.",
+		"prefix": "GM:InitPostEntity"
+	},
+	"GM:Initialize": {
+		"body": [
+			"function GM:Initialize()\n\t$0\nend"
+		],
+		"description": "Called after the gamemode loads and starts.",
+		"prefix": "GM:Initialize"
+	},
+	"GM:InputMouseApply": {
+		"body": [
+			"function GM:InputMouseApply(cmd, x, y, ang)\n\t$0\nend"
+		],
+		"description": "Allows you to modify the supplied User Command with mouse input. This could be used to make moving the mouse do funky things to view angles.",
+		"prefix": "GM:InputMouseApply"
+	},
+	"GM:IsSpawnpointSuitable": {
+		"body": [
+			"function GM:IsSpawnpointSuitable(ply, spawnpoint, makeSuitable)\n\t$0\nend"
+		],
+		"description": "Check if a player can spawn at a certain spawnpoint.",
+		"prefix": "GM:IsSpawnpointSuitable"
+	},
+	"GM:KeyPress": {
+		"body": [
+			"function GM:KeyPress(ply, key)\n\t$0\nend"
+		],
+		"description": "Called whenever a player pressed a key included within the IN keys.\n\nFor a more general purpose function that handles all kinds of input, see GM:PlayerButtonDown.\n\nDue to this being a predicted hook, Global.ParticleEffects created only serverside from this hook will not be networked to the client, so make sure to do that on both realms.",
+		"prefix": "GM:KeyPress"
+	},
+	"GM:KeyRelease": {
+		"body": [
+			"function GM:KeyRelease(ply, key)\n\t$0\nend"
+		],
+		"description": "Runs when a IN key was released by a player.\n\nFor a more general purpose function that handles all kinds of input, see GM:PlayerButtonUp.",
+		"prefix": "GM:KeyRelease"
+	},
+	"GM:LoadGModSave": {
+		"body": [
+			"function GM:LoadGModSave(data, map, timestamp)\n\t$0\nend"
+		],
+		"description": "Called from gm_load when the game should load a map.",
+		"prefix": "GM:LoadGModSave"
+	},
+	"GM:MenuStart": {
+		"body": [
+			"function GM:MenuStart()\n\t$0\nend"
+		],
+		"description": "Called when `menu.lua` has finished loading.",
+		"prefix": "GM:MenuStart"
+	},
+	"GM:MouthMoveAnimation": {
+		"body": [
+			"function GM:MouthMoveAnimation(ply)\n\t$0\nend"
+		],
+		"description": "Override this gamemode function to disable mouth movement when talking on voice chat.",
+		"prefix": "GM:MouthMoveAnimation"
+	},
+	"GM:Move": {
+		"body": [
+			"function GM:Move(ply, mv)\n\t$0\nend"
+		],
+		"description": "The Move hook is called for you to manipulate the player's MoveData.\n\nYou shouldn't adjust the player's position in any way in the move hook. This is because due to prediction errors, the netcode might run the move hook multiple times as packets arrive late. Therefore you should only adjust the movedata construct in this hook.\n\nGenerally you shouldn't have to use this hook - if you want to make a custom move type you should look at the drive system.\n\nThis hook is called after GM:PlayerTick.\n\nSee Game Movement for an explanation on the move system.",
+		"prefix": "GM:Move"
+	},
+	"GM:NeedsDepthPass": {
+		"body": [
+			"function GM:NeedsDepthPass()\n\t$0\nend"
+		],
+		"description": "Returning true in this hook will cause it to render depth buffers defined with render.GetResolvedFullFrameDepth.",
+		"prefix": "GM:NeedsDepthPass"
+	},
+	"GM:NetworkEntityCreated": {
+		"body": [
+			"function GM:NetworkEntityCreated(ent)\n\t$0\nend"
+		],
+		"description": "Called when an entity has been created over the network.",
+		"prefix": "GM:NetworkEntityCreated"
+	},
+	"GM:NetworkIDValidated": {
+		"body": [
+			"function GM:NetworkIDValidated(name, steamID)\n\t$0\nend"
+		],
+		"description": "Called when a player has been validated by Steam.",
+		"prefix": "GM:NetworkIDValidated"
+	},
+	"GM:NotifyShouldTransmit": {
+		"body": [
+			"function GM:NotifyShouldTransmit(ent, shouldtransmit)\n\t$0\nend"
+		],
+		"description": "Called whenever this entity changes its transmission state for this Global.LocalPlayer, such as exiting or re entering the PVS.\n\nThis is the best place to handle the reset of Entity:SetPredictable, as this would be usually called when the player lags and requests a full packet update\n\nWhen the entity stops transmitting, Entity:IsDormant will only return true **after** this hook",
+		"prefix": "GM:NotifyShouldTransmit"
+	},
+	"GM:OnAchievementAchieved": {
+		"body": [
+			"function GM:OnAchievementAchieved(ply, achievement)\n\t$0\nend"
+		],
+		"description": "Called when a player has achieved an achievement. You can get the name and other information from an achievement ID with the achievements library.",
+		"prefix": "GM:OnAchievementAchieved"
+	},
+	"GM:OnChatTab": {
+		"body": [
+			"function GM:OnChatTab(text)\n\t$0\nend"
+		],
+		"description": "Called when the local player presses TAB while having their chatbox opened.",
+		"prefix": "GM:OnChatTab"
+	},
+	"GM:OnCleanup": {
+		"body": [
+			"function GM:OnCleanup(name)\n\t$0\nend"
+		],
+		"description": "Called when the player cleans up something.",
+		"prefix": "GM:OnCleanup"
+	},
+	"GM:OnContextMenuClose": {
+		"body": [
+			"function GM:OnContextMenuClose()\n\t$0\nend"
+		],
+		"description": "Called when the context menu keybind (+menu_context) is released, which by default is C.\n\nThis hook will not run if input.IsKeyTrapping returns true.\n\nSee also GM:OnContextMenuOpen.",
+		"prefix": "GM:OnContextMenuClose"
+	},
+	"GM:OnContextMenuOpen": {
+		"body": [
+			"function GM:OnContextMenuOpen()\n\t$0\nend"
+		],
+		"description": "Called when the context menu keybind (`+menu_context`) is pressed, which by default is C.\n\nSee also GM:OnContextMenuClose.",
+		"prefix": "GM:OnContextMenuOpen"
+	},
+	"GM:OnCrazyPhysics": {
+		"body": [
+			"function GM:OnCrazyPhysics(ent, physobj)\n\t$0\nend"
+		],
+		"description": "Called when the crazy physics detection detects an entity with Crazy Physics.",
+		"prefix": "GM:OnCrazyPhysics"
+	},
+	"GM:OnDamagedByExplosion": {
+		"body": [
+			"function GM:OnDamagedByExplosion(ply, dmginfo)\n\t$0\nend"
+		],
+		"description": "Called when a player has been hurt by an explosion. Override to disable default sound effect.",
+		"prefix": "GM:OnDamagedByExplosion"
+	},
+	"GM:OnEntityCreated": {
+		"body": [
+			"function GM:OnEntityCreated(entity)\n\t$0\nend"
+		],
+		"description": "Called when the entity is created.\n\nSome entities on initial map spawn are passed through this hook, and then removed in the same frame. This is used by the engine to precache things like models and sounds, so always check their validity with Global.IsValid.\n\nRemoving the created entity during this event can lead to unexpected problems. Use timer.Simple( 0, .... ) to safely remove the entity.",
+		"prefix": "GM:OnEntityCreated"
+	},
+	"GM:OnEntityWaterLevelChanged": {
+		"body": [
+			"function GM:OnEntityWaterLevelChanged(entity, old, new)\n\t$0\nend"
+		],
+		"description": "Called when the Entity:WaterLevel of an entity is changed.\nThis hook can be considered a physics callback, so changing collision rules (Entity:SetSolidFlags) in it may lead to a crash!",
+		"prefix": "GM:OnEntityWaterLevelChanged"
+	},
+	"GM:OnGamemodeLoaded": {
+		"body": [
+			"function GM:OnGamemodeLoaded()\n\t$0\nend"
+		],
+		"description": "Called when the gamemode is loaded.\n\nGlobal.LocalPlayer() returns NULL at the time this is run.",
+		"prefix": "GM:OnGamemodeLoaded"
+	},
+	"GM:OnLuaError": {
+		"body": [
+			"function GM:OnLuaError(error, realm, stack, name, id)\n\t$0\nend"
+		],
+		"description": "Called when a Lua error occurs, only works in the Menu realm.\n\nModify menu state Lua code at your own risk!",
+		"prefix": "GM:OnLuaError"
+	},
+	"GM:OnNPCKilled": {
+		"body": [
+			"function GM:OnNPCKilled(npc, attacker, inflictor)\n\t$0\nend"
+		],
+		"description": "Called whenever an NPC is killed.",
+		"prefix": "GM:OnNPCKilled"
+	},
+	"GM:OnPhysgunFreeze": {
+		"body": [
+			"function GM:OnPhysgunFreeze(weapon, physobj, ent, ply)\n\t$0\nend"
+		],
+		"description": "Called when a player freezes an entity with the physgun.\n\nThis is not called for players or NPCs being held with the physgun.",
+		"prefix": "GM:OnPhysgunFreeze"
+	},
+	"GM:OnPhysgunPickup": {
+		"body": [
+			"function GM:OnPhysgunPickup(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called to when a player has successfully picked up an entity with their Physics Gun.\n\nNot to be confused with GM:PhysgunPickup which is called multiple times to ask if the player should be able to pick up an entity.",
+		"prefix": "GM:OnPhysgunPickup"
+	},
+	"GM:OnPhysgunReload": {
+		"body": [
+			"function GM:OnPhysgunReload(physgun, ply)\n\t$0\nend"
+		],
+		"description": "Called when a player reloads with the physgun. Override this to disable default unfreezing behavior.",
+		"prefix": "GM:OnPhysgunReload"
+	},
+	"GM:OnPlayerChangedTeam": {
+		"body": [
+			"function GM:OnPlayerChangedTeam(ply, oldTeam, newTeam)\n\t$0\nend"
+		],
+		"description": "Use GM:PlayerChangedTeam instead, which works for every Player:SetTeam call.\nCalled when a player has changed team using GM:PlayerJoinTeam.\n\nThis hook will not work with hook.Add and it is only called manually from GM:PlayerJoinTeam by the base gamemode",
+		"prefix": "GM:OnPlayerChangedTeam"
+	},
+	"GM:OnPlayerChat": {
+		"body": [
+			"function GM:OnPlayerChat(ply, text, teamChat, isDead)\n\t$0\nend"
+		],
+		"description": "Called whenever a player sends a chat message. For the serverside equivalent, see GM:PlayerSay.\nThe text input of this hook depends on GM:PlayerSay. If it is suppressed on the server, it will be suppressed on the client. This also means, that a message surpressed with this hook will be still visible to other clients.",
+		"prefix": "GM:OnPlayerChat"
+	},
+	"GM:OnPlayerHitGround": {
+		"body": [
+			"function GM:OnPlayerHitGround(player, inWater, onFloater, speed)\n\t$0\nend"
+		],
+		"description": "Called when a player makes contact with the ground after a jump or a fall.",
+		"prefix": "GM:OnPlayerHitGround"
+	},
+	"GM:OnReloaded": {
+		"body": [
+			"function GM:OnReloaded()\n\t$0\nend"
+		],
+		"description": "Called when gamemode has been reloaded by auto refresh.\n\nIt seems that this event can be triggered more than once for a single refresh event.",
+		"prefix": "GM:OnReloaded"
+	},
+	"GM:OnScreenSizeChanged": {
+		"body": [
+			"function GM:OnScreenSizeChanged(oldWidth, oldHeight)\n\t$0\nend"
+		],
+		"description": "Called when the player's screen resolution of the game changes.\nGlobal.ScrW and Global.ScrH will return the new values when this hook is called.",
+		"prefix": "GM:OnScreenSizeChanged"
+	},
+	"GM:OnSpawnMenuClose": {
+		"body": [
+			"function GM:OnSpawnMenuClose()\n\t$0\nend"
+		],
+		"description": "Called when a player releases the `+menu` bind on their keyboard, which is bound to Q by default.",
+		"prefix": "GM:OnSpawnMenuClose"
+	},
+	"GM:OnSpawnMenuOpen": {
+		"body": [
+			"function GM:OnSpawnMenuOpen()\n\t$0\nend"
+		],
+		"description": "Called when a player presses the `+menu` bind on their keyboard, which is bound to Q by default.",
+		"prefix": "GM:OnSpawnMenuOpen"
+	},
+	"GM:OnTextEntryGetFocus": {
+		"body": [
+			"function GM:OnTextEntryGetFocus(panel)\n\t$0\nend"
+		],
+		"description": "Called when a DTextEntry gets focus.\n\nThis hook is run from DTextEntry:OnGetFocus and PANEL:OnMousePressed of DTextEntry.",
+		"prefix": "GM:OnTextEntryGetFocus"
+	},
+	"GM:OnTextEntryLoseFocus": {
+		"body": [
+			"function GM:OnTextEntryLoseFocus(panel)\n\t$0\nend"
+		],
+		"description": "Called when DTextEntry loses focus.",
+		"prefix": "GM:OnTextEntryLoseFocus"
+	},
+	"GM:OnUndo": {
+		"body": [
+			"function GM:OnUndo(name, customText)\n\t$0\nend"
+		],
+		"description": "Called when the player undoes something.",
+		"prefix": "GM:OnUndo"
+	},
+	"GM:OnViewModelChanged": {
+		"body": [
+			"function GM:OnViewModelChanged(viewmodel, oldModel, newModel)\n\t$0\nend"
+		],
+		"description": "Called when the player changes their weapon to another one - and their viewmodel model changes.\n\nThis is not always called clientside.",
+		"prefix": "GM:OnViewModelChanged"
+	},
+	"GM:PhysgunDrop": {
+		"body": [
+			"function GM:PhysgunDrop(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called when a player drops an entity with the Physgun.",
+		"prefix": "GM:PhysgunDrop"
+	},
+	"GM:PhysgunPickup": {
+		"body": [
+			"function GM:PhysgunPickup(player, entity)\n\t$0\nend"
+		],
+		"description": "Called to determine if a player should be able to pick up an entity with the Physics Gun.\n\nSee GM:OnPhysgunPickup for a hook which is called when a player has successfully picked up an entity.",
+		"prefix": "GM:PhysgunPickup"
+	},
+	"GM:PlayerAmmoChanged": {
+		"body": [
+			"function GM:PlayerAmmoChanged(ply, ammoID, oldCount, newCount)\n\t$0\nend"
+		],
+		"description": "Called when player's reserve ammo count changes.",
+		"prefix": "GM:PlayerAmmoChanged"
+	},
+	"GM:PlayerAuthed": {
+		"body": [
+			"function GM:PlayerAuthed(ply, steamid, uniqueid)\n\t$0\nend"
+		],
+		"description": "Called once when the player is authenticated.\n\nGlobal.CurTime returns 0 in this hook.",
+		"prefix": "GM:PlayerAuthed"
+	},
+	"GM:PlayerBindPress": {
+		"body": [
+			"function GM:PlayerBindPress(ply, bind, pressed)\n\t$0\nend"
+		],
+		"description": "Runs when a bind has been pressed. Allows to block commands.\n\nBy using the \"alias\" console command, this hook can be effectively circumvented. To prevent this use input.TranslateAlias.\n\nTo stop the user from using `+attack`, `+left` and any other movement commands of the sort, please look into using GM:StartCommand instead.\n\nThe third argument will always be true.\n\nThis does not run for function keys binds (F1-F12).",
+		"prefix": "GM:PlayerBindPress"
+	},
+	"GM:PlayerButtonDown": {
+		"body": [
+			"function GM:PlayerButtonDown(ply, button)\n\t$0\nend"
+		],
+		"description": "Called when a player presses a button.\n\nThis will not be called if player has a panel opened with keyboard input enabled, use PANEL:OnKeyCodePressed instead.",
+		"prefix": "GM:PlayerButtonDown"
+	},
+	"GM:PlayerButtonUp": {
+		"body": [
+			"function GM:PlayerButtonUp(ply, button)\n\t$0\nend"
+		],
+		"description": "Called when a player releases a button.\n\nThis will not be called if player has a panel opened with keyboard input enabled, use PANEL:OnKeyCodeReleased instead.",
+		"prefix": "GM:PlayerButtonUp"
+	},
+	"GM:PlayerCanHearPlayersVoice": {
+		"body": [
+			"function GM:PlayerCanHearPlayersVoice(listener, talker)\n\t$0\nend"
+		],
+		"description": "Decides whether a player can hear another player using voice chat.\n\nThis hook is called **several** times a tick, so ensure your code is efficient.",
+		"prefix": "GM:PlayerCanHearPlayersVoice"
+	},
+	"GM:PlayerCanJoinTeam": {
+		"body": [
+			"function GM:PlayerCanJoinTeam(ply, team)\n\t$0\nend"
+		],
+		"description": "Returns whether or not a player is allowed to join a team",
+		"prefix": "GM:PlayerCanJoinTeam"
+	},
+	"GM:PlayerCanPickupItem": {
+		"body": [
+			"function GM:PlayerCanPickupItem(ply, item)\n\t$0\nend"
+		],
+		"description": "Returns whether or not a player is allowed to pick an item up.",
+		"prefix": "GM:PlayerCanPickupItem"
+	},
+	"GM:PlayerCanPickupWeapon": {
+		"body": [
+			"function GM:PlayerCanPickupWeapon(ply, weapon)\n\t$0\nend"
+		],
+		"description": "Returns whether or not a player is allowed to pick up a weapon.",
+		"prefix": "GM:PlayerCanPickupWeapon"
+	},
+	"GM:PlayerCanSeePlayersChat": {
+		"body": [
+			"function GM:PlayerCanSeePlayersChat(text, teamOnly, listener, speaker)\n\t$0\nend"
+		],
+		"description": "Returns whether or not the player can see the other player's chat.\nThe **speaker** parameter does not have to be a valid Player object which happens when console messages are displayed for example.",
+		"prefix": "GM:PlayerCanSeePlayersChat"
+	},
+	"GM:PlayerChangedTeam": {
+		"body": [
+			"function GM:PlayerChangedTeam(ply, oldTeam, newTeam)\n\t$0\nend"
+		],
+		"description": "Called when a player has changed team using Player:SetTeam.\nAvoid calling Player:SetTeam in this hook as it may cause an infinite loop!",
+		"prefix": "GM:PlayerChangedTeam"
+	},
+	"GM:PlayerCheckLimit": {
+		"body": [
+			"function GM:PlayerCheckLimit(ply, limitName, current, defaultMax)\n\t$0\nend"
+		],
+		"description": "Called whenever a player is about to spawn something to see if they hit a limit for whatever they are spawning.\nThis hook will not be called in singleplayer, as singleplayer does not have limits.",
+		"prefix": "GM:PlayerCheckLimit"
+	},
+	"GM:PlayerClassChanged": {
+		"body": [
+			"function GM:PlayerClassChanged(ply, newID)\n\t$0\nend"
+		],
+		"description": "\n\nCalled whenever a player's class is changed on the server-side with player_manager.SetPlayerClass.",
+		"prefix": "GM:PlayerClassChanged"
+	},
+	"GM:PlayerConnect": {
+		"body": [
+			"function GM:PlayerConnect(name, ip)\n\t$0\nend"
+		],
+		"description": "Executes when a player connects to the server. Called before the player has been assigned a Player:UserID and entity. See the Game_Events for a version of this hook called after the player entity has been created.\n\nThis is only called clientside for listen server hosts.\nThis is not called clientside for the local player.",
+		"prefix": "GM:PlayerConnect"
+	},
+	"GM:PlayerDeath": {
+		"body": [
+			"function GM:PlayerDeath(victim, inflictor, attacker)\n\t$0\nend"
+		],
+		"description": "Called when a player is killed by Player:Kill or any other normal means.\n\nThis hook is **not** called if the player is killed by Player:KillSilent. See GM:PlayerSilentDeath for that.\n\n* GM:DoPlayerDeath is called **before** this hook.\n* GM:PostPlayerDeath is called **after** this hook.\n\nSee Player:LastHitGroup if you need to get the last hit hitgroup of the player.\n\nPlayer:Alive will return true in this hook.",
+		"prefix": "GM:PlayerDeath"
+	},
+	"GM:PlayerDeathSound": {
+		"body": [
+			"function GM:PlayerDeathSound()\n\t$0\nend"
+		],
+		"description": "Returns whether or not the default death sound should be muted.",
+		"prefix": "GM:PlayerDeathSound"
+	},
+	"GM:PlayerDeathThink": {
+		"body": [
+			"function GM:PlayerDeathThink(ply)\n\t$0\nend"
+		],
+		"description": "Called every think while the player is dead. The return value will determine if the player respawns.\n\nOverwriting this function will prevent players from respawning by pressing space or clicking.\n\nThis hook is not called for players with the Enums/FL flag applied.",
+		"prefix": "GM:PlayerDeathThink"
+	},
+	"GM:PlayerDisconnected": {
+		"body": [
+			"function GM:PlayerDisconnected(ply)\n\t$0\nend"
+		],
+		"description": "Called when a player leaves the server. See the Game_Events for a shared version of this hook.\nPlayer:SteamID, Player:SteamID64, and the like can return nil here.\n\nThis is not called in single-player or listen servers for the host.",
+		"prefix": "GM:PlayerDisconnected"
+	},
+	"GM:PlayerDriveAnimate": {
+		"body": [
+			"function GM:PlayerDriveAnimate(ply)\n\t$0\nend"
+		],
+		"description": "Called to update the player's animation during a drive.",
+		"prefix": "GM:PlayerDriveAnimate"
+	},
+	"GM:PlayerDroppedWeapon": {
+		"body": [
+			"function GM:PlayerDroppedWeapon(owner, wep)\n\t$0\nend"
+		],
+		"description": "Called when a weapon is dropped by a player via Player:DropWeapon.\n\nAlso called when a weapon is removed from a player via Player:StripWeapon.\n\nSee also GM:WeaponEquip for a hook when a player picks up a weapon.\n\nThe weapon's Entity:GetOwner will be NULL at the time this hook is called.\n\n\nWEAPON:OnDrop will be called before this hook is.",
+		"prefix": "GM:PlayerDroppedWeapon"
+	},
+	"GM:PlayerEndVoice": {
+		"body": [
+			"function GM:PlayerEndVoice(ply)\n\t$0\nend"
+		],
+		"description": "Called when player stops using voice chat.",
+		"prefix": "GM:PlayerEndVoice"
+	},
+	"GM:PlayerEnteredVehicle": {
+		"body": [
+			"function GM:PlayerEnteredVehicle(ply, veh, role)\n\t$0\nend"
+		],
+		"description": "Called when a player enters a vehicle.\n\nCalled just after GM:CanPlayerEnterVehicle.\n\nSee also GM:PlayerLeaveVehicle.",
+		"prefix": "GM:PlayerEnteredVehicle"
+	},
+	"GM:PlayerFireAnimationEvent": {
+		"body": [
+			"function GM:PlayerFireAnimationEvent(ply, pos, ang, event, name)\n\t$0\nend"
+		],
+		"description": "Called before firing clientside animation events on a player model.\n\nSee GM:PlayerHandleAnimEvent for the serverside version.",
+		"prefix": "GM:PlayerFireAnimationEvent"
+	},
+	"GM:PlayerFootstep": {
+		"body": [
+			"function GM:PlayerFootstep(ply, pos, foot, sound, volume, filter)\n\t$0\nend"
+		],
+		"description": "Called whenever a player steps. Return true to mute the normal sound.\nThis hook is called on all clients.",
+		"prefix": "GM:PlayerFootstep"
+	},
+	"GM:PlayerFrozeObject": {
+		"body": [
+			"function GM:PlayerFrozeObject(ply, ent, physobj)\n\t$0\nend"
+		],
+		"description": "Called when a player freezes an object.",
+		"prefix": "GM:PlayerFrozeObject"
+	},
+	"GM:PlayerHandleAnimEvent ": {
+		"body": [
+			"function GM:PlayerHandleAnimEvent (ply, event, eventTime, cycle, type, options)\n\t$0\nend"
+		],
+		"description": "Called before firing serverside animation events on the player models.\n\nSee GM:PlayerFireAnimationEvent for the clientside version.",
+		"prefix": "GM:PlayerHandleAnimEvent "
+	},
+	"GM:PlayerHurt": {
+		"body": [
+			"function GM:PlayerHurt(victim, attacker, healthRemaining, damageTaken)\n\t$0\nend"
+		],
+		"description": "Called when a player gets hurt.",
+		"prefix": "GM:PlayerHurt"
+	},
+	"GM:PlayerInitialSpawn": {
+		"body": [
+			"function GM:PlayerInitialSpawn(player, transition)\n\t$0\nend"
+		],
+		"description": "Called when the player spawns for the first time.\n\nSee GM:PlayerSpawn for a hook called every player spawn.\n\nThis hook is called before the player has fully loaded, when the player is still in seeing the `Starting Lua` screen. For example, trying to use the Entity:GetModel function will return the default model (`models/player.mdl`).\nDue to the above note, sending net messages to the spawned player in this hook are highly unreliable, and they most likely won't be received. See https://github.com/Facepunch/garrysmod-requests/issues/718.\n\nCurrent dirty hack without networking:\n```\nhook.Add( \"PlayerInitialSpawn\", \"FullLoadSetup\", function( ply )\nhook.Add( \"SetupMove\", ply, function( self, ply, _, cmd )\nif self == ply and not cmd:IsForced() then\nhook.Run( \"PlayerFullLoad\", self )\nhook.Remove( \"SetupMove\", self )\nend\nend )\nend )\n```\n\nWith networking:\n```\n-- CLIENT\nhook.Add( \"InitPostEntity\", \"Ready\", function()\nnet.Start( \"cool_addon_client_ready\" )\nnet.SendToServer()\nend )\n```\n```\n-- SERVER\nutil.AddNetworkString( \"cool_addon_client_ready\" )\n\nnet.Receive( \"cool_addon_client_ready\", function( len, ply )\n-- Send what you need here!\nend )\n```\n",
+		"prefix": "GM:PlayerInitialSpawn"
+	},
+	"GM:PlayerJoinTeam": {
+		"body": [
+			"function GM:PlayerJoinTeam(ply, team)\n\t$0\nend"
+		],
+		"description": "Makes the player join a specified team. This is a convenience function that calls Player:SetTeam and runs the GM:OnPlayerChangedTeam hook.",
+		"prefix": "GM:PlayerJoinTeam"
+	},
+	"GM:PlayerLeaveVehicle": {
+		"body": [
+			"function GM:PlayerLeaveVehicle(ply, veh)\n\t$0\nend"
+		],
+		"description": "Called when a player leaves a vehicle.\n\nFor vehicles with exit animations, this will be called **at the end** of the animation, **not at the start**!\n\nThis is not called when a different vehicle is immediately entered with Player:EnterVehicle.",
+		"prefix": "GM:PlayerLeaveVehicle"
+	},
+	"GM:PlayerLoadout": {
+		"body": [
+			"function GM:PlayerLoadout(ply)\n\t$0\nend"
+		],
+		"description": "Called to give players the default set of weapons.\n\n\nThis function may not work in your custom gamemode if you have overridden your GM:PlayerSpawn and you do not use self.BaseClass.PlayerSpawn or hook.Call.",
+		"prefix": "GM:PlayerLoadout"
+	},
+	"GM:PlayerNoClip": {
+		"body": [
+			"function GM:PlayerNoClip(ply, desiredState)\n\t$0\nend"
+		],
+		"description": "Called when a player tries to switch noclip mode.",
+		"prefix": "GM:PlayerNoClip"
+	},
+	"GM:PlayerPostThink": {
+		"body": [
+			"function GM:PlayerPostThink(ply)\n\t$0\nend"
+		],
+		"description": "Called after the player's think.",
+		"prefix": "GM:PlayerPostThink"
+	},
+	"GM:PlayerRequestTeam": {
+		"body": [
+			"function GM:PlayerRequestTeam(ply, team)\n\t$0\nend"
+		],
+		"description": "Request a player to join the team. This function will check if the team is available to join or not.\n\nThis hook is called when the player runs \"changeteam\" in the console.\n\nTo prevent the player from changing teams, see GM:PlayerCanJoinTeam",
+		"prefix": "GM:PlayerRequestTeam"
+	},
+	"GM:PlayerSay": {
+		"body": [
+			"function GM:PlayerSay(sender, text, teamChat)\n\t$0\nend"
+		],
+		"description": "Called when a player dispatched a chat message. For the clientside equivalent, see GM:OnPlayerChat.",
+		"prefix": "GM:PlayerSay"
+	},
+	"GM:PlayerSelectSpawn": {
+		"body": [
+			"function GM:PlayerSelectSpawn(ply, transition)\n\t$0\nend"
+		],
+		"description": "Called to determine a spawn point for a player to spawn at.",
+		"prefix": "GM:PlayerSelectSpawn"
+	},
+	"GM:PlayerSelectTeamSpawn": {
+		"body": [
+			"function GM:PlayerSelectTeamSpawn(team, ply)\n\t$0\nend"
+		],
+		"description": "Find a team spawn point entity for this player.",
+		"prefix": "GM:PlayerSelectTeamSpawn"
+	},
+	"GM:PlayerSetHandsModel": {
+		"body": [
+			"function GM:PlayerSetHandsModel(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called whenever view model hands needs setting a model. By default this calls PLAYER:GetHandsModel and if that fails, sets the hands model according to his player model.",
+		"prefix": "GM:PlayerSetHandsModel"
+	},
+	"GM:PlayerSetModel": {
+		"body": [
+			"function GM:PlayerSetModel(ply)\n\t$0\nend"
+		],
+		"description": "Called whenever a player spawns and must choose a model. A good place to assign a model to a player.\nThis function may not work in your custom gamemode if you have overridden your GM:PlayerSpawn and you do not use self.BaseClass.PlayerSpawn or hook.Call.",
+		"prefix": "GM:PlayerSetModel"
+	},
+	"GM:PlayerShouldTakeDamage": {
+		"body": [
+			"function GM:PlayerShouldTakeDamage(ply, attacker)\n\t$0\nend"
+		],
+		"description": "Returns true if the player should take damage from the given attacker.",
+		"prefix": "GM:PlayerShouldTakeDamage"
+	},
+	"GM:PlayerShouldTaunt": {
+		"body": [
+			"function GM:PlayerShouldTaunt(ply, act)\n\t$0\nend"
+		],
+		"description": "Allows to suppress player taunts.",
+		"prefix": "GM:PlayerShouldTaunt"
+	},
+	"GM:PlayerSilentDeath": {
+		"body": [
+			"function GM:PlayerSilentDeath(ply)\n\t$0\nend"
+		],
+		"description": "Called when the player is killed by Player:KillSilent.\n\nThe player is already considered dead when this hook is called.\n\n* See GM:PlayerDeath for a hook which handles all other death causes.\n* GM:PostPlayerDeath is called **after** this hook.\n\nPlayer:Alive will return true in this hook.",
+		"prefix": "GM:PlayerSilentDeath"
+	},
+	"GM:PlayerSpawn": {
+		"body": [
+			"function GM:PlayerSpawn(player, transition)\n\t$0\nend"
+		],
+		"description": "Called whenever a player spawns, including respawns.\n\nSee GM:PlayerInitialSpawn for a hook called only the first time a player spawns.\n\nSee the Game_Events for a shared version of this hook.\n\nBy default, in \"base\" derived gamemodes, this hook will also call GM:PlayerLoadout and GM:PlayerSetModel, which may override your Entity:SetModel and Player:Give calls. Consider using the other hooks or a 0-second timer.",
+		"prefix": "GM:PlayerSpawn"
+	},
+	"GM:PlayerSpawnAsSpectator": {
+		"body": [
+			"function GM:PlayerSpawnAsSpectator(ply)\n\t$0\nend"
+		],
+		"description": "Called to spawn the player as a spectator.",
+		"prefix": "GM:PlayerSpawnAsSpectator"
+	},
+	"GM:PlayerSpray": {
+		"body": [
+			"function GM:PlayerSpray(sprayer)\n\t$0\nend"
+		],
+		"description": "Determines if the player can spray using the `impulse 201` console command.",
+		"prefix": "GM:PlayerSpray"
+	},
+	"GM:PlayerStartTaunt": {
+		"body": [
+			"function GM:PlayerStartTaunt(ply, act, length)\n\t$0\nend"
+		],
+		"description": "Called when player starts taunting.",
+		"prefix": "GM:PlayerStartTaunt"
+	},
+	"GM:PlayerStartVoice": {
+		"body": [
+			"function GM:PlayerStartVoice(ply)\n\t$0\nend"
+		],
+		"description": "Called when a player starts using voice chat.",
+		"prefix": "GM:PlayerStartVoice"
+	},
+	"GM:PlayerStepSoundTime": {
+		"body": [
+			"function GM:PlayerStepSoundTime(ply, type, walking)\n\t$0\nend"
+		],
+		"description": "Allows you to override the time between footsteps.\nThis hook is called on all clients.",
+		"prefix": "GM:PlayerStepSoundTime"
+	},
+	"GM:PlayerSwitchFlashlight": {
+		"body": [
+			"function GM:PlayerSwitchFlashlight(ply, enabled)\n\t$0\nend"
+		],
+		"description": "Called whenever a player attempts to either turn on or off their flashlight, returning false will deny the change.\nAlso gets called when using Player:Flashlight.",
+		"prefix": "GM:PlayerSwitchFlashlight"
+	},
+	"GM:PlayerSwitchWeapon": {
+		"body": [
+			"function GM:PlayerSwitchWeapon(player, oldWeapon, newWeapon)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to switch their weapon.\n\nPrimary usage of this hook is to prevent/allow weapon switching, **not** to detect weapon switching. It will not be called for Player:SetActiveWeapon.",
+		"prefix": "GM:PlayerSwitchWeapon"
+	},
+	"GM:PlayerTick": {
+		"body": [
+			"function GM:PlayerTick(player, mv)\n\t$0\nend"
+		],
+		"description": "The Move hook is called for you to manipulate the player's CMoveData. This hook is called moments before GM:Move and GM:PlayerNoClip.\n\nThis hook will not run when inside a vehicle. GM:VehicleMove will be called instead.",
+		"prefix": "GM:PlayerTick"
+	},
+	"GM:PlayerTraceAttack": {
+		"body": [
+			"function GM:PlayerTraceAttack(ply, dmginfo, dir, trace)\n\t$0\nend"
+		],
+		"description": "Called when a player has been hit by a trace and damaged (such as from a bullet). Returning true overrides the damage handling and prevents GM:ScalePlayerDamage from being called.",
+		"prefix": "GM:PlayerTraceAttack"
+	},
+	"GM:PlayerUnfrozeObject": {
+		"body": [
+			"function GM:PlayerUnfrozeObject(ply, ent, physobj)\n\t$0\nend"
+		],
+		"description": "Called when a player unfreezes an object.",
+		"prefix": "GM:PlayerUnfrozeObject"
+	},
+	"GM:PlayerUse": {
+		"body": [
+			"function GM:PlayerUse(ply, ent)\n\t$0\nend"
+		],
+		"description": "Triggered when the player presses use on an object. Continuously runs until USE is released but will not activate other Entities until the USE key is released; dependent on activation type of the Entity.",
+		"prefix": "GM:PlayerUse"
+	},
+	"GM:PopulateMenuBar": {
+		"body": [
+			"function GM:PopulateMenuBar(menubar)\n\t$0\nend"
+		],
+		"description": "Called when it's time to populate the context menu menu bar at the top.",
+		"prefix": "GM:PopulateMenuBar"
+	},
+	"GM:PostCleanupMap": {
+		"body": [
+			"function GM:PostCleanupMap()\n\t$0\nend"
+		],
+		"description": "Called right after the map has cleaned up (usually because game.CleanUpMap was called)\n\nSee also GM:PreCleanupMap.",
+		"prefix": "GM:PostCleanupMap"
+	},
+	"GM:PostDraw2DSkyBox": {
+		"body": [
+			"function GM:PostDraw2DSkyBox()\n\t$0\nend"
+		],
+		"description": "Called right after the 2D skybox has been drawn - allowing you to draw over it.\n\n",
+		"prefix": "GM:PostDraw2DSkyBox"
+	},
+	"GM:PostDrawEffects": {
+		"body": [
+			"function GM:PostDrawEffects()\n\t$0\nend"
+		],
+		"description": "Called after rendering effects. This is where halos are drawn. Called just before GM:PreDrawHUD.\n\n",
+		"prefix": "GM:PostDrawEffects"
+	},
+	"GM:PostDrawHUD": {
+		"body": [
+			"function GM:PostDrawHUD()\n\t$0\nend"
+		],
+		"description": "Called after GM:PreDrawHUD,  GM:HUDPaintBackground and GM:HUDPaint but before  GM:DrawOverlay.\n\n",
+		"prefix": "GM:PostDrawHUD"
+	},
+	"GM:PostDrawOpaqueRenderables": {
+		"body": [
+			"function GM:PostDrawOpaqueRenderables(bDrawingDepth, bDrawingSkybox)\n\t$0\nend"
+		],
+		"description": "Called after drawing opaque entities.\n\nSee also GM:PostDrawTranslucentRenderables and  GM:PreDrawOpaqueRenderables.\n\n",
+		"prefix": "GM:PostDrawOpaqueRenderables"
+	},
+	"GM:PostDrawPlayerHands": {
+		"body": [
+			"function GM:PostDrawPlayerHands(hands, vm, ply, weapon)\n\t$0\nend"
+		],
+		"description": "Called after the player hands are drawn.",
+		"prefix": "GM:PostDrawPlayerHands"
+	},
+	"GM:PostDrawSkyBox": {
+		"body": [
+			"function GM:PostDrawSkyBox()\n\t$0\nend"
+		],
+		"description": "Called after drawing the 3D skybox. This will not be called if skybox rendering was prevented via the GM:PreDrawSkyBox hook.\n\nSee also GM:PostDraw2DSkyBox.\n\n",
+		"prefix": "GM:PostDrawSkyBox"
+	},
+	"GM:PostDrawTranslucentRenderables": {
+		"body": [
+			"function GM:PostDrawTranslucentRenderables(bDrawingDepth, bDrawingSkybox)\n\t$0\nend"
+		],
+		"description": "Called after all translucent entities are drawn.\n\nSee also GM:PostDrawOpaqueRenderables and  GM:PreDrawTranslucentRenderables.\n\n\n\nThis is still called when r_drawentities or r_drawopaquerenderables is disabled.\nThis is not called when r_drawtranslucentworld is disabled.",
+		"prefix": "GM:PostDrawTranslucentRenderables"
+	},
+	"GM:PostDrawViewModel": {
+		"body": [
+			"function GM:PostDrawViewModel(viewmodel, player, weapon)\n\t$0\nend"
+		],
+		"description": "Called after view model is drawn.\n\n\n\nThe 3D rendering context in this event is different from the main view. Every render operation will only be accurate with the view model entity.",
+		"prefix": "GM:PostDrawViewModel"
+	},
+	"GM:PostEntityTakeDamage": {
+		"body": [
+			"function GM:PostEntityTakeDamage(ent, dmg, took)\n\t$0\nend"
+		],
+		"description": "Called when an entity receives a damage event, after passing damage filters, etc.",
+		"prefix": "GM:PostEntityTakeDamage"
+	},
+	"GM:PostGamemodeLoaded": {
+		"body": [
+			"function GM:PostGamemodeLoaded()\n\t$0\nend"
+		],
+		"description": "Called after the gamemode has loaded.",
+		"prefix": "GM:PostGamemodeLoaded"
+	},
+	"GM:PostPlayerDeath": {
+		"body": [
+			"function GM:PostPlayerDeath(ply)\n\t$0\nend"
+		],
+		"description": "Called right after GM:DoPlayerDeath, GM:PlayerDeath and GM:PlayerSilentDeath.\n\nThis hook will be called for all deaths, including Player:KillSilent\n\nThe player is considered dead when this is hook is called, Player:Alive will return false.",
+		"prefix": "GM:PostPlayerDeath"
+	},
+	"GM:PostPlayerDraw": {
+		"body": [
+			"function GM:PostPlayerDraw(ply, flags)\n\t$0\nend"
+		],
+		"description": "Called after the player was drawn.\n\n",
+		"prefix": "GM:PostPlayerDraw"
+	},
+	"GM:PostProcessPermitted": {
+		"body": [
+			"function GM:PostProcessPermitted(ppeffect)\n\t$0\nend"
+		],
+		"description": "Allows you to suppress post processing effect drawing.",
+		"prefix": "GM:PostProcessPermitted"
+	},
+	"GM:PostRender": {
+		"body": [
+			"function GM:PostRender()\n\t$0\nend"
+		],
+		"description": "Called after the frame has been rendered.",
+		"prefix": "GM:PostRender"
+	},
+	"GM:PostRenderVGUI": {
+		"body": [
+			"function GM:PostRenderVGUI()\n\t$0\nend"
+		],
+		"description": "Called after the VGUI has been drawn.\n\n",
+		"prefix": "GM:PostRenderVGUI"
+	},
+	"GM:PreCleanupMap": {
+		"body": [
+			"function GM:PreCleanupMap()\n\t$0\nend"
+		],
+		"description": "Called right before the map cleans up (usually because game.CleanUpMap was called)\n\nSee also GM:PostCleanupMap.",
+		"prefix": "GM:PreCleanupMap"
+	},
+	"GM:PreDrawEffects": {
+		"body": [
+			"function GM:PreDrawEffects()\n\t$0\nend"
+		],
+		"description": "Called just after GM:PreDrawViewModel and can technically be considered \"PostDrawAllViewModels\".\n\n",
+		"prefix": "GM:PreDrawEffects"
+	},
+	"GM:PreDrawHUD": {
+		"body": [
+			"function GM:PreDrawHUD()\n\t$0\nend"
+		],
+		"description": "Called just after GM:PostDrawEffects. Drawing anything in it seems to work incorrectly.\n",
+		"prefix": "GM:PreDrawHUD"
+	},
+	"GM:PreDrawHalos": {
+		"body": [
+			"function GM:PreDrawHalos()\n\t$0\nend"
+		],
+		"description": "Called before rendering the halos. This is the place to call halo.Add. This hook is actually running inside of GM:PostDrawEffects.\n\n",
+		"prefix": "GM:PreDrawHalos"
+	},
+	"GM:PreDrawOpaqueRenderables": {
+		"body": [
+			"function GM:PreDrawOpaqueRenderables(isDrawingDepth, isDrawSkybox)\n\t$0\nend"
+		],
+		"description": "Called before all opaque entities are drawn.\n\nSee also GM:PreDrawTranslucentRenderables and  GM:PostDrawOpaqueRenderables.\n\n",
+		"prefix": "GM:PreDrawOpaqueRenderables"
+	},
+	"GM:PreDrawPlayerHands": {
+		"body": [
+			"function GM:PreDrawPlayerHands(hands, vm, ply, weapon)\n\t$0\nend"
+		],
+		"description": "Called before the player hands are drawn.",
+		"prefix": "GM:PreDrawPlayerHands"
+	},
+	"GM:PreDrawSkyBox": {
+		"body": [
+			"function GM:PreDrawSkyBox()\n\t$0\nend"
+		],
+		"description": "Called before the 3D sky box is drawn. This will not be called for maps with no 3D skybox, or when the 3d skybox is disabled. (`r_3dsky 0`)\n\nSee also GM:PostDrawSkyBox\n\n",
+		"prefix": "GM:PreDrawSkyBox"
+	},
+	"GM:PreDrawTranslucentRenderables": {
+		"body": [
+			"function GM:PreDrawTranslucentRenderables(isDrawingDepth, isDrawSkybox)\n\t$0\nend"
+		],
+		"description": "Called before all the translucent entities are drawn.\n\nSee also GM:PreDrawOpaqueRenderables and  GM:PostDrawTranslucentRenderables.\n\n\n\nThis is still called when r_drawentities or r_drawopaquerenderables is disabled.\nThis is not called when r_drawtranslucentworld is disabled.",
+		"prefix": "GM:PreDrawTranslucentRenderables"
+	},
+	"GM:PreDrawViewModel": {
+		"body": [
+			"function GM:PreDrawViewModel(vm, ply, weapon)\n\t$0\nend"
+		],
+		"description": "Called before the view model has been drawn. This hook by default also calls this on weapons, so you can use WEAPON:PreDrawViewModel.\n\nYou can use GM:PreDrawEffects as a \"PostDrawViewModel\" hook as it is called just after the view model(s) are drawn.\n\n",
+		"prefix": "GM:PreDrawViewModel"
+	},
+	"GM:PreDrawViewModels": {
+		"body": [
+			"function GM:PreDrawViewModels()\n\t$0\nend"
+		],
+		"description": "Called before view models and entities with `RENDERGROUP_VIEWMODEL` are drawn.\n\nYou can use GM:PreDrawEffects as a `PostDrawViewModel` hook as it is called just after the view model(s) are drawn.\n",
+		"prefix": "GM:PreDrawViewModels"
+	},
+	"GM:PreGamemodeLoaded": {
+		"body": [
+			"function GM:PreGamemodeLoaded()\n\t$0\nend"
+		],
+		"description": "Called before the gamemode is loaded.",
+		"prefix": "GM:PreGamemodeLoaded"
+	},
+	"GM:PrePlayerDraw": {
+		"body": [
+			"function GM:PrePlayerDraw(player, flags)\n\t$0\nend"
+		],
+		"description": "Called before the player is drawn.",
+		"prefix": "GM:PrePlayerDraw"
+	},
+	"GM:PreRender": {
+		"body": [
+			"function GM:PreRender()\n\t$0\nend"
+		],
+		"description": "Called before the renderer is about to start rendering the next frame.",
+		"prefix": "GM:PreRender"
+	},
+	"GM:PreventScreenClicks": {
+		"body": [
+			"function GM:PreventScreenClicks()\n\t$0\nend"
+		],
+		"description": "This will prevent IN_ATTACK from sending to server when player tries to shoot from C menu.",
+		"prefix": "GM:PreventScreenClicks"
+	},
+	"GM:PropBreak": {
+		"body": [
+			"function GM:PropBreak(attacker, prop)\n\t$0\nend"
+		],
+		"description": "Called when a prop has been destroyed.",
+		"prefix": "GM:PropBreak"
+	},
+	"GM:RenderScene": {
+		"body": [
+			"function GM:RenderScene(origin, angles, fov)\n\t$0\nend"
+		],
+		"description": "Render the scene. Used by the `Stereoscopy` post-processing effect.\n\nMaterials rendered in this hook require `$ignorez` parameter to draw properly.",
+		"prefix": "GM:RenderScene"
+	},
+	"GM:RenderScreenspaceEffects": {
+		"body": [
+			"function GM:RenderScreenspaceEffects()\n\t$0\nend"
+		],
+		"description": "Used to render post processing effects.\n\n",
+		"prefix": "GM:RenderScreenspaceEffects"
+	},
+	"GM:Restored": {
+		"body": [
+			"function GM:Restored()\n\t$0\nend"
+		],
+		"description": "Called when the game is reloaded from a Source Engine save system ( not the Sandbox saves or dupes ).\n\nSee GM:Saved for a hook that is called when such a save file is created.",
+		"prefix": "GM:Restored"
+	},
+	"GM:Saved": {
+		"body": [
+			"function GM:Saved()\n\t$0\nend"
+		],
+		"description": "Called when the game is saved using the Source Engine save system (not the Sandbox saves or dupes).\n\nSee GM:Restored for a hook that is called when such a save file is loaded.\n\nSee also the saverestore for relevant functions.",
+		"prefix": "GM:Saved"
+	},
+	"GM:ScaleNPCDamage": {
+		"body": [
+			"function GM:ScaleNPCDamage(npc, hitgroup, dmginfo)\n\t$0\nend"
+		],
+		"description": "Called when an NPC takes damage.\n\nThis hook is called only when a specific hit group of the NPC is hit. In cases where the hitgroup doesn't matter, you should use GM:EntityTakeDamage instead!",
+		"prefix": "GM:ScaleNPCDamage"
+	},
+	"GM:ScalePlayerDamage": {
+		"body": [
+			"function GM:ScalePlayerDamage(ply, hitgroup, dmginfo)\n\t$0\nend"
+		],
+		"description": "This hook allows you to change how much damage a player receives when one takes damage to a specific body part.\n\nThis is called only for bullet damage a player receives, you should use GM:EntityTakeDamage instead if you need to detect *ALL* damage.",
+		"prefix": "GM:ScalePlayerDamage"
+	},
+	"GM:ScoreboardHide": {
+		"body": [
+			"function GM:ScoreboardHide()\n\t$0\nend"
+		],
+		"description": "Called when player released the scoreboard button. ( TAB by default )",
+		"prefix": "GM:ScoreboardHide"
+	},
+	"GM:ScoreboardShow": {
+		"body": [
+			"function GM:ScoreboardShow()\n\t$0\nend"
+		],
+		"description": "Called when player presses the scoreboard button. ( TAB by default )",
+		"prefix": "GM:ScoreboardShow"
+	},
+	"GM:SetPlayerSpeed": {
+		"body": [
+			"function GM:SetPlayerSpeed(ply, walkSpeed, runSpeed)\n\t$0\nend"
+		],
+		"description": "Sets player run and sprint speeds.\n\nThis is not a hook. Treat this as a utility function to set the player's speed.",
+		"prefix": "GM:SetPlayerSpeed"
+	},
+	"GM:SetupMove": {
+		"body": [
+			"function GM:SetupMove(ply, mv, cmd)\n\t$0\nend"
+		],
+		"description": "SetupMove is called before the engine process movements. This allows us to override the players movement.\n\nSee Game Movement for an explanation on the move system.",
+		"prefix": "GM:SetupMove"
+	},
+	"GM:SetupPlayerVisibility": {
+		"body": [
+			"function GM:SetupPlayerVisibility(ply, viewEntity)\n\t$0\nend"
+		],
+		"description": "Allows you to add extra positions to the player's PVS. This is the place to call Global.AddOriginToPVS.",
+		"prefix": "GM:SetupPlayerVisibility"
+	},
+	"GM:SetupSkyboxFog": {
+		"body": [
+			"function GM:SetupSkyboxFog(scale)\n\t$0\nend"
+		],
+		"description": "Allows you to use render.Fog* functions to manipulate skybox fog.",
+		"prefix": "GM:SetupSkyboxFog"
+	},
+	"GM:SetupWorldFog": {
+		"body": [
+			"function GM:SetupWorldFog()\n\t$0\nend"
+		],
+		"description": "Allows you to use render.Fog* functions to manipulate world fog.",
+		"prefix": "GM:SetupWorldFog"
+	},
+	"GM:ShouldCollide": {
+		"body": [
+			"function GM:ShouldCollide(ent1, ent2)\n\t$0\nend"
+		],
+		"description": "Called to decide whether a pair of entities should collide with each other. This is only called if Entity:SetCustomCollisionCheck was used on one or both entities.\n\nWhere applicable, consider using constraint.NoCollide or a [logic_collision_pair](https://developer.valvesoftware.com/wiki/Logic_collision_pair) entity instead - they are considerably easier to use and may be more appropriate in some situations.\n\nThis hook **must** return the same value consistently for the same pair of entities. If an entity changed in such a way that its collision rules change, you **must** call Entity:CollisionRulesChanged on that entity immediately - **not in this hook.**\n\nThis hook can cause all physics to break under certain conditions.",
+		"prefix": "GM:ShouldCollide"
+	},
+	"GM:ShouldDrawLocalPlayer": {
+		"body": [
+			"function GM:ShouldDrawLocalPlayer(ply)\n\t$0\nend"
+		],
+		"description": "Called to determine if the Global.LocalPlayer should be drawn.\n\nDue to an [optimization](https://garry.tv/2012/10/30/optimising-gmod/), this hook is only called once per frame.\n\nThis is problematic if you need to have the player drawn only in certain contexts, such as within render.RenderView or based on the render target. As a workaround, you can call cam.Start3D and cam.End3D within this hook to force the engine to call it every time.\n\nIf you're using this hook to draw a player for a GM:CalcView hook, then you may want to consider using the drawviewer variable you can use in your Structures/CamData table instead.",
+		"prefix": "GM:ShouldDrawLocalPlayer"
+	},
+	"GM:ShowHelp": {
+		"body": [
+			"function GM:ShowHelp(ply)\n\t$0\nend"
+		],
+		"description": "Called when a player executes gm_showhelp console command. ( Default bind is F1 )",
+		"prefix": "GM:ShowHelp"
+	},
+	"GM:ShowSpare1": {
+		"body": [
+			"function GM:ShowSpare1(ply)\n\t$0\nend"
+		],
+		"description": "Called when a player executes gm_showspare1 console command. ( Default bind is F3 )",
+		"prefix": "GM:ShowSpare1"
+	},
+	"GM:ShowSpare2": {
+		"body": [
+			"function GM:ShowSpare2(ply)\n\t$0\nend"
+		],
+		"description": "Called when a player executes gm_showspare2 console command. ( Default bind is F4 )",
+		"prefix": "GM:ShowSpare2"
+	},
+	"GM:ShowTeam": {
+		"body": [
+			"function GM:ShowTeam(ply)\n\t$0\nend"
+		],
+		"description": "Called when a player executes gm_showteam console command. ( Default bind is F2 )",
+		"prefix": "GM:ShowTeam"
+	},
+	"GM:ShutDown": {
+		"body": [
+			"function GM:ShutDown()\n\t$0\nend"
+		],
+		"description": "Called whenever the Lua environment is about to be shut down, for example on map change, or when the server is going to shut down.\nPlayer:SteamID, Player:SteamID64, and the like will return nil for the listen host here but work fine for other players.",
+		"prefix": "GM:ShutDown"
+	},
+	"GM:SpawniconGenerated": {
+		"body": [
+			"function GM:SpawniconGenerated(lastmodel, imagename, modelsleft)\n\t$0\nend"
+		],
+		"description": "Called when spawn icon is generated.",
+		"prefix": "GM:SpawniconGenerated"
+	},
+	"GM:StartChat": {
+		"body": [
+			"function GM:StartChat(isTeamChat)\n\t$0\nend"
+		],
+		"description": "Runs when the user tries to open the chat box.\n\nReturning true won't stop the chatbox from taking VGUI focus.",
+		"prefix": "GM:StartChat"
+	},
+	"GM:StartCommand": {
+		"body": [
+			"function GM:StartCommand(ply, ucmd)\n\t$0\nend"
+		],
+		"description": "Allows you to change the players inputs before they are processed by the server.\n\n\n\n\nThis is basically a shared version of GM:CreateMove.\n\nThis function is also called for bots, making it the best solution to control them so far\n\nThis hook is predicted, but not by usual means, this hook is called when a CUserCmd is generated on the client, and on the server when it is received, so it is necessary for this hook to be called clientside even on singleplayer",
+		"prefix": "GM:StartCommand"
+	},
+	"GM:StartEntityDriving": {
+		"body": [
+			"function GM:StartEntityDriving(ent, ply)\n\t$0\nend"
+		],
+		"description": "Called right before an entity starts driving. Overriding this hook will cause it to not call drive.Start and the player will not begin driving the entity.",
+		"prefix": "GM:StartEntityDriving"
+	},
+	"GM:StartGame": {
+		"body": [
+			"function GM:StartGame()\n\t$0\nend"
+		],
+		"description": "Called when you start a new game via the menu.",
+		"prefix": "GM:StartGame"
+	},
+	"GM:Think": {
+		"body": [
+			"function GM:Think()\n\t$0\nend"
+		],
+		"description": "Called every frame on client and server. This will be the same as GM:Tick on the server when there is no lag, but will only be called once every processed server frame during lag.\n\nSee GM:Tick for a hook that runs every tick on both the client and server.\n\nThis hook **WILL NOT** run if the server is empty, unless you set the ConVar `sv_hibernate_think` to 1",
+		"prefix": "GM:Think"
+	},
+	"GM:Tick": {
+		"body": [
+			"function GM:Tick()\n\t$0\nend"
+		],
+		"description": "Called every server tick. Serverside, this is similar to GM:Think.\n\nThis hook **WILL NOT** run if the server is empty, unless you set the ConVar `sv_hibernate_think` to 1",
+		"prefix": "GM:Tick"
+	},
+	"GM:TranslateActivity": {
+		"body": [
+			"function GM:TranslateActivity(ply, act)\n\t$0\nend"
+		],
+		"description": "Allows you to translate player activities.",
+		"prefix": "GM:TranslateActivity"
+	},
+	"GM:UpdateAnimation": {
+		"body": [
+			"function GM:UpdateAnimation(ply, velocity, maxSeqGroundSpeed)\n\t$0\nend"
+		],
+		"description": "Animation updates (pose params etc) should be done here.",
+		"prefix": "GM:UpdateAnimation"
+	},
+	"GM:VGUIMousePressAllowed": {
+		"body": [
+			"function GM:VGUIMousePressAllowed(button)\n\t$0\nend"
+		],
+		"description": "Called when user clicks on a VGUI panel.",
+		"prefix": "GM:VGUIMousePressAllowed"
+	},
+	"GM:VGUIMousePressed": {
+		"body": [
+			"function GM:VGUIMousePressed(pnl, mouseCode)\n\t$0\nend"
+		],
+		"description": "Called when a mouse button is pressed on a VGUI element or menu.",
+		"prefix": "GM:VGUIMousePressed"
+	},
+	"GM:VariableEdited": {
+		"body": [
+			"function GM:VariableEdited(ent, ply, key, val, editor)\n\t$0\nend"
+		],
+		"description": "Called when a variable is edited on an Entity (called by Edit Properties... menu). See Editable Entities for more information.",
+		"prefix": "GM:VariableEdited"
+	},
+	"GM:VehicleMove": {
+		"body": [
+			"function GM:VehicleMove(ply, veh, mv)\n\t$0\nend"
+		],
+		"description": "Called when you are driving a vehicle. This hook works just like GM:Move.\n\nThis hook is called before GM:Move and will be called when GM:PlayerTick is not.",
+		"prefix": "GM:VehicleMove"
+	},
+	"GM:WeaponEquip": {
+		"body": [
+			"function GM:WeaponEquip(weapon, owner)\n\t$0\nend"
+		],
+		"description": "Called as a weapon entity is picked up by a player.\n\nSee also GM:PlayerDroppedWeapon.\n\nAt the time when this hook is called Entity:GetOwner will return `NULL`. The owner is set on the next frame.\nThis will not be called when picking up a weapon you already have as the weapon will be removed and WEAPON:EquipAmmo will be called instead.",
+		"prefix": "GM:WeaponEquip"
+	},
+	"GM:WorkshopDownloadFile": {
+		"body": [
+			"function GM:WorkshopDownloadFile(id, imageID, title, size)\n\t$0\nend"
+		],
+		"description": "Called when an addon from the Steam workshop begins downloading. Used by default to place details on the workshop downloading panel.",
+		"prefix": "GM:WorkshopDownloadFile"
+	},
+	"GM:WorkshopDownloadProgress": {
+		"body": [
+			"function GM:WorkshopDownloadProgress(id, imageID, title, downloaded, expected)\n\t$0\nend"
+		],
+		"description": "Called while an addon from the Steam workshop is downloading. Used by default to update details on the fancy workshop download panel.",
+		"prefix": "GM:WorkshopDownloadProgress"
+	},
+	"GM:WorkshopDownloadTotals": {
+		"body": [
+			"function GM:WorkshopDownloadTotals(remain, total)\n\t$0\nend"
+		],
+		"description": "Called after GM:WorkshopStart.",
+		"prefix": "GM:WorkshopDownloadTotals"
+	},
+	"GM:WorkshopDownloadedFile": {
+		"body": [
+			"function GM:WorkshopDownloadedFile(id, title)\n\t$0\nend"
+		],
+		"description": "Called when an addon from the Steam workshop finishes downloading. Used by default to update details on the workshop downloading panel.",
+		"prefix": "GM:WorkshopDownloadedFile"
+	},
+	"GM:WorkshopEnd": {
+		"body": [
+			"function GM:WorkshopEnd()\n\t$0\nend"
+		],
+		"description": "Called when downloading content from Steam workshop ends. Used by default to hide fancy workshop downloading panel.",
+		"prefix": "GM:WorkshopEnd"
+	},
+	"GM:WorkshopExtractProgress": {
+		"body": [
+			"function GM:WorkshopExtractProgress(id, ImageID, title, percent)\n\t$0\nend"
+		],
+		"description": "Called while an addon from the Steam workshop is extracting. Used by default to update details on the fancy workshop download panel.",
+		"prefix": "GM:WorkshopExtractProgress"
+	},
+	"GM:WorkshopStart": {
+		"body": [
+			"function GM:WorkshopStart()\n\t$0\nend"
+		],
+		"description": "Called when downloading content from Steam workshop begins. Used by default to show fancy workshop downloading panel.\n\nThe order of Workshop hooks is this:\n* WorkshopStart\n* WorkshopDownloadTotals\n* * These are called for each new item:\n*** WorkshopDownloadFile\n*** WorkshopDownloadProgress - This is called until the file is finished\n*** WorkshopDownloadedFile\n* WorkshopEnd",
+		"prefix": "GM:WorkshopStart"
+	},
+	"GM:WorkshopSubscriptionsProgress": {
+		"body": [
+			"function GM:WorkshopSubscriptionsProgress(num, max)\n\t$0\nend"
+		],
+		"description": "\nCalled by the engine when the game initially fetches subscriptions to be displayed on the bottom of the main menu screen.",
+		"prefix": "GM:WorkshopSubscriptionsProgress"
+	},
+	"NEXTBOT:BehaveStart": {
+		"body": [
+			"function NEXTBOT:BehaveStart()\n\t$0\nend"
+		],
+		"description": "Called to initialize the behaviour.\n\nThis is called automatically when the NextBot is created, you should not call it manually.\n\nYou shouldn't override this unless you know what you are doing - it's used to kick off the coroutine that runs the bot's behaviour. See NEXTBOT:RunBehaviour instead.",
+		"prefix": "NEXTBOT:BehaveStart"
+	},
+	"NEXTBOT:BehaveUpdate": {
+		"body": [
+			"function NEXTBOT:BehaveUpdate(interval)\n\t$0\nend"
+		],
+		"description": "Called to update the bot's behaviour.",
+		"prefix": "NEXTBOT:BehaveUpdate"
+	},
+	"NEXTBOT:BodyUpdate": {
+		"body": [
+			"function NEXTBOT:BodyUpdate()\n\t$0\nend"
+		],
+		"description": "Called to update the bot's animation.",
+		"prefix": "NEXTBOT:BodyUpdate"
+	},
+	"NEXTBOT:OnContact": {
+		"body": [
+			"function NEXTBOT:OnContact(ent)\n\t$0\nend"
+		],
+		"description": "Called when the nextbot touches another entity.",
+		"prefix": "NEXTBOT:OnContact"
+	},
+	"NEXTBOT:OnEntitySight": {
+		"body": [
+			"function NEXTBOT:OnEntitySight(ent)\n\t$0\nend"
+		],
+		"description": "Called when the nextbot NPC sees another Nextbot NPC or a Player.\nThis hook will only run after NextBot:SetFOV or other vision related function is called on the nextbot. See NextBot:IsAbleToSee for more details.\nThis hook is not called in some scenarios.",
+		"prefix": "NEXTBOT:OnEntitySight"
+	},
+	"NEXTBOT:OnEntitySightLost": {
+		"body": [
+			"function NEXTBOT:OnEntitySightLost(ent)\n\t$0\nend"
+		],
+		"description": "Called when the nextbot NPC loses sight of another Nextbot NPC or a Player.\nThis hook will only run after NextBot:SetFOV or other vision related function is called on the nextbot. See NextBot:IsAbleToSee for more details.\nThis hook is not called in some scenarios.",
+		"prefix": "NEXTBOT:OnEntitySightLost"
+	},
+	"NEXTBOT:OnIgnite": {
+		"body": [
+			"function NEXTBOT:OnIgnite()\n\t$0\nend"
+		],
+		"description": "Called when the bot is ignited.",
+		"prefix": "NEXTBOT:OnIgnite"
+	},
+	"NEXTBOT:OnInjured": {
+		"body": [
+			"function NEXTBOT:OnInjured(info)\n\t$0\nend"
+		],
+		"description": "Called when the bot gets hurt. This is a good place to play hurt sounds or voice lines.",
+		"prefix": "NEXTBOT:OnInjured"
+	},
+	"NEXTBOT:OnKilled": {
+		"body": [
+			"function NEXTBOT:OnKilled(info)\n\t$0\nend"
+		],
+		"description": "Called when the bot gets killed.",
+		"prefix": "NEXTBOT:OnKilled"
+	},
+	"NEXTBOT:OnLandOnGround": {
+		"body": [
+			"function NEXTBOT:OnLandOnGround(ent)\n\t$0\nend"
+		],
+		"description": "Called when the bot's feet return to the ground.",
+		"prefix": "NEXTBOT:OnLandOnGround"
+	},
+	"NEXTBOT:OnLeaveGround": {
+		"body": [
+			"function NEXTBOT:OnLeaveGround(ent)\n\t$0\nend"
+		],
+		"description": "Called when the bot's feet leave the ground - for whatever reason.",
+		"prefix": "NEXTBOT:OnLeaveGround"
+	},
+	"NEXTBOT:OnNavAreaChanged": {
+		"body": [
+			"function NEXTBOT:OnNavAreaChanged(old, new)\n\t$0\nend"
+		],
+		"description": "Called when the nextbot enters a new navigation area.",
+		"prefix": "NEXTBOT:OnNavAreaChanged"
+	},
+	"NEXTBOT:OnOtherKilled": {
+		"body": [
+			"function NEXTBOT:OnOtherKilled(victim, info)\n\t$0\nend"
+		],
+		"description": "Called when someone else or something else has been killed.",
+		"prefix": "NEXTBOT:OnOtherKilled"
+	},
+	"NEXTBOT:OnStuck": {
+		"body": [
+			"function NEXTBOT:OnStuck()\n\t$0\nend"
+		],
+		"description": "Called when the bot thinks it is stuck.",
+		"prefix": "NEXTBOT:OnStuck"
+	},
+	"NEXTBOT:OnTraceAttack": {
+		"body": [
+			"function NEXTBOT:OnTraceAttack(info, dir, trace)\n\t$0\nend"
+		],
+		"description": "Called when a trace attack is done against the nextbot, allowing override of the damage being dealt by altering the CTakeDamageInfo.\n\nThis is called before NEXTBOT:OnInjured.",
+		"prefix": "NEXTBOT:OnTraceAttack"
+	},
+	"NEXTBOT:OnUnStuck": {
+		"body": [
+			"function NEXTBOT:OnUnStuck()\n\t$0\nend"
+		],
+		"description": "Called when the bot thinks it is un-stuck.",
+		"prefix": "NEXTBOT:OnUnStuck"
+	},
+	"NEXTBOT:RunBehaviour": {
+		"body": [
+			"function NEXTBOT:RunBehaviour()\n\t$0\nend"
+		],
+		"description": "A hook called to process nextbot logic.\n\nThis hook runs in a coroutine by default. It will only be called if NEXTBOT:BehaveStart is not overriden.",
+		"prefix": "NEXTBOT:RunBehaviour"
+	},
+	"PANEL:ActionSignal": {
+		"body": [
+			"function PANEL:ActionSignal(signalName, signalValue)\n\t$0\nend"
+		],
+		"description": "Called whenever a panel receives a command signal from one of its children.\n\nThis hook is called when using Panel:Command, when clicking a Button with Panel:SetCommand set, and when clicking text within a RichText panel that is marked as click-able.",
+		"prefix": "PANEL:ActionSignal"
+	},
+	"PANEL:AnimationThink": {
+		"body": [
+			"function PANEL:AnimationThink()\n\t$0\nend"
+		],
+		"description": "Called every frame unless Panel:IsVisible is set to false. Similar to PANEL:Think, but can be disabled by Panel:SetAnimationEnabled as explained below.\n\nIf you are overriding this, you must call Panel:AnimationThinkInternal every frame, else animations will cease to work.\n\nIf you want to \"disable\" this hook with Panel:SetAnimationEnabled, you must call it after defining this hook. Once disabled, a custom hook **will not** be re-enabled by Panel:SetAnimationEnabled again - the hook will have to be re-defined.",
+		"prefix": "PANEL:AnimationThink"
+	},
+	"PANEL:ApplySchemeSettings": {
+		"body": [
+			"function PANEL:ApplySchemeSettings()\n\t$0\nend"
+		],
+		"description": "Called whenever the panel should apply its scheme (colors, fonts, style).\n\nIt is called a few frames after Panel's creation once.",
+		"prefix": "PANEL:ApplySchemeSettings"
+	},
+	"PANEL:DragHoverClick": {
+		"body": [
+			"function PANEL:DragHoverClick(hoverTime)\n\t$0\nend"
+		],
+		"description": "Called when an object is dragged and hovered over this panel for 0.1 seconds.\n\nThis is used by DPropertySheet and DTree, for example to open a tab or expand a node when an object is hovered over it.",
+		"prefix": "PANEL:DragHoverClick"
+	},
+	"PANEL:DroppedOn": {
+		"body": [
+			"function PANEL:DroppedOn(pnl)\n\t$0\nend"
+		],
+		"description": "Called when this panel is dropped onto another panel.\n\nOnly works for panels derived from DDragBase.",
+		"prefix": "PANEL:DroppedOn"
+	},
+	"PANEL:GenerateExample": {
+		"body": [
+			"function PANEL:GenerateExample(class, dpropertysheet, width, height)\n\t$0\nend"
+		],
+		"description": "Called when the panel should generate example use case / example code to use for this panel. Used in the panel opened by **derma_controls** console command.",
+		"prefix": "PANEL:GenerateExample"
+	},
+	"PANEL:Init": {
+		"body": [
+			"function PANEL:Init()\n\t$0\nend"
+		],
+		"description": "Called when the panel is created. This is called for each base type that the panel has.",
+		"prefix": "PANEL:Init"
+	},
+	"PANEL:LoadCookies": {
+		"body": [
+			"function PANEL:LoadCookies()\n\t$0\nend"
+		],
+		"description": "Called after Panel:SetCookieName is called on this panel to apply the just loaded cookie values for this panel.",
+		"prefix": "PANEL:LoadCookies"
+	},
+	"PANEL:OnActivate": {
+		"body": [
+			"function PANEL:OnActivate()\n\t$0\nend"
+		],
+		"description": "Called when we are activated during level load. Used by the loading screen panel.",
+		"prefix": "PANEL:OnActivate"
+	},
+	"PANEL:OnChangeTargetURL": {
+		"body": [
+			"function PANEL:OnChangeTargetURL(targetURL)\n\t$0\nend"
+		],
+		"description": "Called by HTML panels when the target URL of the frame has changed, this happens when you hover over a link.",
+		"prefix": "PANEL:OnChangeTargetURL"
+	},
+	"PANEL:OnChangeTitle": {
+		"body": [
+			"function PANEL:OnChangeTitle(newTitle)\n\t$0\nend"
+		],
+		"description": "Called by HTML panels when the title of the loaded page has been changed.",
+		"prefix": "PANEL:OnChangeTitle"
+	},
+	"PANEL:OnChildAdded": {
+		"body": [
+			"function PANEL:OnChildAdded(child)\n\t$0\nend"
+		],
+		"description": "Called whenever a child was parented to the panel.\n\nThis is called before the panel's metatable is set.",
+		"prefix": "PANEL:OnChildAdded"
+	},
+	"PANEL:OnChildRemoved": {
+		"body": [
+			"function PANEL:OnChildRemoved(child)\n\t$0\nend"
+		],
+		"description": "Called whenever a child of the panel is about to removed.",
+		"prefix": "PANEL:OnChildRemoved"
+	},
+	"PANEL:OnChildViewCreated": {
+		"body": [
+			"function PANEL:OnChildViewCreated(sourceURL, targetURL, isPopup)\n\t$0\nend"
+		],
+		"description": "Called by HTML panels when the page attempts to open a new child view (such as a popup or new tab).",
+		"prefix": "PANEL:OnChildViewCreated"
+	},
+	"PANEL:OnCursorEntered": {
+		"body": [
+			"function PANEL:OnCursorEntered()\n\t$0\nend"
+		],
+		"description": "Called whenever the cursor entered the panels bounds.",
+		"prefix": "PANEL:OnCursorEntered"
+	},
+	"PANEL:OnCursorExited": {
+		"body": [
+			"function PANEL:OnCursorExited()\n\t$0\nend"
+		],
+		"description": "Called whenever the cursor left the panels bounds.",
+		"prefix": "PANEL:OnCursorExited"
+	},
+	"PANEL:OnCursorMoved": {
+		"body": [
+			"function PANEL:OnCursorMoved(cursorX, cursorY)\n\t$0\nend"
+		],
+		"description": "Called whenever the cursor was moved with the panels bounds.",
+		"prefix": "PANEL:OnCursorMoved"
+	},
+	"PANEL:OnDeactivate": {
+		"body": [
+			"function PANEL:OnDeactivate()\n\t$0\nend"
+		],
+		"description": "Called when we are deactivated during level load. Used by the loading screen panel.",
+		"prefix": "PANEL:OnDeactivate"
+	},
+	"PANEL:OnDocumentReady": {
+		"body": [
+			"function PANEL:OnDocumentReady(url)\n\t$0\nend"
+		],
+		"description": "Called by HTML panels when the panel's DOM has been set up. You can run JavaScript in here.",
+		"prefix": "PANEL:OnDocumentReady"
+	},
+	"PANEL:OnDrop": {
+		"body": [
+			"function PANEL:OnDrop()\n\t$0\nend"
+		],
+		"description": "We're being dropped on something\nWe can create a new panel here and return it, so that instead of dropping us - it drops the new panel instead! We remain where we are!\n\nOnly works for panels derived from DDragBase.",
+		"prefix": "PANEL:OnDrop"
+	},
+	"PANEL:OnFocusChanged": {
+		"body": [
+			"function PANEL:OnFocusChanged(gained)\n\t$0\nend"
+		],
+		"description": "Called whenever the panel gained or lost focus.\n\nPanel:HasFocus will only be updated on the next frame and will return the \"old\" value at the time this hook is run. Same goes for vgui.GetKeyboardFocus.",
+		"prefix": "PANEL:OnFocusChanged"
+	},
+	"PANEL:OnKeyCodePressed": {
+		"body": [
+			"function PANEL:OnKeyCodePressed(keyCode)\n\t$0\nend"
+		],
+		"description": "Called whenever a keyboard key was pressed while the panel is focused.\n\nThis is not run for ESC/\"cancelselect\" binding.",
+		"prefix": "PANEL:OnKeyCodePressed"
+	},
+	"PANEL:OnKeyCodeReleased": {
+		"body": [
+			"function PANEL:OnKeyCodeReleased(keyCode)\n\t$0\nend"
+		],
+		"description": "Called whenever a keyboard key was released while the panel is focused.\n\nThis is not run for TILDE/\"toggleconsole\" binding.",
+		"prefix": "PANEL:OnKeyCodeReleased"
+	},
+	"PANEL:OnMousePressed": {
+		"body": [
+			"function PANEL:OnMousePressed(keyCode)\n\t$0\nend"
+		],
+		"description": "Called whenever a mouse key was pressed while the panel is focused.",
+		"prefix": "PANEL:OnMousePressed"
+	},
+	"PANEL:OnMouseReleased": {
+		"body": [
+			"function PANEL:OnMouseReleased(keyCode)\n\t$0\nend"
+		],
+		"description": "Called whenever a mouse key was released while the panel is focused.",
+		"prefix": "PANEL:OnMouseReleased"
+	},
+	"PANEL:OnMouseWheeled": {
+		"body": [
+			"function PANEL:OnMouseWheeled(scrollDelta)\n\t$0\nend"
+		],
+		"description": "Called whenever the mouse wheel was used.",
+		"prefix": "PANEL:OnMouseWheeled"
+	},
+	"PANEL:OnRemove": {
+		"body": [
+			"function PANEL:OnRemove()\n\t$0\nend"
+		],
+		"description": "Called when the panel is about to be removed.",
+		"prefix": "PANEL:OnRemove"
+	},
+	"PANEL:OnScreenSizeChanged": {
+		"body": [
+			"function PANEL:OnScreenSizeChanged(oldWidth, oldHeight)\n\t$0\nend"
+		],
+		"description": "Called when the player's screen resolution of the game changes.\n\nGlobal.ScrW and Global.ScrH will return the new values when this hook is called.",
+		"prefix": "PANEL:OnScreenSizeChanged"
+	},
+	"PANEL:OnSizeChanged": {
+		"body": [
+			"function PANEL:OnSizeChanged(newWidth, newHeight)\n\t$0\nend"
+		],
+		"description": "Called just after the panel size changes.\n\nAll size functions will return the new values when this hook is called.\n\nChanging the panel size in this hook will cause an infinite loop!",
+		"prefix": "PANEL:OnSizeChanged"
+	},
+	"PANEL:OnStartDragging": {
+		"body": [
+			"function PANEL:OnStartDragging()\n\t$0\nend"
+		],
+		"description": " Called by dragndrop.StartDragging when the panel starts being dragged.",
+		"prefix": "PANEL:OnStartDragging"
+	},
+	"PANEL:OnStopDragging": {
+		"body": [
+			"function PANEL:OnStopDragging()\n\t$0\nend"
+		],
+		"description": " Called by Panel:DragMouseRelease when the panel object is released after being dragged.",
+		"prefix": "PANEL:OnStopDragging"
+	},
+	"PANEL:Paint": {
+		"body": [
+			"function PANEL:Paint(width, height)\n\t$0\nend"
+		],
+		"description": "Called whenever the panel should be drawn.\n\nYou can create panels with a customized appearance by overriding their Paint() function, which will prevent the default appearance from being drawn.\n\nRender operations from the surface (and consequentially the draw) are always offset by the global position of this panel, as seen in the example below\n\nThis hook will not run if the panel is completely off the screen. The hook will still run however if any parts of the panel are still on screen.",
+		"prefix": "PANEL:Paint"
+	},
+	"PANEL:PaintOver": {
+		"body": [
+			"function PANEL:PaintOver(width, height)\n\t$0\nend"
+		],
+		"description": "Called whenever the panel and all its children were drawn, return true to override the default drawing.",
+		"prefix": "PANEL:PaintOver"
+	},
+	"PANEL:PerformLayout": {
+		"body": [
+			"function PANEL:PerformLayout(width, height)\n\t$0\nend"
+		],
+		"description": "Called whenever the panels layout was invalidated. This means all child panels must be re-positioned to fit the possibly new size of this panel.\n\nDo **NOT** call this function directly. Use Panel:InvalidateLayout instead!",
+		"prefix": "PANEL:PerformLayout"
+	},
+	"PANEL:PostAutoRefresh": {
+		"body": [
+			"function PANEL:PostAutoRefresh()\n\t$0\nend"
+		],
+		"description": "Only works on elements defined with derma.DefineControl and only if the panel has **AllowAutoRefresh** set to true.\n\nCalled after derma.DefineControl is called with panel's class name.\n\nSee also PANEL:PreAutoRefresh",
+		"prefix": "PANEL:PostAutoRefresh"
+	},
+	"PANEL:PreAutoRefresh": {
+		"body": [
+			"function PANEL:PreAutoRefresh()\n\t$0\nend"
+		],
+		"description": "Only works on elements defined with derma.DefineControl and only if the panel has **AllowAutoRefresh** set to true.\n\nCalled when derma.DefineControl is called with this panel's class name before applying changes to this panel.\n\nSee also PANEL:PostAutoRefresh",
+		"prefix": "PANEL:PreAutoRefresh"
+	},
+	"PANEL:TestHover": {
+		"body": [
+			"function PANEL:TestHover(x, y)\n\t$0\nend"
+		],
+		"description": "Called to test if the panel is being `hovered` by the mouse. This will only be called if the panel's parent is being hovered.",
+		"prefix": "PANEL:TestHover"
+	},
+	"PANEL:Think": {
+		"body": [
+			"function PANEL:Think()\n\t$0\nend"
+		],
+		"description": "Called every frame while Panel:IsVisible is true.",
+		"prefix": "PANEL:Think"
+	},
+	"PLAYER:ClassChanged": {
+		"body": [
+			"function PLAYER:ClassChanged()\n\t$0\nend"
+		],
+		"description": "Called when the player's class was changed from this class.",
+		"prefix": "PLAYER:ClassChanged"
+	},
+	"PLAYER:Death": {
+		"body": [
+			"function PLAYER:Death()\n\t$0\nend"
+		],
+		"description": "Called when the player dies",
+		"prefix": "PLAYER:Death"
+	},
+	"PLAYER:FinishMove": {
+		"body": [
+			"function PLAYER:FinishMove(mv)\n\t$0\nend"
+		],
+		"description": "Called from GM:FinishMove.\n\nThis hook will not work if the current gamemode overrides GM:FinishMove and does not call this hook.\n\nThis hook is run after the drive.FinishMove has been called.",
+		"prefix": "PLAYER:FinishMove"
+	},
+	"PLAYER:GetHandsModel": {
+		"body": [
+			"function PLAYER:GetHandsModel()\n\t$0\nend"
+		],
+		"description": "Called on player spawn to determine which hand model to use",
+		"prefix": "PLAYER:GetHandsModel"
+	},
+	"PLAYER:Init": {
+		"body": [
+			"function PLAYER:Init()\n\t$0\nend"
+		],
+		"description": "Called when the class object is created",
+		"prefix": "PLAYER:Init"
+	},
+	"PLAYER:Loadout": {
+		"body": [
+			"function PLAYER:Loadout()\n\t$0\nend"
+		],
+		"description": "Called on spawn to give the player their default loadout",
+		"prefix": "PLAYER:Loadout"
+	},
+	"PLAYER:Move": {
+		"body": [
+			"function PLAYER:Move(mv)\n\t$0\nend"
+		],
+		"description": "Called from GM:Move.\n\nThis hook will not work if the current gamemode overrides GM:Move and does not call this hook.\n\nThis hook is run after the drive.Move has been called.",
+		"prefix": "PLAYER:Move"
+	},
+	"PLAYER:PostDrawViewModel": {
+		"body": [
+			"function PLAYER:PostDrawViewModel(viewmodel, weapon)\n\t$0\nend"
+		],
+		"description": "Called after the viewmodel has been drawn",
+		"prefix": "PLAYER:PostDrawViewModel"
+	},
+	"PLAYER:PreDrawViewModel": {
+		"body": [
+			"function PLAYER:PreDrawViewModel(viewmodel, weapon)\n\t$0\nend"
+		],
+		"description": "Called before the viewmodel is drawn",
+		"prefix": "PLAYER:PreDrawViewModel"
+	},
+	"PLAYER:SetModel": {
+		"body": [
+			"function PLAYER:SetModel()\n\t$0\nend"
+		],
+		"description": "Called when we need to set player model from the class.\n\nThis will only be called if you have not overridden GM:PlayerSetModel or call this function from it or anywhere else using player_manager.RunClass",
+		"prefix": "PLAYER:SetModel"
+	},
+	"PLAYER:SetupDataTables": {
+		"body": [
+			"function PLAYER:SetupDataTables()\n\t$0\nend"
+		],
+		"description": "Setup the network table accessors.",
+		"prefix": "PLAYER:SetupDataTables"
+	},
+	"PLAYER:Spawn": {
+		"body": [
+			"function PLAYER:Spawn()\n\t$0\nend"
+		],
+		"description": "Called when the player spawns",
+		"prefix": "PLAYER:Spawn"
+	},
+	"PLAYER:StartMove": {
+		"body": [
+			"function PLAYER:StartMove(mv, cmd)\n\t$0\nend"
+		],
+		"description": "Called from GM:CreateMove.\n\nThis hook will not work if the current gamemode overrides GM:SetupMove and does not call this hook.\n\nThis hook is run after the drive.StartMove has been called.",
+		"prefix": "PLAYER:StartMove"
+	},
+	"PLAYER:ViewModelChanged": {
+		"body": [
+			"function PLAYER:ViewModelChanged(viewmodel, old, new)\n\t$0\nend"
+		],
+		"description": "Called when the player changes their weapon to another one causing their viewmodel model to change",
+		"prefix": "PLAYER:ViewModelChanged"
+	},
+	"SANDBOX:AddGamemodeToolMenuCategories": {
+		"body": [
+			"function SANDBOX:AddGamemodeToolMenuCategories()\n\t$0\nend"
+		],
+		"description": "\n\nThis hook is used to add default categories to spawnmenu tool tabs.\n\nDo not override or hook this function, use SANDBOX:AddToolMenuCategories!",
+		"prefix": "SANDBOX:AddGamemodeToolMenuCategories"
+	},
+	"SANDBOX:AddGamemodeToolMenuTabs": {
+		"body": [
+			"function SANDBOX:AddGamemodeToolMenuTabs()\n\t$0\nend"
+		],
+		"description": "\n\nThis hook is used to add default tool tabs to spawnmenu.\n\nDo not override or hook this function, use SANDBOX:AddToolMenuTabs!",
+		"prefix": "SANDBOX:AddGamemodeToolMenuTabs"
+	},
+	"SANDBOX:AddToolMenuCategories": {
+		"body": [
+			"function SANDBOX:AddToolMenuCategories()\n\t$0\nend"
+		],
+		"description": "This hook is used to add new categories to spawnmenu tool tabs.",
+		"prefix": "SANDBOX:AddToolMenuCategories"
+	},
+	"SANDBOX:AddToolMenuTabs": {
+		"body": [
+			"function SANDBOX:AddToolMenuTabs()\n\t$0\nend"
+		],
+		"description": "This hook is used to add new tool tabs to spawnmenu.",
+		"prefix": "SANDBOX:AddToolMenuTabs"
+	},
+	"SANDBOX:CanArmDupe": {
+		"body": [
+			"function SANDBOX:CanArmDupe(ply)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to \"arm\" a duplication with the Duplicator tool. Return false to prevent the player from sending data to server, and to ignore data if it was somehow sent anyway.",
+		"prefix": "SANDBOX:CanArmDupe"
+	},
+	"SANDBOX:CanDrive": {
+		"body": [
+			"function SANDBOX:CanDrive(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to drive a prop via Prop Drive",
+		"prefix": "SANDBOX:CanDrive"
+	},
+	"SANDBOX:CanProperty": {
+		"body": [
+			"function SANDBOX:CanProperty(ply, property, ent)\n\t$0\nend"
+		],
+		"description": "Controls if a property can be used or not.",
+		"prefix": "SANDBOX:CanProperty"
+	},
+	"SANDBOX:CanTool": {
+		"body": [
+			"function SANDBOX:CanTool(ply, tr, tool)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to fire their tool gun. Return true to specifically allow the attempt, false to block it.",
+		"prefix": "SANDBOX:CanTool"
+	},
+	"SANDBOX:ContentSidebarSelection": {
+		"body": [
+			"function SANDBOX:ContentSidebarSelection(parent, node)\n\t$0\nend"
+		],
+		"description": "Called when player selects an item on the spawnmenu sidebar at the left.",
+		"prefix": "SANDBOX:ContentSidebarSelection"
+	},
+	"SANDBOX:ContextMenuClosed": {
+		"body": [
+			"function SANDBOX:ContextMenuClosed()\n\t$0\nend"
+		],
+		"description": "Called when the context menu is supposedly closed.\n\nThis is simply an alias of GM:OnContextMenuClose.\n\nThis hook **will** be called even if the Sandbox's context menu doesn't actually exist, i.e. SANDBOX:ContextMenuEnabled blocked its creation.",
+		"prefix": "SANDBOX:ContextMenuClosed"
+	},
+	"SANDBOX:ContextMenuCreated": {
+		"body": [
+			"function SANDBOX:ContextMenuCreated(g_ContextMenu)\n\t$0\nend"
+		],
+		"description": "Called when the context menu is created.",
+		"prefix": "SANDBOX:ContextMenuCreated"
+	},
+	"SANDBOX:ContextMenuEnabled": {
+		"body": [
+			"function SANDBOX:ContextMenuEnabled()\n\t$0\nend"
+		],
+		"description": "Allows to prevent the creation of the context menu. If the context menu is already created, this will have no effect.",
+		"prefix": "SANDBOX:ContextMenuEnabled"
+	},
+	"SANDBOX:ContextMenuOpen": {
+		"body": [
+			"function SANDBOX:ContextMenuOpen()\n\t$0\nend"
+		],
+		"description": "Called when the context menu is trying to be opened. Return false to disallow it.\n\nSee SANDBOX:ContextMenuOpen if you wish to simply prevent the context menu from opening.",
+		"prefix": "SANDBOX:ContextMenuOpen"
+	},
+	"SANDBOX:ContextMenuOpened": {
+		"body": [
+			"function SANDBOX:ContextMenuOpened()\n\t$0\nend"
+		],
+		"description": "Called when the context menu is supposedly opened.\n\nThis is simply an alias of GM:OnContextMenuOpen but will **not** be called if SANDBOX:ContextMenuOpen prevents the context menu from opening.\n\nThis hook **will** be called even if the context menu doesn't actually exist, i.e. SANDBOX:ContextMenuEnabled blocked its creation.",
+		"prefix": "SANDBOX:ContextMenuOpened"
+	},
+	"SANDBOX:PaintNotes": {
+		"body": [
+			"function SANDBOX:PaintNotes()\n\t$0\nend"
+		],
+		"description": "Called from GM:HUDPaint; does nothing by default.\n\nThis cannot be used with hook.Add",
+		"prefix": "SANDBOX:PaintNotes"
+	},
+	"SANDBOX:PaintWorldTips": {
+		"body": [
+			"function SANDBOX:PaintWorldTips()\n\t$0\nend"
+		],
+		"description": "Called from GM:HUDPaint to draw world tips. By default, enabling cl_drawworldtooltips will stop world tips from being drawn here.\nSee Global.AddWorldTip for more information.\n\nThis cannot be used with hook.Add",
+		"prefix": "SANDBOX:PaintWorldTips"
+	},
+	"SANDBOX:PersistenceLoad": {
+		"body": [
+			"function SANDBOX:PersistenceLoad(name)\n\t$0\nend"
+		],
+		"description": "Called when persistent props are loaded.",
+		"prefix": "SANDBOX:PersistenceLoad"
+	},
+	"SANDBOX:PersistenceSave": {
+		"body": [
+			"function SANDBOX:PersistenceSave(name)\n\t$0\nend"
+		],
+		"description": "Called when persistent props are saved.",
+		"prefix": "SANDBOX:PersistenceSave"
+	},
+	"SANDBOX:PlayerGiveSWEP": {
+		"body": [
+			"function SANDBOX:PlayerGiveSWEP(ply, weapon, swep)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to give themselves a weapon from the Q menu. ( Left mouse clicks on an icon )",
+		"prefix": "SANDBOX:PlayerGiveSWEP"
+	},
+	"SANDBOX:PlayerSpawnEffect": {
+		"body": [
+			"function SANDBOX:PlayerSpawnEffect(ply, model)\n\t$0\nend"
+		],
+		"description": "Called to ask if player allowed to spawn a particular effect or not.",
+		"prefix": "SANDBOX:PlayerSpawnEffect"
+	},
+	"SANDBOX:PlayerSpawnNPC": {
+		"body": [
+			"function SANDBOX:PlayerSpawnNPC(ply, npc_type, weapon)\n\t$0\nend"
+		],
+		"description": "Called to ask if player allowed to spawn a particular NPC or not.",
+		"prefix": "SANDBOX:PlayerSpawnNPC"
+	},
+	"SANDBOX:PlayerSpawnObject": {
+		"body": [
+			"function SANDBOX:PlayerSpawnObject(ply, model, skin)\n\t$0\nend"
+		],
+		"description": "Called to ask whether player is allowed to spawn a given model. This includes props, effects, and ragdolls and is called before the respective PlayerSpawn* hook.",
+		"prefix": "SANDBOX:PlayerSpawnObject"
+	},
+	"SANDBOX:PlayerSpawnProp": {
+		"body": [
+			"function SANDBOX:PlayerSpawnProp(ply, model)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to spawn a prop from the Q menu.",
+		"prefix": "SANDBOX:PlayerSpawnProp"
+	},
+	"SANDBOX:PlayerSpawnRagdoll": {
+		"body": [
+			"function SANDBOX:PlayerSpawnRagdoll(ply, model)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to spawn a ragdoll from the Q menu.",
+		"prefix": "SANDBOX:PlayerSpawnRagdoll"
+	},
+	"SANDBOX:PlayerSpawnSENT": {
+		"body": [
+			"function SANDBOX:PlayerSpawnSENT(ply, class)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to spawn an Entity from the Q menu.",
+		"prefix": "SANDBOX:PlayerSpawnSENT"
+	},
+	"SANDBOX:PlayerSpawnSWEP": {
+		"body": [
+			"function SANDBOX:PlayerSpawnSWEP(ply, weapon, swep)\n\t$0\nend"
+		],
+		"description": "Called when a player attempts to spawn a weapon from the Q menu. ( Mouse wheel clicks on an icon )",
+		"prefix": "SANDBOX:PlayerSpawnSWEP"
+	},
+	"SANDBOX:PlayerSpawnVehicle": {
+		"body": [
+			"function SANDBOX:PlayerSpawnVehicle(ply, model, name, table)\n\t$0\nend"
+		],
+		"description": "Called to ask if player allowed to spawn a particular vehicle or not.",
+		"prefix": "SANDBOX:PlayerSpawnVehicle"
+	},
+	"SANDBOX:PlayerSpawnedEffect": {
+		"body": [
+			"function SANDBOX:PlayerSpawnedEffect(ply, model, ent)\n\t$0\nend"
+		],
+		"description": "Called after the player spawned an effect.",
+		"prefix": "SANDBOX:PlayerSpawnedEffect"
+	},
+	"SANDBOX:PlayerSpawnedNPC": {
+		"body": [
+			"function SANDBOX:PlayerSpawnedNPC(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called after the player spawned an NPC.",
+		"prefix": "SANDBOX:PlayerSpawnedNPC"
+	},
+	"SANDBOX:PlayerSpawnedProp": {
+		"body": [
+			"function SANDBOX:PlayerSpawnedProp(ply, model, entity)\n\t$0\nend"
+		],
+		"description": "Called when a player has successfully spawned a prop from the Q menu.",
+		"prefix": "SANDBOX:PlayerSpawnedProp"
+	},
+	"SANDBOX:PlayerSpawnedRagdoll": {
+		"body": [
+			"function SANDBOX:PlayerSpawnedRagdoll(ply, model, ent)\n\t$0\nend"
+		],
+		"description": "Called after the player spawned a ragdoll.",
+		"prefix": "SANDBOX:PlayerSpawnedRagdoll"
+	},
+	"SANDBOX:PlayerSpawnedSENT": {
+		"body": [
+			"function SANDBOX:PlayerSpawnedSENT(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called after the player has spawned a scripted entity.",
+		"prefix": "SANDBOX:PlayerSpawnedSENT"
+	},
+	"SANDBOX:PlayerSpawnedSWEP": {
+		"body": [
+			"function SANDBOX:PlayerSpawnedSWEP(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called after the player has spawned a scripted weapon from the spawnmenu with a middle mouse click.\n\nFor left mouse click spawns, see SANDBOX:PlayerGiveSWEP.",
+		"prefix": "SANDBOX:PlayerSpawnedSWEP"
+	},
+	"SANDBOX:PlayerSpawnedVehicle": {
+		"body": [
+			"function SANDBOX:PlayerSpawnedVehicle(ply, ent)\n\t$0\nend"
+		],
+		"description": "Called after the player spawned a vehicle.",
+		"prefix": "SANDBOX:PlayerSpawnedVehicle"
+	},
+	"SANDBOX:PopulatePropMenu": {
+		"body": [
+			"function SANDBOX:PopulatePropMenu()\n\t$0\nend"
+		],
+		"description": "This hook makes the engine load the spawnlist text files.\nIt calls spawnmenu.PopulateFromEngineTextFiles by default.",
+		"prefix": "SANDBOX:PopulatePropMenu"
+	},
+	"SANDBOX:PopulateSTOOLMenu": {
+		"body": [
+			"function SANDBOX:PopulateSTOOLMenu()\n\t$0\nend"
+		],
+		"description": "Called to populate the Scripted Tool menu.\n\nThis hook is never called. Use SANDBOX:PopulateToolMenu instead.",
+		"prefix": "SANDBOX:PopulateSTOOLMenu"
+	},
+	"SANDBOX:PopulateToolMenu": {
+		"body": [
+			"function SANDBOX:PopulateToolMenu()\n\t$0\nend"
+		],
+		"description": "Add the STOOLS to the tool menu. You want to call spawnmenu.AddToolMenuOption in this hook.",
+		"prefix": "SANDBOX:PopulateToolMenu"
+	},
+	"SANDBOX:PostReloadToolsMenu": {
+		"body": [
+			"function SANDBOX:PostReloadToolsMenu()\n\t$0\nend"
+		],
+		"description": "Called right after the Lua Loaded tool menus are reloaded. This is a good place to set up any ControlPanels.",
+		"prefix": "SANDBOX:PostReloadToolsMenu"
+	},
+	"SANDBOX:PreReloadToolsMenu": {
+		"body": [
+			"function SANDBOX:PreReloadToolsMenu()\n\t$0\nend"
+		],
+		"description": "Called right before the Lua Loaded tool menus are reloaded.",
+		"prefix": "SANDBOX:PreReloadToolsMenu"
+	},
+	"SANDBOX:SpawnMenuEnabled": {
+		"body": [
+			"function SANDBOX:SpawnMenuEnabled()\n\t$0\nend"
+		],
+		"description": "If false is returned then the spawn menu is never created. This saves load times if your mod doesn't actually use the spawn menu for any reason.",
+		"prefix": "SANDBOX:SpawnMenuEnabled"
+	},
+	"SANDBOX:SpawnMenuOpen": {
+		"body": [
+			"function SANDBOX:SpawnMenuOpen()\n\t$0\nend"
+		],
+		"description": "Called when spawnmenu is trying to be opened.\n\nHiding the spawnmenu will not stop people from being able to use the various console commands to spawn in items, etc. See GM:PlayerSpawn* hooks for blocking actual spawning.",
+		"prefix": "SANDBOX:SpawnMenuOpen"
+	},
+	"SANDBOX:SpawnlistOpenGenericMenu": {
+		"body": [
+			"function SANDBOX:SpawnlistOpenGenericMenu(canvas)\n\t$0\nend"
+		],
+		"description": "\nCalled when there's one or more items selected in the spawnmenu by the player, to open the multi selection right click menu (DMenu)",
+		"prefix": "SANDBOX:SpawnlistOpenGenericMenu"
+	},
+	"TOOL:Deploy": {
+		"body": [
+			"function TOOL:Deploy()\n\t$0\nend"
+		],
+		"description": "Called when WEAPON:Deploy of the toolgun is called.\n\nThis is also called when switching from another tool on the server.",
+		"prefix": "TOOL:Deploy"
+	},
+	"TOOL:DrawHUD": {
+		"body": [
+			"function TOOL:DrawHUD()\n\t$0\nend"
+		],
+		"description": "Called when WEAPON:DrawHUD of the toolgun is called, only when the user has this tool selected.",
+		"prefix": "TOOL:DrawHUD"
+	},
+	"TOOL:DrawToolScreen": {
+		"body": [
+			"function TOOL:DrawToolScreen(width, height)\n\t$0\nend"
+		],
+		"description": "Called after the default tool screen has been drawn from WEAPON:RenderScreen.\n\nIf this method exists on the TOOL object table, the default scrolling text will not be drawn\nMaterials rendered in this hook require $ignorez parameter to draw properly.",
+		"prefix": "TOOL:DrawToolScreen"
+	},
+	"TOOL:FreezeMovement": {
+		"body": [
+			"function TOOL:FreezeMovement()\n\t$0\nend"
+		],
+		"description": "Called when WEAPON:Think of the toolgun is called, only when the user has this tool selected.",
+		"prefix": "TOOL:FreezeMovement"
+	},
+	"TOOL:Holster": {
+		"body": [
+			"function TOOL:Holster()\n\t$0\nend"
+		],
+		"description": "Called when WEAPON:Holster of the toolgun is called, as well as when switching between different toolguns.",
+		"prefix": "TOOL:Holster"
+	},
+	"TOOL:LeftClick": {
+		"body": [
+			"function TOOL:LeftClick(tr)\n\t$0\nend"
+		],
+		"description": "Called when the user left clicks with the tool",
+		"prefix": "TOOL:LeftClick"
+	},
+	"TOOL:Reload": {
+		"body": [
+			"function TOOL:Reload(tr)\n\t$0\nend"
+		],
+		"description": "Called when the user presses the reload key with the tool out.",
+		"prefix": "TOOL:Reload"
+	},
+	"TOOL:RightClick": {
+		"body": [
+			"function TOOL:RightClick(tr)\n\t$0\nend"
+		],
+		"description": "Called when the user right clicks with the tool.",
+		"prefix": "TOOL:RightClick"
+	},
+	"TOOL:Think": {
+		"body": [
+			"function TOOL:Think()\n\t$0\nend"
+		],
+		"description": "Called when WEAPON:Think of the toolgun is called. This only happens when the tool gun is currently equipped/selected by the player and the selected tool is this tool.",
+		"prefix": "TOOL:Think"
+	},
+	"WEAPON:AcceptInput": {
+		"body": [
+			"function WEAPON:AcceptInput(inputName, activator, called, data)\n\t$0\nend"
+		],
+		"description": "Called when another entity fires an event to this entity.",
+		"prefix": "WEAPON:AcceptInput"
+	},
+	"WEAPON:AdjustMouseSensitivity": {
+		"body": [
+			"function WEAPON:AdjustMouseSensitivity()\n\t$0\nend"
+		],
+		"description": "Allows you to adjust the mouse sensitivity. This hook only works if you haven't overridden GM:AdjustMouseSensitivity.",
+		"prefix": "WEAPON:AdjustMouseSensitivity"
+	},
+	"WEAPON:Ammo1": {
+		"body": [
+			"function WEAPON:Ammo1()\n\t$0\nend"
+		],
+		"description": "Returns how much of primary ammo the player has.",
+		"prefix": "WEAPON:Ammo1"
+	},
+	"WEAPON:Ammo2": {
+		"body": [
+			"function WEAPON:Ammo2()\n\t$0\nend"
+		],
+		"description": "Returns how much of secondary ammo the player has.",
+		"prefix": "WEAPON:Ammo2"
+	},
+	"WEAPON:CalcView": {
+		"body": [
+			"function WEAPON:CalcView(ply, pos, ang, fov)\n\t$0\nend"
+		],
+		"description": "Allows you to adjust player view while this weapon in use.\n\nThis hook is called from the default implementation of GM:CalcView which is [here](https://github.com/garrynewman/garrysmod/blob/master/garrysmod/gamemodes/base/gamemode/cl_init.lua#L376-L383). Therefore, it will not be called if any other hook added to CalcView returns any value, or if the current gamemode overrides the default hook and does not call the SWEP function.\n\nSWEPs that define this function will not work with the Global.TauntCamera",
+		"prefix": "WEAPON:CalcView"
+	},
+	"WEAPON:CalcViewModelView": {
+		"body": [
+			"function WEAPON:CalcViewModelView(ViewModel, OldEyePos, OldEyeAng, EyePos, EyeAng)\n\t$0\nend"
+		],
+		"description": "Allows overriding the position and angle of the viewmodel. This hook only works if you haven't overridden GM:CalcViewModelView.",
+		"prefix": "WEAPON:CalcViewModelView"
+	},
+	"WEAPON:CanBePickedUpByNPCs": {
+		"body": [
+			"function WEAPON:CanBePickedUpByNPCs()\n\t$0\nend"
+		],
+		"description": "Called when a Citizen NPC is looking around to a (better) weapon to pickup.",
+		"prefix": "WEAPON:CanBePickedUpByNPCs"
+	},
+	"WEAPON:CanPrimaryAttack": {
+		"body": [
+			"function WEAPON:CanPrimaryAttack()\n\t$0\nend"
+		],
+		"description": "Helper function for checking for no ammo.",
+		"prefix": "WEAPON:CanPrimaryAttack"
+	},
+	"WEAPON:CanSecondaryAttack": {
+		"body": [
+			"function WEAPON:CanSecondaryAttack()\n\t$0\nend"
+		],
+		"description": "Helper function for checking for no ammo.",
+		"prefix": "WEAPON:CanSecondaryAttack"
+	},
+	"WEAPON:CustomAmmoDisplay": {
+		"body": [
+			"function WEAPON:CustomAmmoDisplay()\n\t$0\nend"
+		],
+		"description": "Allows you to use any numbers you want for the ammo display on the HUD.\n\nCan be useful for weapons that don't use standard ammo.",
+		"prefix": "WEAPON:CustomAmmoDisplay"
+	},
+	"WEAPON:Deploy": {
+		"body": [
+			"function WEAPON:Deploy()\n\t$0\nend"
+		],
+		"description": "Called when player has just switched to this weapon.\n\nDue to this hook being predicted, it is not called clientside in singleplayer at all, and in multiplayer it will not be called clientside if the weapon is switched with Player:SelectWeapon or the \"use\" console command, however it will be called clientside with the default weapon selection menu and when using CUserCmd:SelectWeapon",
+		"prefix": "WEAPON:Deploy"
+	},
+	"WEAPON:DoDrawCrosshair": {
+		"body": [
+			"function WEAPON:DoDrawCrosshair(x, y)\n\t$0\nend"
+		],
+		"description": "Called when the crosshair is about to get drawn, and allows you to override it.\n\nThis function will not be called if **SWEP.DrawCrosshair** set to false.\nThis function will not be called if player was affected by Player:CrosshairDisable.\n\nThe arguments passed to this function are not affected by **SWEP.AccurateCrosshair**.",
+		"prefix": "WEAPON:DoDrawCrosshair"
+	},
+	"WEAPON:DoImpactEffect": {
+		"body": [
+			"function WEAPON:DoImpactEffect(tr, damageType)\n\t$0\nend"
+		],
+		"description": "Called so the weapon can override the impact effects it makes.",
+		"prefix": "WEAPON:DoImpactEffect"
+	},
+	"WEAPON:DrawHUD": {
+		"body": [
+			"function WEAPON:DrawHUD()\n\t$0\nend"
+		],
+		"description": "This hook allows you to draw on screen while this weapon is in use.\n\nIf you want to draw a custom crosshair, consider using WEAPON:DoDrawCrosshair instead.",
+		"prefix": "WEAPON:DrawHUD"
+	},
+	"WEAPON:DrawHUDBackground": {
+		"body": [
+			"function WEAPON:DrawHUDBackground()\n\t$0\nend"
+		],
+		"description": "This hook allows you to draw on screen while this weapon is in use. This hook is called **before** WEAPON:DrawHUD and is equivalent of GM:HUDPaintBackground.",
+		"prefix": "WEAPON:DrawHUDBackground"
+	},
+	"WEAPON:DrawWeaponSelection": {
+		"body": [
+			"function WEAPON:DrawWeaponSelection(x, y, width, height, alpha)\n\t$0\nend"
+		],
+		"description": "This hook draws the selection icon in the weapon selection menu.",
+		"prefix": "WEAPON:DrawWeaponSelection"
+	},
+	"WEAPON:DrawWorldModel": {
+		"body": [
+			"function WEAPON:DrawWorldModel(flags)\n\t$0\nend"
+		],
+		"description": "Called when we are about to draw the world model.",
+		"prefix": "WEAPON:DrawWorldModel"
+	},
+	"WEAPON:DrawWorldModelTranslucent": {
+		"body": [
+			"function WEAPON:DrawWorldModelTranslucent(flags)\n\t$0\nend"
+		],
+		"description": "Called when we are about to draw the translucent world model.",
+		"prefix": "WEAPON:DrawWorldModelTranslucent"
+	},
+	"WEAPON:Equip": {
+		"body": [
+			"function WEAPON:Equip(NewOwner)\n\t$0\nend"
+		],
+		"description": "Called when a player or NPC has picked the weapon up.",
+		"prefix": "WEAPON:Equip"
+	},
+	"WEAPON:EquipAmmo": {
+		"body": [
+			"function WEAPON:EquipAmmo(ply)\n\t$0\nend"
+		],
+		"description": "The player has picked up the weapon and has taken the ammo from it.\nThe weapon will be removed immidiately after this call.",
+		"prefix": "WEAPON:EquipAmmo"
+	},
+	"WEAPON:FireAnimationEvent": {
+		"body": [
+			"function WEAPON:FireAnimationEvent(pos, ang, event, options, source)\n\t$0\nend"
+		],
+		"description": "Called before firing animation events, such as muzzle flashes or shell ejections.\n\nThis will only be called serverside for 3000-range events, and clientside for 5000-range  and other events.",
+		"prefix": "WEAPON:FireAnimationEvent"
+	},
+	"WEAPON:FreezeMovement": {
+		"body": [
+			"function WEAPON:FreezeMovement()\n\t$0\nend"
+		],
+		"description": "This hook allows you to freeze players screen.\nPlayer will still be able to move or shoot",
+		"prefix": "WEAPON:FreezeMovement"
+	},
+	"WEAPON:GetCapabilities": {
+		"body": [
+			"function WEAPON:GetCapabilities()\n\t$0\nend"
+		],
+		"description": "This hook is for NPCs, you return what they should try to do with it.",
+		"prefix": "WEAPON:GetCapabilities"
+	},
+	"WEAPON:GetNPCBulletSpread": {
+		"body": [
+			"function WEAPON:GetNPCBulletSpread(proficiency)\n\t$0\nend"
+		],
+		"description": "Called when the weapon is used by NPCs to determine how accurate the bullets fired should be.\n\nThe inaccuracy is simulated by changing the NPC:GetAimVector based on the value returned from this hook.",
+		"prefix": "WEAPON:GetNPCBulletSpread"
+	},
+	"WEAPON:GetNPCBurstSettings": {
+		"body": [
+			"function WEAPON:GetNPCBurstSettings()\n\t$0\nend"
+		],
+		"description": "Called when the weapon is used by NPCs to tell the NPC how to use this weapon. Controls how long the NPC can or should shoot continuously.",
+		"prefix": "WEAPON:GetNPCBurstSettings"
+	},
+	"WEAPON:GetNPCRestTimes": {
+		"body": [
+			"function WEAPON:GetNPCRestTimes()\n\t$0\nend"
+		],
+		"description": "Called when the weapon is used by NPCs to tell the NPC how to use this weapon. Controls amount of time the NPC can rest (not shoot) between bursts.",
+		"prefix": "WEAPON:GetNPCRestTimes"
+	},
+	"WEAPON:GetTracerOrigin": {
+		"body": [
+			"function WEAPON:GetTracerOrigin()\n\t$0\nend"
+		],
+		"description": "Allows you to override where the tracer effect comes from. ( Visual bullets )",
+		"prefix": "WEAPON:GetTracerOrigin"
+	},
+	"WEAPON:GetViewModelPosition": {
+		"body": [
+			"function WEAPON:GetViewModelPosition(EyePos, EyeAng)\n\t$0\nend"
+		],
+		"description": "This hook allows you to adjust view model position and angles.",
+		"prefix": "WEAPON:GetViewModelPosition"
+	},
+	"WEAPON:HUDShouldDraw": {
+		"body": [
+			"function WEAPON:HUDShouldDraw(element)\n\t$0\nend"
+		],
+		"description": "This hook determines which parts of the HUD to draw.",
+		"prefix": "WEAPON:HUDShouldDraw"
+	},
+	"WEAPON:Holster": {
+		"body": [
+			"function WEAPON:Holster(weapon)\n\t$0\nend"
+		],
+		"description": "Called when weapon tries to holster.\n\nThis will only be called serverside when using Player:SelectWeapon as that function immidiately switches the weapon out of prediction.\n\nThis is called twice for every holster clientside, one in Prediction and one not.\n\nBefore WEAPON:OnRemove is called, this function is only called serverside.",
+		"prefix": "WEAPON:Holster"
+	},
+	"WEAPON:Initialize": {
+		"body": [
+			"function WEAPON:Initialize()\n\t$0\nend"
+		],
+		"description": "Called when the weapon entity is created.\n\nEntity:GetOwner will return NULL at this point because the weapon is not equpped by a player or NPC yet. Use WEAPON:Equip or WEAPON:Deploy if you need the owner to be valid.\n\nThis is sometimes not called clientside. You can work around this by setting a variable in Initialize and check if it exists in WEAPON:Think. See the example below.\n\nThis is not called serverside after a quicksave.",
+		"prefix": "WEAPON:Initialize"
+	},
+	"WEAPON:KeyValue": {
+		"body": [
+			"function WEAPON:KeyValue(key, value)\n\t$0\nend"
+		],
+		"description": "Called when the engine sets a value for this scripted weapon.\n\nSee GM:EntityKeyValue for a hook that works for all entities.\n\n\nSee ENTITY:KeyValue for an  hook that works for scripted entities.",
+		"prefix": "WEAPON:KeyValue"
+	},
+	"WEAPON:OnDrop": {
+		"body": [
+			"function WEAPON:OnDrop()\n\t$0\nend"
+		],
+		"description": "Called when weapon is dropped by Player:DropWeapon.\n\nSee also WEAPON:OwnerChanged.",
+		"prefix": "WEAPON:OnDrop"
+	},
+	"WEAPON:OnReloaded": {
+		"body": [
+			"function WEAPON:OnReloaded()\n\t$0\nend"
+		],
+		"description": "Called whenever the weapons Lua script is reloaded.",
+		"prefix": "WEAPON:OnReloaded"
+	},
+	"WEAPON:OnRemove": {
+		"body": [
+			"function WEAPON:OnRemove()\n\t$0\nend"
+		],
+		"description": "Called when the swep is about to be removed.",
+		"prefix": "WEAPON:OnRemove"
+	},
+	"WEAPON:OnRestore": {
+		"body": [
+			"function WEAPON:OnRestore()\n\t$0\nend"
+		],
+		"description": "Called when the weapon entity is reloaded from a Source Engine save (not the Sandbox saves or dupes) or on a changelevel (for example Half-Life 2 campaign level transitions).\n\nFor the duplicator callbacks, see ENTITY:OnDuplicated.\n\nSee also saverestore for relevant functions.",
+		"prefix": "WEAPON:OnRestore"
+	},
+	"WEAPON:OwnerChanged": {
+		"body": [
+			"function WEAPON:OwnerChanged()\n\t$0\nend"
+		],
+		"description": "Called when weapon is dropped or picked up by a new player.\n\nSee also WEAPON:OnDrop.",
+		"prefix": "WEAPON:OwnerChanged"
+	},
+	"WEAPON:PostDrawViewModel": {
+		"body": [
+			"function WEAPON:PostDrawViewModel(vm, weapon, ply)\n\t$0\nend"
+		],
+		"description": "Called after the view model has been drawn while the weapon in use. This hook is called from the default implementation of GM:PostDrawViewModel, and as such, will not occur if it has been overridden.\n\nWEAPON:ViewModelDrawn is an alternative hook which is always called before GM:PostDrawViewModel.",
+		"prefix": "WEAPON:PostDrawViewModel"
+	},
+	"WEAPON:PreDrawViewModel": {
+		"body": [
+			"function WEAPON:PreDrawViewModel(vm, weapon, ply)\n\t$0\nend"
+		],
+		"description": "Allows you to modify viewmodel while the weapon in use before it is drawn. This hook only works if you haven't overridden GM:PreDrawViewModel.",
+		"prefix": "WEAPON:PreDrawViewModel"
+	},
+	"WEAPON:PrimaryAttack": {
+		"body": [
+			"function WEAPON:PrimaryAttack()\n\t$0\nend"
+		],
+		"description": "Called when primary attack button ( +attack ) is pressed.\n\nWhen in singleplayer, this function is only called in the server realm. When in multiplayer, the hook will be called on both the server and the client in order to allow for Prediction.\n\nYou can force the hook to always be called on client like this:\n\n```\nif ( game.SinglePlayer() ) then self:CallOnClient( \"PrimaryAttack\" ) end\n```\n\n\nNote that due to prediction, in multiplayer SWEP:PrimaryAttack is called multiple times per one \"shot\" with the gun. To work around that, use Global.IsFirstTimePredicted.",
+		"prefix": "WEAPON:PrimaryAttack"
+	},
+	"WEAPON:PrintWeaponInfo": {
+		"body": [
+			"function WEAPON:PrintWeaponInfo(x, y, alpha)\n\t$0\nend"
+		],
+		"description": "A convenience function that draws the weapon info box, used in WEAPON:DrawWeaponSelection.",
+		"prefix": "WEAPON:PrintWeaponInfo"
+	},
+	"WEAPON:Reload": {
+		"body": [
+			"function WEAPON:Reload()\n\t$0\nend"
+		],
+		"description": "Called when the reload key ( +reload ) is pressed.",
+		"prefix": "WEAPON:Reload"
+	},
+	"WEAPON:RenderScreen": {
+		"body": [
+			"function WEAPON:RenderScreen()\n\t$0\nend"
+		],
+		"description": "Called every frame just before GM:RenderScene.\n\nUsed by the Tool Gun to render view model screens (TOOL:DrawToolScreen).\n\n\nMaterials rendered in this hook require $ignorez parameter to draw properly.",
+		"prefix": "WEAPON:RenderScreen"
+	},
+	"WEAPON:SecondaryAttack": {
+		"body": [
+			"function WEAPON:SecondaryAttack()\n\t$0\nend"
+		],
+		"description": "Called when secondary attack button ( +attack2 ) is pressed.\n\nFor issues with this hook being called rapidly on the client side, see the global function Global.IsFirstTimePredicted.",
+		"prefix": "WEAPON:SecondaryAttack"
+	},
+	"WEAPON:SetDeploySpeed": {
+		"body": [
+			"function WEAPON:SetDeploySpeed(speed)\n\t$0\nend"
+		],
+		"description": "Sets the weapon deploy speed. This value needs to match on client and server.",
+		"prefix": "WEAPON:SetDeploySpeed"
+	},
+	"WEAPON:SetWeaponHoldType": {
+		"body": [
+			"function WEAPON:SetWeaponHoldType(name)\n\t$0\nend"
+		],
+		"description": "Sets the hold type of the weapon. This must be called on **both** the server and the client to work properly.\n\n**NOTE:** You should avoid calling this function and call Weapon:SetHoldType now.",
+		"prefix": "WEAPON:SetWeaponHoldType"
+	},
+	"WEAPON:SetupDataTables": {
+		"body": [
+			"function WEAPON:SetupDataTables()\n\t$0\nend"
+		],
+		"description": "Called when the SWEP should set up its Networking_Entities.",
+		"prefix": "WEAPON:SetupDataTables"
+	},
+	"WEAPON:ShootBullet": {
+		"body": [
+			"function WEAPON:ShootBullet(damage, num_bullets, aimcone, ammo_type, force, tracer)\n\t$0\nend"
+		],
+		"description": "A convenient function to shoot bullets.",
+		"prefix": "WEAPON:ShootBullet"
+	},
+	"WEAPON:ShootEffects": {
+		"body": [
+			"function WEAPON:ShootEffects()\n\t$0\nend"
+		],
+		"description": "A convenience function to create shoot effects.",
+		"prefix": "WEAPON:ShootEffects"
+	},
+	"WEAPON:ShouldDrawViewModel": {
+		"body": [
+			"function WEAPON:ShouldDrawViewModel()\n\t$0\nend"
+		],
+		"description": "Called to determine if the view model should be drawn or not.",
+		"prefix": "WEAPON:ShouldDrawViewModel"
+	},
+	"WEAPON:ShouldDropOnDie": {
+		"body": [
+			"function WEAPON:ShouldDropOnDie()\n\t$0\nend"
+		],
+		"description": "Should this weapon be dropped when its owner dies?\n\nThis only works if the player has Player:ShouldDropWeapon set to true.",
+		"prefix": "WEAPON:ShouldDropOnDie"
+	},
+	"WEAPON:TakePrimaryAmmo": {
+		"body": [
+			"function WEAPON:TakePrimaryAmmo(amount)\n\t$0\nend"
+		],
+		"description": "A convenience function to remove primary ammo from clip.",
+		"prefix": "WEAPON:TakePrimaryAmmo"
+	},
+	"WEAPON:TakeSecondaryAmmo": {
+		"body": [
+			"function WEAPON:TakeSecondaryAmmo(amount)\n\t$0\nend"
+		],
+		"description": "A convenience function to remove secondary ammo from clip.",
+		"prefix": "WEAPON:TakeSecondaryAmmo"
+	},
+	"WEAPON:Think": {
+		"body": [
+			"function WEAPON:Think()\n\t$0\nend"
+		],
+		"description": "Called when the swep thinks.\n\nThis hook won't be called during the deploy animation and when using Weapon:DefaultReload.\n\nDespite being a predicted hook, this hook is called clientside in single player, however it will not be recognized as a predicted hook to Player:GetCurrentCommand.\n\nThis hook will be called before Player movement is processed on the client, and after on the server.\n\nThis will not be run during deploy animations after a serverside-only deploy. This usually happens after picking up and dropping an object with +use.",
+		"prefix": "WEAPON:Think"
+	},
+	"WEAPON:TranslateActivity": {
+		"body": [
+			"function WEAPON:TranslateActivity(act)\n\t$0\nend"
+		],
+		"description": "Translate a player's Activity into a weapon's activity, depending on how you want the player to be holding the weapon.\n\nFor example, ACT_MP_RUN becomes ACT_HL2MP_RUN_PISTOL.",
+		"prefix": "WEAPON:TranslateActivity"
+	},
+	"WEAPON:TranslateFOV": {
+		"body": [
+			"function WEAPON:TranslateFOV(fov)\n\t$0\nend"
+		],
+		"description": "Allows to change players field of view while player holds the weapon.\n\nThis hook must be defined shared and return same value on both to properly affect Area Portals.",
+		"prefix": "WEAPON:TranslateFOV"
+	},
+	"WEAPON:ViewModelDrawn": {
+		"body": [
+			"function WEAPON:ViewModelDrawn(ViewModel)\n\t$0\nend"
+		],
+		"description": "Called straight after the view model has been drawn. This is called before GM:PostDrawViewModel and WEAPON:PostDrawViewModel.",
+		"prefix": "WEAPON:ViewModelDrawn"
+	}
+}

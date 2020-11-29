@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.3.0
+- Added hooks to snippets
+
 ## 2.2.3
 - Fixed numbers at the end of variable names being tokenized
 

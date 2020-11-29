@@ -34,6 +34,30 @@ def translateMethod(method, prefix=""):
 
 	return newMethod
 
+def translateHook(hook):
+	newHook = {}
+
+	# Adding prefix
+	newHook["prefix"] = hook["parent"] + ":" + hook["name"]
+
+	# Adding description
+	if "description" in hook:
+		newHook["description"] = formatDesc(hook["description"])
+	else:
+		newHook["description"] = ""
+
+	# Formatting body
+	newHook["body"] = ["function " + hook["parent"] + ":" + hook["name"] + "("]
+
+	if "arguments" in hook:
+		for arg in hook["arguments"]:
+			newHook["body"][0] += arg["name"] + ", "
+
+	newHook["body"][0] = newHook["body"][0].removesuffix(", ")
+	newHook["body"][0] += ")\n\t$0\nend"
+
+	return newHook
+
 def translateValue(value):
 	newValue = {}
 
@@ -86,6 +110,17 @@ def translateEnums():
 
 	return finalEnums
 
+def translateHooks():
+	f = open("output/hooks.json")
+	d = json.load(f)
+	finalHooks = {}
+
+	for obj in d:
+		for method in obj["functions"]:
+			finalHooks[obj["name"] + ":" + method["name"]] = translateHook(method)
+
+	return finalHooks
+
 if not os.path.exists("final"):
 	os.makedirs("final")
 
@@ -94,3 +129,4 @@ dump(translateGlobals(), "globals")
 dump(translateClasses(), "classes")
 dump(translateLibs(), "libraries")
 dump(translateEnums(), "enums")
+dump(translateHooks(), "hooks")
