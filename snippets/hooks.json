@@ -55,467 +55,467 @@
 		"description": "",
 		"prefix": "EFFECT:Touch"
 	},
-	"ENTITY:AcceptInput": {
+	"ENT:AcceptInput": {
 		"body": [
-			"function ENTITY:AcceptInput(inputName, activator, caller, data)\n\t$0\nend"
+			"function ENT:AcceptInput(inputName, activator, caller, data)\n\t$0\nend"
 		],
 		"description": "Called when another entity fires an event to this entity.",
-		"prefix": "ENTITY:AcceptInput"
+		"prefix": "ENT:AcceptInput"
 	},
-	"ENTITY:CalcAbsolutePosition": {
+	"ENT:CalcAbsolutePosition": {
 		"body": [
-			"function ENTITY:CalcAbsolutePosition(pos, ang)\n\t$0\nend"
+			"function ENT:CalcAbsolutePosition(pos, ang)\n\t$0\nend"
 		],
 		"description": "Called whenever the entity's position changes. A callback for when an entity's angle changes is available via Entity:AddCallback.\n\nLike ENTITY:RenderOverride, this hook works on any entity (scripted or not) it is applied on.\n\nIf EFL_DIRTY_ABSTRANSFORM is set on the entity, this will be called serverside only; otherwise, this will be called clientside only. This means serverside calls of Entity:SetPos without the EFL_DIRTY_ABSTRANSFORM flag enabled (most cases) will be called clientside only.\n\nThe give concommand will call this hook serverside only upon entity spawn.",
-		"prefix": "ENTITY:CalcAbsolutePosition"
+		"prefix": "ENT:CalcAbsolutePosition"
 	},
-	"ENTITY:CanProperty": {
+	"ENT:CanProperty": {
 		"body": [
-			"function ENTITY:CanProperty(ply, property)\n\t$0\nend"
+			"function ENT:CanProperty(ply, property)\n\t$0\nend"
 		],
 		"description": "Controls if a property can be used on this entity or not.\n\nThis hook will only work in Sandbox derived gamemodes that do not have SANDBOX:CanProperty overridden.\n\nThis hook will work on ALL entities, not just the scripted ones (SENTs)",
-		"prefix": "ENTITY:CanProperty"
+		"prefix": "ENT:CanProperty"
 	},
-	"ENTITY:CanTool": {
+	"ENT:CanTool": {
 		"body": [
-			"function ENTITY:CanTool(ply, tr, tool)\n\t$0\nend"
+			"function ENT:CanTool(ply, tr, tool)\n\t$0\nend"
 		],
 		"description": "Controls if a tool can be used on this entity or not.\n\nThis hook will only work in Sandbox derived gamemodes that do not have SANDBOX:CanTool overridden.\n\nThis hook will work on ALL entities, not just the scripted ones (SENTs)",
-		"prefix": "ENTITY:CanTool"
+		"prefix": "ENT:CanTool"
 	},
-	"ENTITY:CreateSchedulesInternal": {
+	"ENT:CreateSchedulesInternal": {
 		"body": [
-			"function ENTITY:CreateSchedulesInternal()\n\t$0\nend"
+			"function ENT:CreateSchedulesInternal()\n\t$0\nend"
 		],
 		"description": "Called just before ENTITY:Initialize for \"ai\" type entities only.",
-		"prefix": "ENTITY:CreateSchedulesInternal"
+		"prefix": "ENT:CreateSchedulesInternal"
 	},
-	"ENTITY:DoImpactEffect": {
+	"ENT:DoImpactEffect": {
 		"body": [
-			"function ENTITY:DoImpactEffect(tr, damageType)\n\t$0\nend"
+			"function ENT:DoImpactEffect(tr, damageType)\n\t$0\nend"
 		],
 		"description": "Called so the entity can override the bullet impact effects it makes.\n\nThis hook only works for the \"anim\" type entities.",
-		"prefix": "ENTITY:DoImpactEffect"
+		"prefix": "ENT:DoImpactEffect"
 	},
-	"ENTITY:DoSchedule": {
+	"ENT:DoSchedule": {
 		"body": [
-			"function ENTITY:DoSchedule(sched)\n\t$0\nend"
+			"function ENT:DoSchedule(sched)\n\t$0\nend"
 		],
 		"description": "Runs a Lua schedule. Runs tasks inside the schedule.",
-		"prefix": "ENTITY:DoSchedule"
+		"prefix": "ENT:DoSchedule"
 	},
-	"ENTITY:DoingEngineSchedule": {
+	"ENT:DoingEngineSchedule": {
 		"body": [
-			"function ENTITY:DoingEngineSchedule()\n\t$0\nend"
+			"function ENT:DoingEngineSchedule()\n\t$0\nend"
 		],
 		"description": "Called whenever an engine schedule is being ran.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:DoingEngineSchedule"
+		"prefix": "ENT:DoingEngineSchedule"
 	},
-	"ENTITY:Draw": {
+	"ENT:Draw": {
 		"body": [
-			"function ENTITY:Draw(flags)\n\t$0\nend"
+			"function ENT:Draw(flags)\n\t$0\nend"
 		],
 		"description": "Called if and when the entity should be drawn opaquely, based on the Entity:GetRenderGroup of the entity.\n\nSee Structures/ENT and Enums/RENDERGROUP for more information.\n\nSee also ENTITY:DrawTranslucent.",
-		"prefix": "ENTITY:Draw"
+		"prefix": "ENT:Draw"
 	},
-	"ENTITY:DrawTranslucent": {
+	"ENT:DrawTranslucent": {
 		"body": [
-			"function ENTITY:DrawTranslucent(flags)\n\t$0\nend"
+			"function ENT:DrawTranslucent(flags)\n\t$0\nend"
 		],
 		"description": "Called when the entity should be drawn translucently. If your scripted entity has a translucent model, it will be invisible unless it is drawn here.",
-		"prefix": "ENTITY:DrawTranslucent"
+		"prefix": "ENT:DrawTranslucent"
 	},
-	"ENTITY:EndTouch": {
+	"ENT:EndTouch": {
 		"body": [
-			"function ENTITY:EndTouch(entity)\n\t$0\nend"
+			"function ENT:EndTouch(entity)\n\t$0\nend"
 		],
 		"description": "Called when the entity stops touching another entity.\n\nThis only works for **brush** entities and for entities that have Entity:SetTrigger set to true.",
-		"prefix": "ENTITY:EndTouch"
+		"prefix": "ENT:EndTouch"
 	},
-	"ENTITY:EngineScheduleFinish": {
+	"ENT:EngineScheduleFinish": {
 		"body": [
-			"function ENTITY:EngineScheduleFinish()\n\t$0\nend"
+			"function ENT:EngineScheduleFinish()\n\t$0\nend"
 		],
 		"description": "Called whenever an engine schedule is finished.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:EngineScheduleFinish"
+		"prefix": "ENT:EngineScheduleFinish"
 	},
-	"ENTITY:ExpressionFinished": {
+	"ENT:ExpressionFinished": {
 		"body": [
-			"function ENTITY:ExpressionFinished(strExp)\n\t$0\nend"
+			"function ENT:ExpressionFinished(strExp)\n\t$0\nend"
 		],
 		"description": "Called when an NPC's expression has finished.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:ExpressionFinished"
+		"prefix": "ENT:ExpressionFinished"
 	},
-	"ENTITY:FireAnimationEvent": {
+	"ENT:FireAnimationEvent": {
 		"body": [
-			"function ENTITY:FireAnimationEvent(pos, ang, event, name)\n\t$0\nend"
+			"function ENT:FireAnimationEvent(pos, ang, event, name)\n\t$0\nend"
 		],
 		"description": "Called before firing clientside animation events, such as muzzle flashes or shell ejections.\n\nSee ENTITY:HandleAnimEvent for the serverside version.\n\nThis hook only works on \"anim\", \"nextbot\" and \"ai\" type entities.",
-		"prefix": "ENTITY:FireAnimationEvent"
+		"prefix": "ENT:FireAnimationEvent"
 	},
-	"ENTITY:GetAttackSpread": {
+	"ENT:GetAttackSpread": {
 		"body": [
-			"function ENTITY:GetAttackSpread(wep, target)\n\t$0\nend"
+			"function ENT:GetAttackSpread(wep, target)\n\t$0\nend"
 		],
 		"description": "Called to determine how good an NPC is at using a particular weapon.\n\n\"ai\" base only",
-		"prefix": "ENTITY:GetAttackSpread"
+		"prefix": "ENT:GetAttackSpread"
 	},
-	"ENTITY:GetRelationship": {
+	"ENT:GetRelationship": {
 		"body": [
-			"function ENTITY:GetRelationship(ent)\n\t$0\nend"
+			"function ENT:GetRelationship(ent)\n\t$0\nend"
 		],
 		"description": "Called when scripted NPC needs to check how he \"feels\" against another entity, such as when NPC:Disposition is called.",
-		"prefix": "ENTITY:GetRelationship"
+		"prefix": "ENT:GetRelationship"
 	},
-	"ENTITY:GetRenderMesh": {
+	"ENT:GetRenderMesh": {
 		"body": [
-			"function ENTITY:GetRenderMesh()\n\t$0\nend"
+			"function ENT:GetRenderMesh()\n\t$0\nend"
 		],
 		"description": "Specify a mesh that should be rendered instead of this SENT's model.",
-		"prefix": "ENTITY:GetRenderMesh"
+		"prefix": "ENT:GetRenderMesh"
 	},
-	"ENTITY:GetShadowCastDirection": {
+	"ENT:GetShadowCastDirection": {
 		"body": [
-			"function ENTITY:GetShadowCastDirection(type)\n\t$0\nend"
+			"function ENT:GetShadowCastDirection(type)\n\t$0\nend"
 		],
 		"description": "Called when the shadow needs to be recomputed. Allows shadow angles to be customized. This only works for `anim` type entities.",
-		"prefix": "ENTITY:GetShadowCastDirection"
+		"prefix": "ENT:GetShadowCastDirection"
 	},
-	"ENTITY:GravGunPickupAllowed": {
+	"ENT:GravGunPickupAllowed": {
 		"body": [
-			"function ENTITY:GravGunPickupAllowed(ply)\n\t$0\nend"
+			"function ENT:GravGunPickupAllowed(ply)\n\t$0\nend"
 		],
 		"description": "Called by GM:GravGunPickupAllowed on ALL entites in Sandbox-derived  gamemodes and acts as an override.",
-		"prefix": "ENTITY:GravGunPickupAllowed"
+		"prefix": "ENT:GravGunPickupAllowed"
 	},
-	"ENTITY:GravGunPunt": {
+	"ENT:GravGunPunt": {
 		"body": [
-			"function ENTITY:GravGunPunt(ply)\n\t$0\nend"
+			"function ENT:GravGunPunt(ply)\n\t$0\nend"
 		],
 		"description": "Called when this entity is about to be punted with the gravity gun (primary fire).\n\nOnly works in Sandbox derived gamemodes and only if GM:GravGunPunt is not overridden.",
-		"prefix": "ENTITY:GravGunPunt"
+		"prefix": "ENT:GravGunPunt"
 	},
-	"ENTITY:HandleAnimEvent": {
+	"ENT:HandleAnimEvent": {
 		"body": [
-			"function ENTITY:HandleAnimEvent(event, eventTime, cycle, type, options)\n\t$0\nend"
+			"function ENT:HandleAnimEvent(event, eventTime, cycle, type, options)\n\t$0\nend"
 		],
 		"description": "Called before firing serverside animation events, such as weapon reload, drawing and holstering for NPCs, scripted sequences, etc.\n\nSee ENTITY:FireAnimationEvent for the clientside version.\n\nThis hook only works on \"anim\", \"ai\" and \"nextbot\" type entities.",
-		"prefix": "ENTITY:HandleAnimEvent"
+		"prefix": "ENT:HandleAnimEvent"
 	},
-	"ENTITY:ImpactTrace": {
+	"ENT:ImpactTrace": {
 		"body": [
-			"function ENTITY:ImpactTrace(traceResult, damageType, customImpactName)\n\t$0\nend"
+			"function ENT:ImpactTrace(traceResult, damageType, customImpactName)\n\t$0\nend"
 		],
 		"description": "Called when a bullet trace hits this entity and allows you to override the default behavior by returning true.",
-		"prefix": "ENTITY:ImpactTrace"
+		"prefix": "ENT:ImpactTrace"
 	},
-	"ENTITY:Initialize": {
+	"ENT:Initialize": {
 		"body": [
-			"function ENTITY:Initialize()\n\t$0\nend"
+			"function ENT:Initialize()\n\t$0\nend"
 		],
 		"description": "Called when the entity is created. This is called when you Entity:Spawn the custom entity.\n\nThis is called **after** ENTITY:SetupDataTables and GM:OnEntityCreated.",
-		"prefix": "ENTITY:Initialize"
+		"prefix": "ENT:Initialize"
 	},
-	"ENTITY:IsJumpLegal": {
+	"ENT:IsJumpLegal": {
 		"body": [
-			"function ENTITY:IsJumpLegal(startPos, apex, endPos)\n\t$0\nend"
+			"function ENT:IsJumpLegal(startPos, apex, endPos)\n\t$0\nend"
 		],
 		"description": "Called when deciding if the Scripted NPC should be able to perform a certain jump or not.\nThis is only called for \"ai\" type entities",
-		"prefix": "ENTITY:IsJumpLegal"
+		"prefix": "ENT:IsJumpLegal"
 	},
-	"ENTITY:KeyValue": {
+	"ENT:KeyValue": {
 		"body": [
-			"function ENTITY:KeyValue(key, value)\n\t$0\nend"
+			"function ENT:KeyValue(key, value)\n\t$0\nend"
 		],
 		"description": "Called when the engine sets a value for this scripted entity.\n\nThis hook is called **before** ENTITY:Initialize when the key-values are set by the map.\nOtherwise this hook will be called whenever Entity:SetKeyValue is called on the entity.\n\nSee GM:EntityKeyValue for a hook that works for all entities.\n\nSee WEAPON:KeyValue for a hook that works for scripted weapons.",
-		"prefix": "ENTITY:KeyValue"
+		"prefix": "ENT:KeyValue"
 	},
-	"ENTITY:NextTask": {
+	"ENT:NextTask": {
 		"body": [
-			"function ENTITY:NextTask(sched)\n\t$0\nend"
+			"function ENT:NextTask(sched)\n\t$0\nend"
 		],
 		"description": "Start the next task in specific schedule.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:NextTask"
+		"prefix": "ENT:NextTask"
 	},
-	"ENTITY:OnChangeActivity": {
+	"ENT:OnChangeActivity": {
 		"body": [
-			"function ENTITY:OnChangeActivity(act)\n\t$0\nend"
+			"function ENT:OnChangeActivity(act)\n\t$0\nend"
 		],
 		"description": "Called when the NPC has changed its activity.\n\nThis hook only works for `ai` type entities.",
-		"prefix": "ENTITY:OnChangeActivity"
+		"prefix": "ENT:OnChangeActivity"
 	},
-	"ENTITY:OnCondition": {
+	"ENT:OnCondition": {
 		"body": [
-			"function ENTITY:OnCondition(conditionID)\n\t$0\nend"
+			"function ENT:OnCondition(conditionID)\n\t$0\nend"
 		],
 		"description": "Called each time the NPC updates its condition.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:OnCondition"
+		"prefix": "ENT:OnCondition"
 	},
-	"ENTITY:OnDuplicated": {
+	"ENT:OnDuplicated": {
 		"body": [
-			"function ENTITY:OnDuplicated(entTable)\n\t$0\nend"
+			"function ENT:OnDuplicated(entTable)\n\t$0\nend"
 		],
 		"description": "Called on any entity after it has been created by the duplicator and before any bone/entity modifiers have been applied.\n\nThis hook is called after ENTITY:Initialize and before ENTITY:PostEntityPaste.",
-		"prefix": "ENTITY:OnDuplicated"
+		"prefix": "ENT:OnDuplicated"
 	},
-	"ENTITY:OnEntityCopyTableFinish": {
+	"ENT:OnEntityCopyTableFinish": {
 		"body": [
-			"function ENTITY:OnEntityCopyTableFinish(data)\n\t$0\nend"
+			"function ENT:OnEntityCopyTableFinish(data)\n\t$0\nend"
 		],
 		"description": "Called after duplicator finishes saving the entity, allowing you to modify the save data.\n\nThis is called after ENTITY:PostEntityCopy.",
-		"prefix": "ENTITY:OnEntityCopyTableFinish"
+		"prefix": "ENT:OnEntityCopyTableFinish"
 	},
-	"ENTITY:OnReloaded": {
+	"ENT:OnReloaded": {
 		"body": [
-			"function ENTITY:OnReloaded()\n\t$0\nend"
+			"function ENT:OnReloaded()\n\t$0\nend"
 		],
 		"description": "Called when the entity is reloaded by the lua auto-refresh system, i.e. when the developer edits the lua file for the entity while the game is running.",
-		"prefix": "ENTITY:OnReloaded"
+		"prefix": "ENT:OnReloaded"
 	},
-	"ENTITY:OnRemove": {
+	"ENT:OnRemove": {
 		"body": [
-			"function ENTITY:OnRemove()\n\t$0\nend"
+			"function ENT:OnRemove()\n\t$0\nend"
 		],
 		"description": "Called when the entity is about to be removed.\n\nSee also Entity:CallOnRemove, which can even be used on engine (non-Lua) entities.\n\n\nCreate an explosion when the entity will be removed. To create an entity, you can read ents.Create.\n\nfunction ENT:OnRemove()\nlocal explosion = ents.Create( \"env_explosion\" ) -- The explosion entity\nexplosion:SetPos( self:GetPos() ) -- Put the position of the explosion at the position of the entity\nexplosion:Spawn() -- Spawn the explosion\nexplosion:SetKeyValue( \"iMagnitude\", \"50\" ) -- the magnitude of the explosion\nexplosion:Fire( \"Explode\", 0, 0 ) -- explode\nend\n\n",
-		"prefix": "ENTITY:OnRemove"
+		"prefix": "ENT:OnRemove"
 	},
-	"ENTITY:OnRestore": {
+	"ENT:OnRestore": {
 		"body": [
-			"function ENTITY:OnRestore()\n\t$0\nend"
+			"function ENT:OnRestore()\n\t$0\nend"
 		],
 		"description": "Called when the entity is reloaded from a Source Engine save (not the Sandbox saves or dupes) or on a changelevel (for example Half-Life 2 campaign level transitions).\n\nFor the duplicator callbacks, see ENTITY:OnDuplicated.",
-		"prefix": "ENTITY:OnRestore"
+		"prefix": "ENT:OnRestore"
 	},
-	"ENTITY:OnTakeDamage": {
+	"ENT:OnTakeDamage": {
 		"body": [
-			"function ENTITY:OnTakeDamage(damage)\n\t$0\nend"
+			"function ENT:OnTakeDamage(damage)\n\t$0\nend"
 		],
 		"description": "Called when the entity is taking damage.\n\nCalling Entity:TakeDamage, Entity:TakeDamageInfo, Entity:DispatchTraceAttack, or Player:TraceHullAttack (if the entity is hit) in this hook on the victim entity can cause infinite loops since the hook will be called again. Make sure to setup recursion safeguards like the example below.",
-		"prefix": "ENTITY:OnTakeDamage"
+		"prefix": "ENT:OnTakeDamage"
 	},
-	"ENTITY:OnTaskComplete": {
+	"ENT:OnTaskComplete": {
 		"body": [
-			"function ENTITY:OnTaskComplete()\n\t$0\nend"
+			"function ENT:OnTaskComplete()\n\t$0\nend"
 		],
 		"description": "Called from the engine when TaskComplete is called.\nThis allows us to move onto the next task - even when TaskComplete was called from an engine side task.\n\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:OnTaskComplete"
+		"prefix": "ENT:OnTaskComplete"
 	},
-	"ENTITY:PassesTriggerFilters": {
+	"ENT:PassesTriggerFilters": {
 		"body": [
-			"function ENTITY:PassesTriggerFilters(ent)\n\t$0\nend"
+			"function ENT:PassesTriggerFilters(ent)\n\t$0\nend"
 		],
 		"description": "Polls whenever the entity should trigger the brush.\n\nThis hook is broken and will not work without code below",
-		"prefix": "ENTITY:PassesTriggerFilters"
+		"prefix": "ENT:PassesTriggerFilters"
 	},
-	"ENTITY:PhysicsCollide": {
+	"ENT:PhysicsCollide": {
 		"body": [
-			"function ENTITY:PhysicsCollide(colData, collider)\n\t$0\nend"
+			"function ENT:PhysicsCollide(colData, collider)\n\t$0\nend"
 		],
 		"description": "Called when the entity collides with anything. The move type and solid type must be VPHYSICS for the hook to be called.\n\nIf you want to use this hook on default/engine/non-Lua entites ( like prop_physics ), use Entity:AddCallback instead! This page describes a hook for Lua entities",
-		"prefix": "ENTITY:PhysicsCollide"
+		"prefix": "ENT:PhysicsCollide"
 	},
-	"ENTITY:PhysicsSimulate": {
+	"ENT:PhysicsSimulate": {
 		"body": [
-			"function ENTITY:PhysicsSimulate(phys, deltaTime)\n\t$0\nend"
+			"function ENT:PhysicsSimulate(phys, deltaTime)\n\t$0\nend"
 		],
 		"description": "Called from the Entity's motion controller to simulate physics.\n\nThis will only be called after using Entity:StartMotionController on a scripted entity of \"anim\" type.\n\nThis hook can work on the CLIENT if you call Entity:StartMotionController and use Entity:AddToMotionController on the physics objects you want to control\n\nDo not use functions such as PhysObj:EnableCollisions or PhysObj:EnableGravity in this hook as they're very likely to crash your game. You may want to use ENTITY:PhysicsUpdate instead.",
-		"prefix": "ENTITY:PhysicsSimulate"
+		"prefix": "ENT:PhysicsSimulate"
 	},
-	"ENTITY:PhysicsUpdate": {
+	"ENT:PhysicsUpdate": {
 		"body": [
-			"function ENTITY:PhysicsUpdate(phys)\n\t$0\nend"
+			"function ENT:PhysicsUpdate(phys)\n\t$0\nend"
 		],
 		"description": "Called whenever the physics of the entity are updated.\n\nThis hook won't be called if the Entity's PhysObj goes asleep",
-		"prefix": "ENTITY:PhysicsUpdate"
+		"prefix": "ENT:PhysicsUpdate"
 	},
-	"ENTITY:PostEntityCopy": {
+	"ENT:PostEntityCopy": {
 		"body": [
-			"function ENTITY:PostEntityCopy()\n\t$0\nend"
+			"function ENT:PostEntityCopy()\n\t$0\nend"
 		],
 		"description": "Called after the duplicator finished copying the entity.\n\nSee also ENTITY:PreEntityCopy and ENTITY:PostEntityPaste.",
-		"prefix": "ENTITY:PostEntityCopy"
+		"prefix": "ENT:PostEntityCopy"
 	},
-	"ENTITY:PostEntityPaste": {
+	"ENT:PostEntityPaste": {
 		"body": [
-			"function ENTITY:PostEntityPaste(ply, ent, createdEntities)\n\t$0\nend"
+			"function ENT:PostEntityPaste(ply, ent, createdEntities)\n\t$0\nend"
 		],
 		"description": "Called after the duplicator pastes the entity, after the bone/entity modifiers have been applied to the entity.\n\nThis hook is called after ENTITY:OnDuplicated.",
-		"prefix": "ENTITY:PostEntityPaste"
+		"prefix": "ENT:PostEntityPaste"
 	},
-	"ENTITY:PreEntityCopy": {
+	"ENT:PreEntityCopy": {
 		"body": [
-			"function ENTITY:PreEntityCopy()\n\t$0\nend"
+			"function ENT:PreEntityCopy()\n\t$0\nend"
 		],
 		"description": "Called before the duplicator copies the entity.\n\nIf you are looking for a way to make the duplicator spawn another entity when duplicated. ( For example, you duplicate a \"prop_physics\", but you want the duplicator to spawn \"prop_physics_my\" ), you should add prop_physics.ClassOverride = \"prop_physics_my\". The duplication table should be also stored on that prop_physics, not on prop_physics_my.",
-		"prefix": "ENTITY:PreEntityCopy"
+		"prefix": "ENT:PreEntityCopy"
 	},
-	"ENTITY:RenderOverride": {
+	"ENT:RenderOverride": {
 		"body": [
-			"function ENTITY:RenderOverride(flags)\n\t$0\nend"
+			"function ENT:RenderOverride(flags)\n\t$0\nend"
 		],
 		"description": "Called instead of the engine drawing function of the entity. This hook works on any entity (scripted or not) it is applied on.\n\nThis does not work on \"physgun_beam\", use GM:DrawPhysgunBeam instead.\n\nAs a downside of this implementation, only one RenderOverride may be applied at a time.\n\nDrawing a viewmodel in this function will cause GM:PreDrawViewModel, WEAPON:PreDrawViewModel, WEAPON:ViewModelDrawn, GM:PostDrawViewModel, and WEAPON:PostDrawViewModel to be called twice.\n\nThis is called before PrePlayerDraw for players. If this function exists at all on a player, their worldmodel will always be rendered regardless of PrePlayerDraw's return.",
-		"prefix": "ENTITY:RenderOverride"
+		"prefix": "ENT:RenderOverride"
 	},
-	"ENTITY:RunAI": {
+	"ENT:RunAI": {
 		"body": [
-			"function ENTITY:RunAI()\n\t$0\nend"
+			"function ENT:RunAI()\n\t$0\nend"
 		],
 		"description": "Called from the engine every 0.1 seconds.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:RunAI"
+		"prefix": "ENT:RunAI"
 	},
-	"ENTITY:RunEngineTask": {
+	"ENT:RunEngineTask": {
 		"body": [
-			"function ENTITY:RunEngineTask(taskID, taskData)\n\t$0\nend"
+			"function ENT:RunEngineTask(taskID, taskData)\n\t$0\nend"
 		],
 		"description": "Called when an engine task is ran on the entity.\n\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:RunEngineTask"
+		"prefix": "ENT:RunEngineTask"
 	},
-	"ENTITY:RunTask": {
+	"ENT:RunTask": {
 		"body": [
-			"function ENTITY:RunTask(task)\n\t$0\nend"
+			"function ENT:RunTask(task)\n\t$0\nend"
 		],
 		"description": "Called every think on running task.\nThe actual task function should tell us when the task is finished.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:RunTask"
+		"prefix": "ENT:RunTask"
 	},
-	"ENTITY:ScheduleFinished": {
+	"ENT:ScheduleFinished": {
 		"body": [
-			"function ENTITY:ScheduleFinished()\n\t$0\nend"
+			"function ENT:ScheduleFinished()\n\t$0\nend"
 		],
 		"description": "Called whenever a schedule is finished.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:ScheduleFinished"
+		"prefix": "ENT:ScheduleFinished"
 	},
-	"ENTITY:SelectSchedule": {
+	"ENT:SelectSchedule": {
 		"body": [
-			"function ENTITY:SelectSchedule(iNPCState)\n\t$0\nend"
+			"function ENT:SelectSchedule(iNPCState)\n\t$0\nend"
 		],
 		"description": "Set the schedule we should be playing right now.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:SelectSchedule"
+		"prefix": "ENT:SelectSchedule"
 	},
-	"ENTITY:SetAutomaticFrameAdvance": {
+	"ENT:SetAutomaticFrameAdvance": {
 		"body": [
-			"function ENTITY:SetAutomaticFrameAdvance(enable)\n\t$0\nend"
+			"function ENT:SetAutomaticFrameAdvance(enable)\n\t$0\nend"
 		],
 		"description": "Toggles automatic frame advancing for animated sequences on an entity.\n\nThis has the same effect as setting the ``ENT.AutomaticFrameAdvance`` property. (See Structures/ENT)",
-		"prefix": "ENTITY:SetAutomaticFrameAdvance"
+		"prefix": "ENT:SetAutomaticFrameAdvance"
 	},
-	"ENTITY:SetTask": {
+	"ENT:SetTask": {
 		"body": [
-			"function ENTITY:SetTask(task)\n\t$0\nend"
+			"function ENT:SetTask(task)\n\t$0\nend"
 		],
 		"description": "Sets the current task.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:SetTask"
+		"prefix": "ENT:SetTask"
 	},
-	"ENTITY:SetupDataTables": {
+	"ENT:SetupDataTables": {
 		"body": [
-			"function ENTITY:SetupDataTables()\n\t$0\nend"
+			"function ENT:SetupDataTables()\n\t$0\nend"
 		],
 		"description": "Called when the entity should set up its Networking_Entities.\n\nThis is a much better option than using Set/Get Networked Values.\n\nThis hook is called after GM:OnEntityCreated and GM:NetworkEntityCreated.",
-		"prefix": "ENTITY:SetupDataTables"
+		"prefix": "ENT:SetupDataTables"
 	},
-	"ENTITY:SpawnFunction": {
+	"ENT:SpawnFunction": {
 		"body": [
-			"function ENTITY:SpawnFunction(ply, tr, ClassName)\n\t$0\nend"
+			"function ENT:SpawnFunction(ply, tr, ClassName)\n\t$0\nend"
 		],
 		"description": "This is the spawn function. It's called when a player spawns the entity from the spawnmenu.\n\nIf you want to make your SENT spawnable you need this function to properly create the entity.\n\nUnlike other ENTITY functions, the \"self\" parameter of this function is not an entity but rather the table used to generate the SENT. This table is equivalent to scripted_ents.GetStored(\"ent_name\").",
-		"prefix": "ENTITY:SpawnFunction"
+		"prefix": "ENT:SpawnFunction"
 	},
-	"ENTITY:StartEngineSchedule": {
+	"ENT:StartEngineSchedule": {
 		"body": [
-			"function ENTITY:StartEngineSchedule(scheduleID)\n\t$0\nend"
+			"function ENT:StartEngineSchedule(scheduleID)\n\t$0\nend"
 		],
 		"description": "Starts an engine schedule.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:StartEngineSchedule"
+		"prefix": "ENT:StartEngineSchedule"
 	},
-	"ENTITY:StartEngineTask": {
+	"ENT:StartEngineTask": {
 		"body": [
-			"function ENTITY:StartEngineTask(taskID, TaskData)\n\t$0\nend"
+			"function ENT:StartEngineTask(taskID, TaskData)\n\t$0\nend"
 		],
 		"description": "Called when an engine task has been started on the entity.\n\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:StartEngineTask"
+		"prefix": "ENT:StartEngineTask"
 	},
-	"ENTITY:StartSchedule": {
+	"ENT:StartSchedule": {
 		"body": [
-			"function ENTITY:StartSchedule(sched)\n\t$0\nend"
+			"function ENT:StartSchedule(sched)\n\t$0\nend"
 		],
 		"description": "Starts a schedule previously created by ai_schedule.New.\n\nNot to be confused with ENTITY:StartEngineSchedule or NPC:SetSchedule which start an Engine-based schedule.\n\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:StartSchedule"
+		"prefix": "ENT:StartSchedule"
 	},
-	"ENTITY:StartTask": {
+	"ENT:StartTask": {
 		"body": [
-			"function ENTITY:StartTask(task)\n\t$0\nend"
+			"function ENT:StartTask(task)\n\t$0\nend"
 		],
 		"description": "Called once on starting task.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:StartTask"
+		"prefix": "ENT:StartTask"
 	},
-	"ENTITY:StartTouch": {
+	"ENT:StartTouch": {
 		"body": [
-			"function ENTITY:StartTouch(entity)\n\t$0\nend"
+			"function ENT:StartTouch(entity)\n\t$0\nend"
 		],
 		"description": "Called when the entity starts touching another entity.\n\nThis only works for **brush** entities and for entities that have Entity:SetTrigger set to true.",
-		"prefix": "ENTITY:StartTouch"
+		"prefix": "ENT:StartTouch"
 	},
-	"ENTITY:StoreOutput": {
+	"ENT:StoreOutput": {
 		"body": [
-			"function ENTITY:StoreOutput(name, info)\n\t$0\nend"
+			"function ENT:StoreOutput(name, info)\n\t$0\nend"
 		],
 		"description": "Used to store an output so it can be triggered with ENTITY:TriggerOutput.\nOutputs compiled into a map are passed to entities as key/value pairs through ENTITY:KeyValue.\n\nTriggerOutput will do nothing if this function has not been called first.",
-		"prefix": "ENTITY:StoreOutput"
+		"prefix": "ENT:StoreOutput"
 	},
-	"ENTITY:TaskFinished": {
+	"ENT:TaskFinished": {
 		"body": [
-			"function ENTITY:TaskFinished()\n\t$0\nend"
+			"function ENT:TaskFinished()\n\t$0\nend"
 		],
 		"description": "Returns true if the current running Task is finished.\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:TaskFinished"
+		"prefix": "ENT:TaskFinished"
 	},
-	"ENTITY:TaskTime": {
+	"ENT:TaskTime": {
 		"body": [
-			"function ENTITY:TaskTime()\n\t$0\nend"
+			"function ENT:TaskTime()\n\t$0\nend"
 		],
 		"description": "Returns how many seconds we've been doing this current task\nThis hook only exists for **ai** type SENTs",
-		"prefix": "ENTITY:TaskTime"
+		"prefix": "ENT:TaskTime"
 	},
-	"ENTITY:TestCollision": {
+	"ENT:TestCollision": {
 		"body": [
-			"function ENTITY:TestCollision(startpos, delta, isbox, extents, mask)\n\t$0\nend"
+			"function ENT:TestCollision(startpos, delta, isbox, extents, mask)\n\t$0\nend"
 		],
 		"description": "Allows you to override trace result when a trace hits the entitys Bounding Box.\n\nYour entity must have Entity:EnableCustomCollisions enabled for this hook to work.\nThis hook is called for `anim` type only.",
-		"prefix": "ENTITY:TestCollision"
+		"prefix": "ENT:TestCollision"
 	},
-	"ENTITY:Think": {
+	"ENT:Think": {
 		"body": [
-			"function ENTITY:Think()\n\t$0\nend"
+			"function ENT:Think()\n\t$0\nend"
 		],
 		"description": "Called every frame on the client.\nCalled every tick on the server.\n\nYou may need to call Entity:Spawn to get this hook to run server side.\nBy default, it runs about 5-6 times per second on the server, but you can force it to run at servers tickrate using the example below.",
-		"prefix": "ENTITY:Think"
+		"prefix": "ENT:Think"
 	},
-	"ENTITY:Touch": {
+	"ENT:Touch": {
 		"body": [
-			"function ENTITY:Touch(entity)\n\t$0\nend"
+			"function ENT:Touch(entity)\n\t$0\nend"
 		],
 		"description": "Called every tick for every entity being \"touched\".\n\nSee also ENTITY:StartTouch and ENTITY:EndTouch.\n\nFor physics enabled entities, this hook will **not** be ran while the entity's physics is asleep. See PhysObj:Wake.",
-		"prefix": "ENTITY:Touch"
+		"prefix": "ENT:Touch"
 	},
-	"ENTITY:TriggerOutput": {
+	"ENT:TriggerOutput": {
 		"body": [
-			"function ENTITY:TriggerOutput(output, activator, data)\n\t$0\nend"
+			"function ENT:TriggerOutput(output, activator, data)\n\t$0\nend"
 		],
 		"description": "Triggers all outputs stored using ENTITY:StoreOutput.",
-		"prefix": "ENTITY:TriggerOutput"
+		"prefix": "ENT:TriggerOutput"
 	},
-	"ENTITY:UpdateTransmitState": {
+	"ENT:UpdateTransmitState": {
 		"body": [
-			"function ENTITY:UpdateTransmitState()\n\t$0\nend"
+			"function ENT:UpdateTransmitState()\n\t$0\nend"
 		],
 		"description": "Called whenever the transmit state should be updated.",
-		"prefix": "ENTITY:UpdateTransmitState"
+		"prefix": "ENT:UpdateTransmitState"
 	},
-	"ENTITY:Use": {
+	"ENT:Use": {
 		"body": [
-			"function ENTITY:Use(activator, caller, useType, value)\n\t$0\nend"
+			"function ENT:Use(activator, caller, useType, value)\n\t$0\nend"
 		],
 		"description": "Called when an entity \"uses\" this entity, for example a player pressing their `+use` key (default E) on this entity.\n\nTo change how often the hook is called, see Entity:SetUseType.\n\nThis hook only works for `nextbot`, `ai` and `anim` scripted entity types.",
-		"prefix": "ENTITY:Use"
+		"prefix": "ENT:Use"
 	},
 	"GM:AcceptInput": {
 		"body": [
@@ -2988,6 +2988,405 @@
 		"description": "\nCalled when there's one or more items selected in the spawnmenu by the player, to open the multi selection right click menu (DMenu)",
 		"prefix": "SANDBOX:SpawnlistOpenGenericMenu"
 	},
+	"SWEP:AcceptInput": {
+		"body": [
+			"function SWEP:AcceptInput(inputName, activator, called, data)\n\t$0\nend"
+		],
+		"description": "Called when another entity fires an event to this entity.",
+		"prefix": "SWEP:AcceptInput"
+	},
+	"SWEP:AdjustMouseSensitivity": {
+		"body": [
+			"function SWEP:AdjustMouseSensitivity()\n\t$0\nend"
+		],
+		"description": "Allows you to adjust the mouse sensitivity. This hook only works if you haven't overridden GM:AdjustMouseSensitivity.",
+		"prefix": "SWEP:AdjustMouseSensitivity"
+	},
+	"SWEP:Ammo1": {
+		"body": [
+			"function SWEP:Ammo1()\n\t$0\nend"
+		],
+		"description": "Returns how much of primary ammo the player has.",
+		"prefix": "SWEP:Ammo1"
+	},
+	"SWEP:Ammo2": {
+		"body": [
+			"function SWEP:Ammo2()\n\t$0\nend"
+		],
+		"description": "Returns how much of secondary ammo the player has.",
+		"prefix": "SWEP:Ammo2"
+	},
+	"SWEP:CalcView": {
+		"body": [
+			"function SWEP:CalcView(ply, pos, ang, fov)\n\t$0\nend"
+		],
+		"description": "Allows you to adjust player view while this weapon in use.\n\nThis hook is called from the default implementation of GM:CalcView which is [here](https://github.com/garrynewman/garrysmod/blob/master/garrysmod/gamemodes/base/gamemode/cl_init.lua#L376-L383). Therefore, it will not be called if any other hook added to CalcView returns any value, or if the current gamemode overrides the default hook and does not call the SWEP function.\n\nSWEPs that define this function will not work with the Global.TauntCamera",
+		"prefix": "SWEP:CalcView"
+	},
+	"SWEP:CalcViewModelView": {
+		"body": [
+			"function SWEP:CalcViewModelView(ViewModel, OldEyePos, OldEyeAng, EyePos, EyeAng)\n\t$0\nend"
+		],
+		"description": "Allows overriding the position and angle of the viewmodel. This hook only works if you haven't overridden GM:CalcViewModelView.",
+		"prefix": "SWEP:CalcViewModelView"
+	},
+	"SWEP:CanBePickedUpByNPCs": {
+		"body": [
+			"function SWEP:CanBePickedUpByNPCs()\n\t$0\nend"
+		],
+		"description": "Called when a Citizen NPC is looking around to a (better) weapon to pickup.",
+		"prefix": "SWEP:CanBePickedUpByNPCs"
+	},
+	"SWEP:CanPrimaryAttack": {
+		"body": [
+			"function SWEP:CanPrimaryAttack()\n\t$0\nend"
+		],
+		"description": "Helper function for checking for no ammo.",
+		"prefix": "SWEP:CanPrimaryAttack"
+	},
+	"SWEP:CanSecondaryAttack": {
+		"body": [
+			"function SWEP:CanSecondaryAttack()\n\t$0\nend"
+		],
+		"description": "Helper function for checking for no ammo.",
+		"prefix": "SWEP:CanSecondaryAttack"
+	},
+	"SWEP:CustomAmmoDisplay": {
+		"body": [
+			"function SWEP:CustomAmmoDisplay()\n\t$0\nend"
+		],
+		"description": "Allows you to use any numbers you want for the ammo display on the HUD.\n\nCan be useful for weapons that don't use standard ammo.",
+		"prefix": "SWEP:CustomAmmoDisplay"
+	},
+	"SWEP:Deploy": {
+		"body": [
+			"function SWEP:Deploy()\n\t$0\nend"
+		],
+		"description": "Called when player has just switched to this weapon.\n\nDue to this hook being predicted, it is not called clientside in singleplayer at all, and in multiplayer it will not be called clientside if the weapon is switched with Player:SelectWeapon or the \"use\" console command, however it will be called clientside with the default weapon selection menu and when using CUserCmd:SelectWeapon",
+		"prefix": "SWEP:Deploy"
+	},
+	"SWEP:DoDrawCrosshair": {
+		"body": [
+			"function SWEP:DoDrawCrosshair(x, y)\n\t$0\nend"
+		],
+		"description": "Called when the crosshair is about to get drawn, and allows you to override it.\n\nThis function will not be called if **SWEP.DrawCrosshair** set to false.\nThis function will not be called if player was affected by Player:CrosshairDisable.\n\nThe arguments passed to this function are not affected by **SWEP.AccurateCrosshair**.",
+		"prefix": "SWEP:DoDrawCrosshair"
+	},
+	"SWEP:DoImpactEffect": {
+		"body": [
+			"function SWEP:DoImpactEffect(tr, damageType)\n\t$0\nend"
+		],
+		"description": "Called so the weapon can override the impact effects it makes.",
+		"prefix": "SWEP:DoImpactEffect"
+	},
+	"SWEP:DrawHUD": {
+		"body": [
+			"function SWEP:DrawHUD()\n\t$0\nend"
+		],
+		"description": "This hook allows you to draw on screen while this weapon is in use.\n\nIf you want to draw a custom crosshair, consider using WEAPON:DoDrawCrosshair instead.",
+		"prefix": "SWEP:DrawHUD"
+	},
+	"SWEP:DrawHUDBackground": {
+		"body": [
+			"function SWEP:DrawHUDBackground()\n\t$0\nend"
+		],
+		"description": "This hook allows you to draw on screen while this weapon is in use. This hook is called **before** WEAPON:DrawHUD and is equivalent of GM:HUDPaintBackground.",
+		"prefix": "SWEP:DrawHUDBackground"
+	},
+	"SWEP:DrawWeaponSelection": {
+		"body": [
+			"function SWEP:DrawWeaponSelection(x, y, width, height, alpha)\n\t$0\nend"
+		],
+		"description": "This hook draws the selection icon in the weapon selection menu.",
+		"prefix": "SWEP:DrawWeaponSelection"
+	},
+	"SWEP:DrawWorldModel": {
+		"body": [
+			"function SWEP:DrawWorldModel(flags)\n\t$0\nend"
+		],
+		"description": "Called when we are about to draw the world model.",
+		"prefix": "SWEP:DrawWorldModel"
+	},
+	"SWEP:DrawWorldModelTranslucent": {
+		"body": [
+			"function SWEP:DrawWorldModelTranslucent(flags)\n\t$0\nend"
+		],
+		"description": "Called when we are about to draw the translucent world model.",
+		"prefix": "SWEP:DrawWorldModelTranslucent"
+	},
+	"SWEP:Equip": {
+		"body": [
+			"function SWEP:Equip(NewOwner)\n\t$0\nend"
+		],
+		"description": "Called when a player or NPC has picked the weapon up.",
+		"prefix": "SWEP:Equip"
+	},
+	"SWEP:EquipAmmo": {
+		"body": [
+			"function SWEP:EquipAmmo(ply)\n\t$0\nend"
+		],
+		"description": "The player has picked up the weapon and has taken the ammo from it.\nThe weapon will be removed immidiately after this call.",
+		"prefix": "SWEP:EquipAmmo"
+	},
+	"SWEP:FireAnimationEvent": {
+		"body": [
+			"function SWEP:FireAnimationEvent(pos, ang, event, options, source)\n\t$0\nend"
+		],
+		"description": "Called before firing animation events, such as muzzle flashes or shell ejections.\n\nThis will only be called serverside for 3000-range events, and clientside for 5000-range  and other events.",
+		"prefix": "SWEP:FireAnimationEvent"
+	},
+	"SWEP:FreezeMovement": {
+		"body": [
+			"function SWEP:FreezeMovement()\n\t$0\nend"
+		],
+		"description": "This hook allows you to freeze players screen.\nPlayer will still be able to move or shoot",
+		"prefix": "SWEP:FreezeMovement"
+	},
+	"SWEP:GetCapabilities": {
+		"body": [
+			"function SWEP:GetCapabilities()\n\t$0\nend"
+		],
+		"description": "This hook is for NPCs, you return what they should try to do with it.",
+		"prefix": "SWEP:GetCapabilities"
+	},
+	"SWEP:GetNPCBulletSpread": {
+		"body": [
+			"function SWEP:GetNPCBulletSpread(proficiency)\n\t$0\nend"
+		],
+		"description": "Called when the weapon is used by NPCs to determine how accurate the bullets fired should be.\n\nThe inaccuracy is simulated by changing the NPC:GetAimVector based on the value returned from this hook.",
+		"prefix": "SWEP:GetNPCBulletSpread"
+	},
+	"SWEP:GetNPCBurstSettings": {
+		"body": [
+			"function SWEP:GetNPCBurstSettings()\n\t$0\nend"
+		],
+		"description": "Called when the weapon is used by NPCs to tell the NPC how to use this weapon. Controls how long the NPC can or should shoot continuously.",
+		"prefix": "SWEP:GetNPCBurstSettings"
+	},
+	"SWEP:GetNPCRestTimes": {
+		"body": [
+			"function SWEP:GetNPCRestTimes()\n\t$0\nend"
+		],
+		"description": "Called when the weapon is used by NPCs to tell the NPC how to use this weapon. Controls amount of time the NPC can rest (not shoot) between bursts.",
+		"prefix": "SWEP:GetNPCRestTimes"
+	},
+	"SWEP:GetTracerOrigin": {
+		"body": [
+			"function SWEP:GetTracerOrigin()\n\t$0\nend"
+		],
+		"description": "Allows you to override where the tracer effect comes from. ( Visual bullets )",
+		"prefix": "SWEP:GetTracerOrigin"
+	},
+	"SWEP:GetViewModelPosition": {
+		"body": [
+			"function SWEP:GetViewModelPosition(EyePos, EyeAng)\n\t$0\nend"
+		],
+		"description": "This hook allows you to adjust view model position and angles.",
+		"prefix": "SWEP:GetViewModelPosition"
+	},
+	"SWEP:HUDShouldDraw": {
+		"body": [
+			"function SWEP:HUDShouldDraw(element)\n\t$0\nend"
+		],
+		"description": "This hook determines which parts of the HUD to draw.",
+		"prefix": "SWEP:HUDShouldDraw"
+	},
+	"SWEP:Holster": {
+		"body": [
+			"function SWEP:Holster(weapon)\n\t$0\nend"
+		],
+		"description": "Called when weapon tries to holster.\n\nThis will only be called serverside when using Player:SelectWeapon as that function immidiately switches the weapon out of prediction.\n\nThis is called twice for every holster clientside, one in Prediction and one not.\n\nBefore WEAPON:OnRemove is called, this function is only called serverside.",
+		"prefix": "SWEP:Holster"
+	},
+	"SWEP:Initialize": {
+		"body": [
+			"function SWEP:Initialize()\n\t$0\nend"
+		],
+		"description": "Called when the weapon entity is created.\n\nEntity:GetOwner will return NULL at this point because the weapon is not equpped by a player or NPC yet. Use WEAPON:Equip or WEAPON:Deploy if you need the owner to be valid.\n\nThis is sometimes not called clientside. You can work around this by setting a variable in Initialize and check if it exists in WEAPON:Think. See the example below.\n\nThis is not called serverside after a quicksave.",
+		"prefix": "SWEP:Initialize"
+	},
+	"SWEP:KeyValue": {
+		"body": [
+			"function SWEP:KeyValue(key, value)\n\t$0\nend"
+		],
+		"description": "Called when the engine sets a value for this scripted weapon.\n\nSee GM:EntityKeyValue for a hook that works for all entities.\n\n\nSee ENTITY:KeyValue for an  hook that works for scripted entities.",
+		"prefix": "SWEP:KeyValue"
+	},
+	"SWEP:OnDrop": {
+		"body": [
+			"function SWEP:OnDrop()\n\t$0\nend"
+		],
+		"description": "Called when weapon is dropped by Player:DropWeapon.\n\nSee also WEAPON:OwnerChanged.",
+		"prefix": "SWEP:OnDrop"
+	},
+	"SWEP:OnReloaded": {
+		"body": [
+			"function SWEP:OnReloaded()\n\t$0\nend"
+		],
+		"description": "Called whenever the weapons Lua script is reloaded.",
+		"prefix": "SWEP:OnReloaded"
+	},
+	"SWEP:OnRemove": {
+		"body": [
+			"function SWEP:OnRemove()\n\t$0\nend"
+		],
+		"description": "Called when the swep is about to be removed.",
+		"prefix": "SWEP:OnRemove"
+	},
+	"SWEP:OnRestore": {
+		"body": [
+			"function SWEP:OnRestore()\n\t$0\nend"
+		],
+		"description": "Called when the weapon entity is reloaded from a Source Engine save (not the Sandbox saves or dupes) or on a changelevel (for example Half-Life 2 campaign level transitions).\n\nFor the duplicator callbacks, see ENTITY:OnDuplicated.\n\nSee also saverestore for relevant functions.",
+		"prefix": "SWEP:OnRestore"
+	},
+	"SWEP:OwnerChanged": {
+		"body": [
+			"function SWEP:OwnerChanged()\n\t$0\nend"
+		],
+		"description": "Called when weapon is dropped or picked up by a new player.\n\nSee also WEAPON:OnDrop.",
+		"prefix": "SWEP:OwnerChanged"
+	},
+	"SWEP:PostDrawViewModel": {
+		"body": [
+			"function SWEP:PostDrawViewModel(vm, weapon, ply)\n\t$0\nend"
+		],
+		"description": "Called after the view model has been drawn while the weapon in use. This hook is called from the default implementation of GM:PostDrawViewModel, and as such, will not occur if it has been overridden.\n\nWEAPON:ViewModelDrawn is an alternative hook which is always called before GM:PostDrawViewModel.",
+		"prefix": "SWEP:PostDrawViewModel"
+	},
+	"SWEP:PreDrawViewModel": {
+		"body": [
+			"function SWEP:PreDrawViewModel(vm, weapon, ply)\n\t$0\nend"
+		],
+		"description": "Allows you to modify viewmodel while the weapon in use before it is drawn. This hook only works if you haven't overridden GM:PreDrawViewModel.",
+		"prefix": "SWEP:PreDrawViewModel"
+	},
+	"SWEP:PrimaryAttack": {
+		"body": [
+			"function SWEP:PrimaryAttack()\n\t$0\nend"
+		],
+		"description": "Called when primary attack button ( +attack ) is pressed.\n\nWhen in singleplayer, this function is only called in the server realm. When in multiplayer, the hook will be called on both the server and the client in order to allow for Prediction.\n\nYou can force the hook to always be called on client like this:\n\n```\nif ( game.SinglePlayer() ) then self:CallOnClient( \"PrimaryAttack\" ) end\n```\n\n\nNote that due to prediction, in multiplayer SWEP:PrimaryAttack is called multiple times per one \"shot\" with the gun. To work around that, use Global.IsFirstTimePredicted.",
+		"prefix": "SWEP:PrimaryAttack"
+	},
+	"SWEP:PrintWeaponInfo": {
+		"body": [
+			"function SWEP:PrintWeaponInfo(x, y, alpha)\n\t$0\nend"
+		],
+		"description": "A convenience function that draws the weapon info box, used in WEAPON:DrawWeaponSelection.",
+		"prefix": "SWEP:PrintWeaponInfo"
+	},
+	"SWEP:Reload": {
+		"body": [
+			"function SWEP:Reload()\n\t$0\nend"
+		],
+		"description": "Called when the reload key ( +reload ) is pressed.",
+		"prefix": "SWEP:Reload"
+	},
+	"SWEP:RenderScreen": {
+		"body": [
+			"function SWEP:RenderScreen()\n\t$0\nend"
+		],
+		"description": "Called every frame just before GM:RenderScene.\n\nUsed by the Tool Gun to render view model screens (TOOL:DrawToolScreen).\n\n\nMaterials rendered in this hook require $ignorez parameter to draw properly.",
+		"prefix": "SWEP:RenderScreen"
+	},
+	"SWEP:SecondaryAttack": {
+		"body": [
+			"function SWEP:SecondaryAttack()\n\t$0\nend"
+		],
+		"description": "Called when secondary attack button ( +attack2 ) is pressed.\n\nFor issues with this hook being called rapidly on the client side, see the global function Global.IsFirstTimePredicted.",
+		"prefix": "SWEP:SecondaryAttack"
+	},
+	"SWEP:SetDeploySpeed": {
+		"body": [
+			"function SWEP:SetDeploySpeed(speed)\n\t$0\nend"
+		],
+		"description": "Sets the weapon deploy speed. This value needs to match on client and server.",
+		"prefix": "SWEP:SetDeploySpeed"
+	},
+	"SWEP:SetWeaponHoldType": {
+		"body": [
+			"function SWEP:SetWeaponHoldType(name)\n\t$0\nend"
+		],
+		"description": "Sets the hold type of the weapon. This must be called on **both** the server and the client to work properly.\n\n**NOTE:** You should avoid calling this function and call Weapon:SetHoldType now.",
+		"prefix": "SWEP:SetWeaponHoldType"
+	},
+	"SWEP:SetupDataTables": {
+		"body": [
+			"function SWEP:SetupDataTables()\n\t$0\nend"
+		],
+		"description": "Called when the SWEP should set up its Networking_Entities.",
+		"prefix": "SWEP:SetupDataTables"
+	},
+	"SWEP:ShootBullet": {
+		"body": [
+			"function SWEP:ShootBullet(damage, num_bullets, aimcone, ammo_type, force, tracer)\n\t$0\nend"
+		],
+		"description": "A convenient function to shoot bullets.",
+		"prefix": "SWEP:ShootBullet"
+	},
+	"SWEP:ShootEffects": {
+		"body": [
+			"function SWEP:ShootEffects()\n\t$0\nend"
+		],
+		"description": "A convenience function to create shoot effects.",
+		"prefix": "SWEP:ShootEffects"
+	},
+	"SWEP:ShouldDrawViewModel": {
+		"body": [
+			"function SWEP:ShouldDrawViewModel()\n\t$0\nend"
+		],
+		"description": "Called to determine if the view model should be drawn or not.",
+		"prefix": "SWEP:ShouldDrawViewModel"
+	},
+	"SWEP:ShouldDropOnDie": {
+		"body": [
+			"function SWEP:ShouldDropOnDie()\n\t$0\nend"
+		],
+		"description": "Should this weapon be dropped when its owner dies?\n\nThis only works if the player has Player:ShouldDropWeapon set to true.",
+		"prefix": "SWEP:ShouldDropOnDie"
+	},
+	"SWEP:TakePrimaryAmmo": {
+		"body": [
+			"function SWEP:TakePrimaryAmmo(amount)\n\t$0\nend"
+		],
+		"description": "A convenience function to remove primary ammo from clip.",
+		"prefix": "SWEP:TakePrimaryAmmo"
+	},
+	"SWEP:TakeSecondaryAmmo": {
+		"body": [
+			"function SWEP:TakeSecondaryAmmo(amount)\n\t$0\nend"
+		],
+		"description": "A convenience function to remove secondary ammo from clip.",
+		"prefix": "SWEP:TakeSecondaryAmmo"
+	},
+	"SWEP:Think": {
+		"body": [
+			"function SWEP:Think()\n\t$0\nend"
+		],
+		"description": "Called when the swep thinks.\n\nThis hook won't be called during the deploy animation and when using Weapon:DefaultReload.\n\nDespite being a predicted hook, this hook is called clientside in single player, however it will not be recognized as a predicted hook to Player:GetCurrentCommand.\n\nThis hook will be called before Player movement is processed on the client, and after on the server.\n\nThis will not be run during deploy animations after a serverside-only deploy. This usually happens after picking up and dropping an object with +use.",
+		"prefix": "SWEP:Think"
+	},
+	"SWEP:TranslateActivity": {
+		"body": [
+			"function SWEP:TranslateActivity(act)\n\t$0\nend"
+		],
+		"description": "Translate a player's Activity into a weapon's activity, depending on how you want the player to be holding the weapon.\n\nFor example, ACT_MP_RUN becomes ACT_HL2MP_RUN_PISTOL.",
+		"prefix": "SWEP:TranslateActivity"
+	},
+	"SWEP:TranslateFOV": {
+		"body": [
+			"function SWEP:TranslateFOV(fov)\n\t$0\nend"
+		],
+		"description": "Allows to change players field of view while player holds the weapon.\n\nThis hook must be defined shared and return same value on both to properly affect Area Portals.",
+		"prefix": "SWEP:TranslateFOV"
+	},
+	"SWEP:ViewModelDrawn": {
+		"body": [
+			"function SWEP:ViewModelDrawn(ViewModel)\n\t$0\nend"
+		],
+		"description": "Called straight after the view model has been drawn. This is called before GM:PostDrawViewModel and WEAPON:PostDrawViewModel.",
+		"prefix": "SWEP:ViewModelDrawn"
+	},
 	"TOOL:Deploy": {
 		"body": [
 			"function TOOL:Deploy()\n\t$0\nend"
@@ -3050,404 +3449,5 @@
 		],
 		"description": "Called when WEAPON:Think of the toolgun is called. This only happens when the tool gun is currently equipped/selected by the player and the selected tool is this tool.",
 		"prefix": "TOOL:Think"
-	},
-	"WEAPON:AcceptInput": {
-		"body": [
-			"function WEAPON:AcceptInput(inputName, activator, called, data)\n\t$0\nend"
-		],
-		"description": "Called when another entity fires an event to this entity.",
-		"prefix": "WEAPON:AcceptInput"
-	},
-	"WEAPON:AdjustMouseSensitivity": {
-		"body": [
-			"function WEAPON:AdjustMouseSensitivity()\n\t$0\nend"
-		],
-		"description": "Allows you to adjust the mouse sensitivity. This hook only works if you haven't overridden GM:AdjustMouseSensitivity.",
-		"prefix": "WEAPON:AdjustMouseSensitivity"
-	},
-	"WEAPON:Ammo1": {
-		"body": [
-			"function WEAPON:Ammo1()\n\t$0\nend"
-		],
-		"description": "Returns how much of primary ammo the player has.",
-		"prefix": "WEAPON:Ammo1"
-	},
-	"WEAPON:Ammo2": {
-		"body": [
-			"function WEAPON:Ammo2()\n\t$0\nend"
-		],
-		"description": "Returns how much of secondary ammo the player has.",
-		"prefix": "WEAPON:Ammo2"
-	},
-	"WEAPON:CalcView": {
-		"body": [
-			"function WEAPON:CalcView(ply, pos, ang, fov)\n\t$0\nend"
-		],
-		"description": "Allows you to adjust player view while this weapon in use.\n\nThis hook is called from the default implementation of GM:CalcView which is [here](https://github.com/garrynewman/garrysmod/blob/master/garrysmod/gamemodes/base/gamemode/cl_init.lua#L376-L383). Therefore, it will not be called if any other hook added to CalcView returns any value, or if the current gamemode overrides the default hook and does not call the SWEP function.\n\nSWEPs that define this function will not work with the Global.TauntCamera",
-		"prefix": "WEAPON:CalcView"
-	},
-	"WEAPON:CalcViewModelView": {
-		"body": [
-			"function WEAPON:CalcViewModelView(ViewModel, OldEyePos, OldEyeAng, EyePos, EyeAng)\n\t$0\nend"
-		],
-		"description": "Allows overriding the position and angle of the viewmodel. This hook only works if you haven't overridden GM:CalcViewModelView.",
-		"prefix": "WEAPON:CalcViewModelView"
-	},
-	"WEAPON:CanBePickedUpByNPCs": {
-		"body": [
-			"function WEAPON:CanBePickedUpByNPCs()\n\t$0\nend"
-		],
-		"description": "Called when a Citizen NPC is looking around to a (better) weapon to pickup.",
-		"prefix": "WEAPON:CanBePickedUpByNPCs"
-	},
-	"WEAPON:CanPrimaryAttack": {
-		"body": [
-			"function WEAPON:CanPrimaryAttack()\n\t$0\nend"
-		],
-		"description": "Helper function for checking for no ammo.",
-		"prefix": "WEAPON:CanPrimaryAttack"
-	},
-	"WEAPON:CanSecondaryAttack": {
-		"body": [
-			"function WEAPON:CanSecondaryAttack()\n\t$0\nend"
-		],
-		"description": "Helper function for checking for no ammo.",
-		"prefix": "WEAPON:CanSecondaryAttack"
-	},
-	"WEAPON:CustomAmmoDisplay": {
-		"body": [
-			"function WEAPON:CustomAmmoDisplay()\n\t$0\nend"
-		],
-		"description": "Allows you to use any numbers you want for the ammo display on the HUD.\n\nCan be useful for weapons that don't use standard ammo.",
-		"prefix": "WEAPON:CustomAmmoDisplay"
-	},
-	"WEAPON:Deploy": {
-		"body": [
-			"function WEAPON:Deploy()\n\t$0\nend"
-		],
-		"description": "Called when player has just switched to this weapon.\n\nDue to this hook being predicted, it is not called clientside in singleplayer at all, and in multiplayer it will not be called clientside if the weapon is switched with Player:SelectWeapon or the \"use\" console command, however it will be called clientside with the default weapon selection menu and when using CUserCmd:SelectWeapon",
-		"prefix": "WEAPON:Deploy"
-	},
-	"WEAPON:DoDrawCrosshair": {
-		"body": [
-			"function WEAPON:DoDrawCrosshair(x, y)\n\t$0\nend"
-		],
-		"description": "Called when the crosshair is about to get drawn, and allows you to override it.\n\nThis function will not be called if **SWEP.DrawCrosshair** set to false.\nThis function will not be called if player was affected by Player:CrosshairDisable.\n\nThe arguments passed to this function are not affected by **SWEP.AccurateCrosshair**.",
-		"prefix": "WEAPON:DoDrawCrosshair"
-	},
-	"WEAPON:DoImpactEffect": {
-		"body": [
-			"function WEAPON:DoImpactEffect(tr, damageType)\n\t$0\nend"
-		],
-		"description": "Called so the weapon can override the impact effects it makes.",
-		"prefix": "WEAPON:DoImpactEffect"
-	},
-	"WEAPON:DrawHUD": {
-		"body": [
-			"function WEAPON:DrawHUD()\n\t$0\nend"
-		],
-		"description": "This hook allows you to draw on screen while this weapon is in use.\n\nIf you want to draw a custom crosshair, consider using WEAPON:DoDrawCrosshair instead.",
-		"prefix": "WEAPON:DrawHUD"
-	},
-	"WEAPON:DrawHUDBackground": {
-		"body": [
-			"function WEAPON:DrawHUDBackground()\n\t$0\nend"
-		],
-		"description": "This hook allows you to draw on screen while this weapon is in use. This hook is called **before** WEAPON:DrawHUD and is equivalent of GM:HUDPaintBackground.",
-		"prefix": "WEAPON:DrawHUDBackground"
-	},
-	"WEAPON:DrawWeaponSelection": {
-		"body": [
-			"function WEAPON:DrawWeaponSelection(x, y, width, height, alpha)\n\t$0\nend"
-		],
-		"description": "This hook draws the selection icon in the weapon selection menu.",
-		"prefix": "WEAPON:DrawWeaponSelection"
-	},
-	"WEAPON:DrawWorldModel": {
-		"body": [
-			"function WEAPON:DrawWorldModel(flags)\n\t$0\nend"
-		],
-		"description": "Called when we are about to draw the world model.",
-		"prefix": "WEAPON:DrawWorldModel"
-	},
-	"WEAPON:DrawWorldModelTranslucent": {
-		"body": [
-			"function WEAPON:DrawWorldModelTranslucent(flags)\n\t$0\nend"
-		],
-		"description": "Called when we are about to draw the translucent world model.",
-		"prefix": "WEAPON:DrawWorldModelTranslucent"
-	},
-	"WEAPON:Equip": {
-		"body": [
-			"function WEAPON:Equip(NewOwner)\n\t$0\nend"
-		],
-		"description": "Called when a player or NPC has picked the weapon up.",
-		"prefix": "WEAPON:Equip"
-	},
-	"WEAPON:EquipAmmo": {
-		"body": [
-			"function WEAPON:EquipAmmo(ply)\n\t$0\nend"
-		],
-		"description": "The player has picked up the weapon and has taken the ammo from it.\nThe weapon will be removed immidiately after this call.",
-		"prefix": "WEAPON:EquipAmmo"
-	},
-	"WEAPON:FireAnimationEvent": {
-		"body": [
-			"function WEAPON:FireAnimationEvent(pos, ang, event, options, source)\n\t$0\nend"
-		],
-		"description": "Called before firing animation events, such as muzzle flashes or shell ejections.\n\nThis will only be called serverside for 3000-range events, and clientside for 5000-range  and other events.",
-		"prefix": "WEAPON:FireAnimationEvent"
-	},
-	"WEAPON:FreezeMovement": {
-		"body": [
-			"function WEAPON:FreezeMovement()\n\t$0\nend"
-		],
-		"description": "This hook allows you to freeze players screen.\nPlayer will still be able to move or shoot",
-		"prefix": "WEAPON:FreezeMovement"
-	},
-	"WEAPON:GetCapabilities": {
-		"body": [
-			"function WEAPON:GetCapabilities()\n\t$0\nend"
-		],
-		"description": "This hook is for NPCs, you return what they should try to do with it.",
-		"prefix": "WEAPON:GetCapabilities"
-	},
-	"WEAPON:GetNPCBulletSpread": {
-		"body": [
-			"function WEAPON:GetNPCBulletSpread(proficiency)\n\t$0\nend"
-		],
-		"description": "Called when the weapon is used by NPCs to determine how accurate the bullets fired should be.\n\nThe inaccuracy is simulated by changing the NPC:GetAimVector based on the value returned from this hook.",
-		"prefix": "WEAPON:GetNPCBulletSpread"
-	},
-	"WEAPON:GetNPCBurstSettings": {
-		"body": [
-			"function WEAPON:GetNPCBurstSettings()\n\t$0\nend"
-		],
-		"description": "Called when the weapon is used by NPCs to tell the NPC how to use this weapon. Controls how long the NPC can or should shoot continuously.",
-		"prefix": "WEAPON:GetNPCBurstSettings"
-	},
-	"WEAPON:GetNPCRestTimes": {
-		"body": [
-			"function WEAPON:GetNPCRestTimes()\n\t$0\nend"
-		],
-		"description": "Called when the weapon is used by NPCs to tell the NPC how to use this weapon. Controls amount of time the NPC can rest (not shoot) between bursts.",
-		"prefix": "WEAPON:GetNPCRestTimes"
-	},
-	"WEAPON:GetTracerOrigin": {
-		"body": [
-			"function WEAPON:GetTracerOrigin()\n\t$0\nend"
-		],
-		"description": "Allows you to override where the tracer effect comes from. ( Visual bullets )",
-		"prefix": "WEAPON:GetTracerOrigin"
-	},
-	"WEAPON:GetViewModelPosition": {
-		"body": [
-			"function WEAPON:GetViewModelPosition(EyePos, EyeAng)\n\t$0\nend"
-		],
-		"description": "This hook allows you to adjust view model position and angles.",
-		"prefix": "WEAPON:GetViewModelPosition"
-	},
-	"WEAPON:HUDShouldDraw": {
-		"body": [
-			"function WEAPON:HUDShouldDraw(element)\n\t$0\nend"
-		],
-		"description": "This hook determines which parts of the HUD to draw.",
-		"prefix": "WEAPON:HUDShouldDraw"
-	},
-	"WEAPON:Holster": {
-		"body": [
-			"function WEAPON:Holster(weapon)\n\t$0\nend"
-		],
-		"description": "Called when weapon tries to holster.\n\nThis will only be called serverside when using Player:SelectWeapon as that function immidiately switches the weapon out of prediction.\n\nThis is called twice for every holster clientside, one in Prediction and one not.\n\nBefore WEAPON:OnRemove is called, this function is only called serverside.",
-		"prefix": "WEAPON:Holster"
-	},
-	"WEAPON:Initialize": {
-		"body": [
-			"function WEAPON:Initialize()\n\t$0\nend"
-		],
-		"description": "Called when the weapon entity is created.\n\nEntity:GetOwner will return NULL at this point because the weapon is not equpped by a player or NPC yet. Use WEAPON:Equip or WEAPON:Deploy if you need the owner to be valid.\n\nThis is sometimes not called clientside. You can work around this by setting a variable in Initialize and check if it exists in WEAPON:Think. See the example below.\n\nThis is not called serverside after a quicksave.",
-		"prefix": "WEAPON:Initialize"
-	},
-	"WEAPON:KeyValue": {
-		"body": [
-			"function WEAPON:KeyValue(key, value)\n\t$0\nend"
-		],
-		"description": "Called when the engine sets a value for this scripted weapon.\n\nSee GM:EntityKeyValue for a hook that works for all entities.\n\n\nSee ENTITY:KeyValue for an  hook that works for scripted entities.",
-		"prefix": "WEAPON:KeyValue"
-	},
-	"WEAPON:OnDrop": {
-		"body": [
-			"function WEAPON:OnDrop()\n\t$0\nend"
-		],
-		"description": "Called when weapon is dropped by Player:DropWeapon.\n\nSee also WEAPON:OwnerChanged.",
-		"prefix": "WEAPON:OnDrop"
-	},
-	"WEAPON:OnReloaded": {
-		"body": [
-			"function WEAPON:OnReloaded()\n\t$0\nend"
-		],
-		"description": "Called whenever the weapons Lua script is reloaded.",
-		"prefix": "WEAPON:OnReloaded"
-	},
-	"WEAPON:OnRemove": {
-		"body": [
-			"function WEAPON:OnRemove()\n\t$0\nend"
-		],
-		"description": "Called when the swep is about to be removed.",
-		"prefix": "WEAPON:OnRemove"
-	},
-	"WEAPON:OnRestore": {
-		"body": [
-			"function WEAPON:OnRestore()\n\t$0\nend"
-		],
-		"description": "Called when the weapon entity is reloaded from a Source Engine save (not the Sandbox saves or dupes) or on a changelevel (for example Half-Life 2 campaign level transitions).\n\nFor the duplicator callbacks, see ENTITY:OnDuplicated.\n\nSee also saverestore for relevant functions.",
-		"prefix": "WEAPON:OnRestore"
-	},
-	"WEAPON:OwnerChanged": {
-		"body": [
-			"function WEAPON:OwnerChanged()\n\t$0\nend"
-		],
-		"description": "Called when weapon is dropped or picked up by a new player.\n\nSee also WEAPON:OnDrop.",
-		"prefix": "WEAPON:OwnerChanged"
-	},
-	"WEAPON:PostDrawViewModel": {
-		"body": [
-			"function WEAPON:PostDrawViewModel(vm, weapon, ply)\n\t$0\nend"
-		],
-		"description": "Called after the view model has been drawn while the weapon in use. This hook is called from the default implementation of GM:PostDrawViewModel, and as such, will not occur if it has been overridden.\n\nWEAPON:ViewModelDrawn is an alternative hook which is always called before GM:PostDrawViewModel.",
-		"prefix": "WEAPON:PostDrawViewModel"
-	},
-	"WEAPON:PreDrawViewModel": {
-		"body": [
-			"function WEAPON:PreDrawViewModel(vm, weapon, ply)\n\t$0\nend"
-		],
-		"description": "Allows you to modify viewmodel while the weapon in use before it is drawn. This hook only works if you haven't overridden GM:PreDrawViewModel.",
-		"prefix": "WEAPON:PreDrawViewModel"
-	},
-	"WEAPON:PrimaryAttack": {
-		"body": [
-			"function WEAPON:PrimaryAttack()\n\t$0\nend"
-		],
-		"description": "Called when primary attack button ( +attack ) is pressed.\n\nWhen in singleplayer, this function is only called in the server realm. When in multiplayer, the hook will be called on both the server and the client in order to allow for Prediction.\n\nYou can force the hook to always be called on client like this:\n\n```\nif ( game.SinglePlayer() ) then self:CallOnClient( \"PrimaryAttack\" ) end\n```\n\n\nNote that due to prediction, in multiplayer SWEP:PrimaryAttack is called multiple times per one \"shot\" with the gun. To work around that, use Global.IsFirstTimePredicted.",
-		"prefix": "WEAPON:PrimaryAttack"
-	},
-	"WEAPON:PrintWeaponInfo": {
-		"body": [
-			"function WEAPON:PrintWeaponInfo(x, y, alpha)\n\t$0\nend"
-		],
-		"description": "A convenience function that draws the weapon info box, used in WEAPON:DrawWeaponSelection.",
-		"prefix": "WEAPON:PrintWeaponInfo"
-	},
-	"WEAPON:Reload": {
-		"body": [
-			"function WEAPON:Reload()\n\t$0\nend"
-		],
-		"description": "Called when the reload key ( +reload ) is pressed.",
-		"prefix": "WEAPON:Reload"
-	},
-	"WEAPON:RenderScreen": {
-		"body": [
-			"function WEAPON:RenderScreen()\n\t$0\nend"
-		],
-		"description": "Called every frame just before GM:RenderScene.\n\nUsed by the Tool Gun to render view model screens (TOOL:DrawToolScreen).\n\n\nMaterials rendered in this hook require $ignorez parameter to draw properly.",
-		"prefix": "WEAPON:RenderScreen"
-	},
-	"WEAPON:SecondaryAttack": {
-		"body": [
-			"function WEAPON:SecondaryAttack()\n\t$0\nend"
-		],
-		"description": "Called when secondary attack button ( +attack2 ) is pressed.\n\nFor issues with this hook being called rapidly on the client side, see the global function Global.IsFirstTimePredicted.",
-		"prefix": "WEAPON:SecondaryAttack"
-	},
-	"WEAPON:SetDeploySpeed": {
-		"body": [
-			"function WEAPON:SetDeploySpeed(speed)\n\t$0\nend"
-		],
-		"description": "Sets the weapon deploy speed. This value needs to match on client and server.",
-		"prefix": "WEAPON:SetDeploySpeed"
-	},
-	"WEAPON:SetWeaponHoldType": {
-		"body": [
-			"function WEAPON:SetWeaponHoldType(name)\n\t$0\nend"
-		],
-		"description": "Sets the hold type of the weapon. This must be called on **both** the server and the client to work properly.\n\n**NOTE:** You should avoid calling this function and call Weapon:SetHoldType now.",
-		"prefix": "WEAPON:SetWeaponHoldType"
-	},
-	"WEAPON:SetupDataTables": {
-		"body": [
-			"function WEAPON:SetupDataTables()\n\t$0\nend"
-		],
-		"description": "Called when the SWEP should set up its Networking_Entities.",
-		"prefix": "WEAPON:SetupDataTables"
-	},
-	"WEAPON:ShootBullet": {
-		"body": [
-			"function WEAPON:ShootBullet(damage, num_bullets, aimcone, ammo_type, force, tracer)\n\t$0\nend"
-		],
-		"description": "A convenient function to shoot bullets.",
-		"prefix": "WEAPON:ShootBullet"
-	},
-	"WEAPON:ShootEffects": {
-		"body": [
-			"function WEAPON:ShootEffects()\n\t$0\nend"
-		],
-		"description": "A convenience function to create shoot effects.",
-		"prefix": "WEAPON:ShootEffects"
-	},
-	"WEAPON:ShouldDrawViewModel": {
-		"body": [
-			"function WEAPON:ShouldDrawViewModel()\n\t$0\nend"
-		],
-		"description": "Called to determine if the view model should be drawn or not.",
-		"prefix": "WEAPON:ShouldDrawViewModel"
-	},
-	"WEAPON:ShouldDropOnDie": {
-		"body": [
-			"function WEAPON:ShouldDropOnDie()\n\t$0\nend"
-		],
-		"description": "Should this weapon be dropped when its owner dies?\n\nThis only works if the player has Player:ShouldDropWeapon set to true.",
-		"prefix": "WEAPON:ShouldDropOnDie"
-	},
-	"WEAPON:TakePrimaryAmmo": {
-		"body": [
-			"function WEAPON:TakePrimaryAmmo(amount)\n\t$0\nend"
-		],
-		"description": "A convenience function to remove primary ammo from clip.",
-		"prefix": "WEAPON:TakePrimaryAmmo"
-	},
-	"WEAPON:TakeSecondaryAmmo": {
-		"body": [
-			"function WEAPON:TakeSecondaryAmmo(amount)\n\t$0\nend"
-		],
-		"description": "A convenience function to remove secondary ammo from clip.",
-		"prefix": "WEAPON:TakeSecondaryAmmo"
-	},
-	"WEAPON:Think": {
-		"body": [
-			"function WEAPON:Think()\n\t$0\nend"
-		],
-		"description": "Called when the swep thinks.\n\nThis hook won't be called during the deploy animation and when using Weapon:DefaultReload.\n\nDespite being a predicted hook, this hook is called clientside in single player, however it will not be recognized as a predicted hook to Player:GetCurrentCommand.\n\nThis hook will be called before Player movement is processed on the client, and after on the server.\n\nThis will not be run during deploy animations after a serverside-only deploy. This usually happens after picking up and dropping an object with +use.",
-		"prefix": "WEAPON:Think"
-	},
-	"WEAPON:TranslateActivity": {
-		"body": [
-			"function WEAPON:TranslateActivity(act)\n\t$0\nend"
-		],
-		"description": "Translate a player's Activity into a weapon's activity, depending on how you want the player to be holding the weapon.\n\nFor example, ACT_MP_RUN becomes ACT_HL2MP_RUN_PISTOL.",
-		"prefix": "WEAPON:TranslateActivity"
-	},
-	"WEAPON:TranslateFOV": {
-		"body": [
-			"function WEAPON:TranslateFOV(fov)\n\t$0\nend"
-		],
-		"description": "Allows to change players field of view while player holds the weapon.\n\nThis hook must be defined shared and return same value on both to properly affect Area Portals.",
-		"prefix": "WEAPON:TranslateFOV"
-	},
-	"WEAPON:ViewModelDrawn": {
-		"body": [
-			"function WEAPON:ViewModelDrawn(ViewModel)\n\t$0\nend"
-		],
-		"description": "Called straight after the view model has been drawn. This is called before GM:PostDrawViewModel and WEAPON:PostDrawViewModel.",
-		"prefix": "WEAPON:ViewModelDrawn"
 	}
 }

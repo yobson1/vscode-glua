@@ -34,11 +34,19 @@ def translateMethod(method, prefix=""):
 
 	return newMethod
 
-def translateHook(hook):
+hookPrefixs = {
+	"ENTITY": "ENT",
+	"WEAPON": "SWEP"
+}
+
+def translateHookPrefix(prefix):
+	return (hookPrefixs[prefix] if prefix in hookPrefixs else prefix) + ":"
+
+def translateHook(hook, prefix):
 	newHook = {}
 
 	# Adding prefix
-	newHook["prefix"] = hook["parent"] + ":" + hook["name"]
+	newHook["prefix"] = prefix + hook["name"]
 
 	# Adding description
 	if "description" in hook:
@@ -47,7 +55,7 @@ def translateHook(hook):
 		newHook["description"] = ""
 
 	# Formatting body
-	newHook["body"] = ["function " + hook["parent"] + ":" + hook["name"] + "("]
+	newHook["body"] = ["function " + prefix + hook["name"] + "("]
 
 	if "arguments" in hook:
 		for arg in hook["arguments"]:
@@ -117,7 +125,8 @@ def translateHooks():
 
 	for obj in d:
 		for method in obj["functions"]:
-			finalHooks[obj["name"] + ":" + method["name"]] = translateHook(method)
+			prefix = translateHookPrefix(method["parent"])
+			finalHooks[prefix + method["name"]] = translateHook(method, prefix)
 
 	return finalHooks
 
