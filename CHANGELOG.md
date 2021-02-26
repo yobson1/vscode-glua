@@ -1,5 +1,7 @@
 # Change Log
 
+## 2.3.2
+- Fixed function declaration tokenization
 ## 2.3.1
 - Changed ENTITY to ENT and WEAPON to SWEP for hook snippets
 
