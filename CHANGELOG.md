@@ -1,7 +1,11 @@
 # Change Log
 
-## 2.3.2
+## 2.3.3
 - Fixed function declaration tokenization
+
+## 2.3.2
+- Fixed kRenderFx enums not being highlighted
+
 ## 2.3.1
 - Changed ENTITY to ENT and WEAPON to SWEP for hook snippets
 
