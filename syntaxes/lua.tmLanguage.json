@@ -28,7 +28,7 @@
 		},
 		{
 			"name": "meta.function.lua",
-			"begin": "(?x)(\\bfunction\\b) \\s+ ([a-zA-Z0-9_]\\w* [.:])* ([a-zA-Z0-9_]\\w*)* \\s* (\\()",
+			"begin": "(?x)(\\bfunction\\b) \\s+ ([a-zA-Z0-9_.:]* [.:]) ([a-zA-Z0-9_]\\w*)* \\s* (\\()",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.control.lua"
