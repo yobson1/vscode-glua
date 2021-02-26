@@ -36,6 +36,7 @@ function obj:funcname(parlist, ...) self:method() end
 function tbl.funcname(parlist, ...) block end
 function tbl.tbl.funcname(parlist, ...) block end
 function chat.AddText(parlist, ...) block end
+function tbl.tbl.tbl.tbl() end
 local function Name(parlist, ...) block end
 local namelist = explist;
 funcname(parlist, ...)
@@ -45,7 +46,7 @@ chat.AddText(parlist, ...)
 tbl.tbl.funcname(parlist, ...)
 tbl[1]["foo"].bar(...)
 tbl[foo].foo.bar(...)
-
+tbl.tbl.tbl.tbl()
 -- Single comment
 code() -- Single comment
 
